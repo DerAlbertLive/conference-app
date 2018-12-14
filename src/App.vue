@@ -8,8 +8,8 @@
     </main>
     <footer id="nav">
       <router-link to="/">Favoriten</router-link> |
-      <router-link to="/sessions">Sprecher</router-link> |
-      <router-link to="/speakers">Sessions</router-link> |
+      <router-link to="/sessions">Sessions</router-link> |
+      <router-link to="/speakers">Sprecher</router-link> |
       <router-link to="/information">Information</router-link> |
       <router-link to="/about">Über</router-link>
     </footer>

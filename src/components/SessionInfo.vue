@@ -15,7 +15,7 @@ import { ISessionInfo } from '../types';
 
 @Component
 export default class SessionInfo extends Vue {
-    @Prop({default:{ title: ' Dummy Title'}}) item : ISessionInfo;
+    @Prop({default:{ title: ' Dummy Title'}}) item!: ISessionInfo;
 
     get altText() {
         return `Picture of ${this.item.speakerName}`;
@@ -27,7 +27,7 @@ export default class SessionInfo extends Vue {
 .sessionInfo {
     display: grid;
     grid-template-columns: 2.5rem auto 2.5rem; 
-    grid-template-rows: 2.5rem;
+    grid-template-rows: minmax(2.5rem, 3.0rem);
     margin-bottom: 0.5rem; 
 
     img {

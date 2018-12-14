@@ -14,10 +14,9 @@ export interface ISessionInfo {
     title: string;
     speakerName: string;
     speakerImage: string;
-    favorite: boolean;
+    favorite?: boolean;
 }
-
-
 export interface ISessionGroup {
+    title?: string;
     sessions: ISessionInfo[];
 }

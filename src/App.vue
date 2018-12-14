@@ -1,29 +1,56 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+        <h1>dotnet Cologne 2019</h1>
+    </header>
+    <main>
+      <router-view/>
+    </main>
+    <footer id="nav">
+      <router-link to="/">Favoriten</router-link> |
+      <router-link to="/sessions">Sprecher</router-link> |
+      <router-link to="/speakers">Sessions</router-link> |
+      <router-link to="/information">Information</router-link> |
+      <router-link to="/about">Über</router-link>
+    </footer>
   </div>
 </template>
 
 <style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+}
+body, html {
+  height: 100%;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+  display: grid;
+  grid-template-rows: 2em auto 2rem;
+  grid-template-columns: 100%;
+  height: 100%;
+
+  header {
+    background-color: #2c3e50;
+    text-align: center;
+    color: white;
+    h1 {
+      font-size: 1.5rem;
+    }  
+  }
+
+  main {
+    grid-row-start: 2;
+  }
+
+  footer {
+    a {
+      color: white;
     }
+    background-color: #2c3e50;
+    grid-row-start: 3;
   }
 }
 </style>

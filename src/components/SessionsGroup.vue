@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { ISessionGroup } from '../types';
+import { ISessionGroup } from '@/types';
 import SessionInfo from './SessionInfo.vue';
 
 @Component({

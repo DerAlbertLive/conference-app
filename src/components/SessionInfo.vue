@@ -11,11 +11,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { ISessionInfo } from '../types';
+import { ISessionInfo } from '@/types';
 
 @Component
 export default class SessionInfo extends Vue {
-  @Prop({ default: { title: ' Dummy Title' } })
+  @Prop({ default: { title: 'Dummy Title' } })
   private item!: ISessionInfo;
 
   get altText() {

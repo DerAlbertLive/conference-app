@@ -15,6 +15,7 @@ export interface ISessionInfo {
   speakerImage: string;
   favorite?: boolean;
 }
+
 export interface ISessionGroup {
   title?: string;
   sessions: ISessionInfo[];

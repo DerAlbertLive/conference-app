@@ -1,12 +1,12 @@
 <template>
 <section>
-    <SessionInfo v-for="item in sessions" v-bind:item="item" v-bind:key="item.id" />
+    <SessionInfo v-for="item in group.sessions" v-bind:item="item" v-bind:key="item.id" />
 </section>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-
+import { ISessionGroup }from '../types'
 import SessionInfo from './SessionInfo.vue';
 import Component from 'vue-class-component';
 
@@ -14,7 +14,7 @@ import Component from 'vue-class-component';
     components: {SessionInfo}
 })
 export default class SessionGroup extends Vue {
-    @Prop({default:{}}) sessions;
+    @Prop({default:{}}) group: ISessionGroup;
 }
 </script>
 <style lang="sass">

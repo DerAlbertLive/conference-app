@@ -1,11 +1,7 @@
 <template>
   <div id="app">
-    <header>
-        <h1>dotnet Cologne 2019</h1>
-    </header>
-    <main>
-      <router-view/>
-    </main>
+    <header><h1>dotnet Cologne 2019</h1></header>
+    <main><router-view /></main>
     <footer id="nav">
       <router-link to="/">Favoriten</router-link> |
       <router-link to="/sessions">Sessions</router-link> |
@@ -21,7 +17,8 @@
   padding: 0;
   margin: 0;
 }
-body, html {
+body,
+html {
   height: 100%;
 }
 #app {
@@ -38,7 +35,7 @@ body, html {
     color: white;
     h1 {
       font-size: 1.5rem;
-    }  
+    }
   }
 
   main {

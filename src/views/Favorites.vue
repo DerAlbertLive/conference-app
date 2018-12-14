@@ -1,19 +1,20 @@
 <template>
   <div class="favorites">
-    <Sessions msg="Welcome to Your Vue.js + TypeScript App"/>
+    <h2>Favoriten</h2>
+    <SessionGroup v-bind:sessions="sessions" />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Sessions from '@/components/Sessions.vue'; // @ is an alias to /src
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import SessionGroup from '@/components/SessionsGroup.vue'; // @ is an alias to /src
 
 @Component({
   components: {
-    Sessions,
+    SessionGroup,
   },
 })
 export default class Favorites extends Vue {
-
+    sessions = [{id:0,title:"Eins"}, {id:1,title:"Zwei"}, {id:2,title:"Drei"}]
 }
 </script>

@@ -19,7 +19,12 @@ Auch ohne eine Anwendung wäre es sogar möglich einfach die Daten irgendwo manu
 
 Jedoch kann sich ein anderes Projekt entwickeln mit dem man die Sessions aus Veranstaltersicht Planen kann, und dann die Daten entsprechend aufbereitet. Oder es können Konverter geschrieben werden die aus vorhandenen SaaS oder eigenen Lösungn die Daten aufbereitet. 
 
-# Wie man sie zum laufen entwickeln zu laufen bekommt
+## Technologien
+
+* VueJS als SPA Framework (hat die Abstimmung ergeben)
+* Keine fetten CSS Framework oder Control Libraries
+
+# Wie man sie zum entwickeln zu laufen bekommt
 
 ## Project setup
 ```

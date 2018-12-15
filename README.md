@@ -13,9 +13,9 @@ Diese Anwendung soll dafür gedacht sein für den Teilnehmer einer Konferenz sic
 
 Eine Planungs Anwendung mit der man aus Veranstaltersicht die Konferenz plant. 
 
-Das wie und womit man eine Konferenz plant gibt es schon Software für und viele machen es auf unterschiedliche Weise. Man man aus einem vorhandenn System die Daten rausnimmt und für diese App hier aufbereitet ist man schon fertig.
+Das wie und womit man eine Konferenz plant gibt es schon Software für und viele machen es auf unterschiedliche Weise. Wenn man aus einem vorhandenn System die Daten rausnimmt und für diese App hier aufbereitet ist man schon fertig.
 
-Auch ohne eine Anwendung wäre es sogar möglich einfach die Daten irgendwo manuell zu erzeugen und statisch dort abzulegen wie die Anwendung drauf zugriff hat. Und schon hat man eine komfortable Konferenz App.
+Auch ohne eine Anwendung wäre es sogar möglich einfach die Daten irgendwo manuell zu erzeugen und statisch dort abzulegen wo die Anwendung zugriff hat. Und schon hat man eine komfortable Konferenz App.
 
 Jedoch kann sich ein anderes Projekt entwickeln mit dem man die Sessions aus Veranstaltersicht Planen kann, und dann die Daten entsprechend aufbereitet. Oder es können Konverter geschrieben werden die aus vorhandenen SaaS oder eigenen Lösungn die Daten aufbereitet. 
 

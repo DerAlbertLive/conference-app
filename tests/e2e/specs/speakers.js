@@ -1,7 +1,9 @@
 // https://docs.cypress.io/api/introduction/api.html
 
 context('Speakers', () => {
-  beforeEach(() => cy.visit('/speakers'));
+  beforeEach(() => { 
+    cy.visit('/speakers')
+   });
 
   describe('Speaker test', () => {
     it('Visits the Favorite  url', () => {
@@ -18,7 +20,6 @@ context('Speakers', () => {
 
     it('Should has the group Titles on the Page', () => {
       cy.get(':nth-child(2) > h3').should('have.text', 'Group A')
-      cy.get(':nth-child(3) > h3').should('have.text', 'Group B')
     });
   });
 });

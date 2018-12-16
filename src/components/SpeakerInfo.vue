@@ -1,6 +1,6 @@
 <template>
       <div class="speakerInfo">
-        <img v-bind:src="item.speakerImage" v-bind:alt="altText">
+        <img v-bind:src="item.imageUrl" v-bind:alt="altText">
         <p>{{ item.name }}</p>
       </div>
 </template>
@@ -24,7 +24,7 @@ export default class SpeakerInfo extends Vue {
 .speakerInfo {
   display: grid;
   grid-template-columns: 2.5rem auto;
- 
+
   img {
     grid-column-start: 1;
     grid-row-start: 1;

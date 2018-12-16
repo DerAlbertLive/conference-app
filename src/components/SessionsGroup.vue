@@ -17,7 +17,8 @@ import SessionInfo from './SessionInfo.vue';
   components: { SessionInfo },
 })
 export default class SessionGroup extends Vue {
-    @Prop({default: {}}) private group!: ISessionGroup;
+  @Prop({ default: {} })
+  private group!: ISessionGroup;
 }
 </script>
 

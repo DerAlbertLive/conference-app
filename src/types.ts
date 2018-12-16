@@ -29,5 +29,5 @@ export interface ISpeakerGroup {
 export interface ISpeakerInfo {
   id: number;
   name: string;
-  speakerImage: string;
+  imageUrl: string;
 }

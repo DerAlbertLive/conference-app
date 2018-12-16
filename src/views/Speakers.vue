@@ -13,48 +13,23 @@ import { ISpeakerGroup } from '@/types';
 import SpeakerGroup from '../components/SpeakerGroup.vue';
 
 @Component({
-  components: { SpeakerGroup }
+  components: { SpeakerGroup },
 })
 export default class Speakers extends Vue {
-  private groups: ISpeakerGroup[] = [
-    { 
-      title: "Group A",
-      speakers: [
-        {
-          id: 0,
-          name: 'Albert Weinert',
-          speakerImage:
-            'https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/26',
-        },
-        {
-          id: 1,
-          name: 'Sunny 2405',
-          speakerImage:
-            'https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/28',
-        },
-      ],
-    },
-    {
-      title: "Group B",
-      speakers: [
-        {
-          id: 2,
-          name: 'least fix point',
-          speakerImage:
-            'https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/29',
-        },
-        {
-          id: 3,
-          name: 'yev hensh',
-          speakerImage:
-            'https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/27',
-        },
-      ],
-    },
-  ];
+  private groups: ISpeakerGroup[] = [];
+
+  async created() {
+    var response = await fetch('/data/conference.json');
+    var json = await response.json();
+    this.groups = [
+      {
+        title: 'Group A',
+        speakers: json.speakers,
+      },
+    ];
+    console.log(json.speakers);
+  }
 }
 </script>
 <style lang="scss">
-
 </style>
-

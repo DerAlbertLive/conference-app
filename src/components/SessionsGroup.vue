@@ -8,13 +8,12 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { ISessionGroup }from '../types'
 import SessionInfo from './SessionInfo.vue';
-import Component from 'vue-class-component';
 
 @Component({
     components: {SessionInfo}
 })
 export default class SessionGroup extends Vue {
-    @Prop({default:{}}) group: ISessionGroup;
+    @Prop({default:{}}) group!: ISessionGroup;
 }
 </script>
 <style lang="sass">

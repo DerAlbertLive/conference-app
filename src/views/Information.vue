@@ -1,3 +1,5 @@
 <template>
-  <div class="about"><h1>This is an information page</h1></div>
+  <div class="Information">
+    <h2>Information</h2>
+  </div>
 </template>

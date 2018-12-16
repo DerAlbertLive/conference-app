@@ -40,6 +40,7 @@ html {
 
   main {
     grid-row-start: 2;
+    overflow: auto;
   }
 
   footer {

@@ -20,3 +20,14 @@ export interface ISessionGroup {
   title?: string;
   sessions: ISessionInfo[];
 }
+
+export interface ISpeakerGroup {
+  title?: string;
+  speakers: ISpeakerInfo[];
+}
+
+export interface ISpeakerInfo {
+  id: number;
+  name: string;
+  speakerImage: string;
+}

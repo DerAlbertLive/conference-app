@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e",
+    "test:e2e": "vue-cli-service test:e2e --mode development",
     "test:unit": "vue-cli-service test:unit",
     "test:unit:updatesnapshot": "vue-cli-service test:unit --updateSnapshot",
     "test:unit-coverage": "vue-cli-service test:unit --coverage",

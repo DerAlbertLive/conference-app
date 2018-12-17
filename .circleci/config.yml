@@ -9,5 +9,11 @@ jobs:
       - run: npm run lint
       - run: npm run test:unit
       - run: npm run test:e2e:ci
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+      - store_test_results:
+          path: test-results.xml
       - run: npm run build
 

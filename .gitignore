@@ -24,3 +24,4 @@ yarn-error.log*
 *.sln
 *.sw*
 /coverage/
+/test-results.xml

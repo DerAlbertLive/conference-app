@@ -7,10 +7,12 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e --mode development",
+    "test:e2e:ci": "vue-cli-service test:e2e --headless --mode development",
     "test:unit": "vue-cli-service test:unit",
     "test:unit:updatesnapshot": "vue-cli-service test:unit --updateSnapshot",
     "test:unit-coverage": "vue-cli-service test:unit --coverage",
-    "prettify": "prettier --write \"./**/*.*(ts|tsx|vue|json)\""
+    "prettify": "prettier --write \"./**/*.*(ts|tsx|vue|json|js)\"",
+    "build:simulate": "npm run lint && npm run test:unit && npm run test:e2e:ci && npm run build"
   },
   "dependencies": {
     "register-service-worker": "^1.5.2",

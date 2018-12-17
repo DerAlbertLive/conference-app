@@ -22,16 +22,16 @@ import SpeakerGroup from '../components/SpeakerGroup.vue';
 export default class Speakers extends Vue {
   private groups: ISpeakerGroup[] = [];
 
-  async created() {
-    var response = await fetch('/data/conference.json');
-    var json = await response.json();
+  public async created() {
+    const response = await fetch('/data/conference.json');
+    const json = await response.json();
     this.groups = [
       {
         title: 'Group A',
         speakers: json.speakers,
       },
     ];
-    console.log(json.speakers);
+    // console.log(json.speakers);
   }
 }
 </script>

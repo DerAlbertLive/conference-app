@@ -1,7 +1,11 @@
 <template>
   <section>
     <h3>{{ group.title }}</h3>
-    <SpeakerInfo v-for="speaker in group.speakers" :key="speaker.id" :item="speaker"/>
+    <SpeakerInfo
+      v-for="speaker in group.speakers"
+      :key="speaker.id"
+      :item="speaker"
+    />
   </section>
 </template>
 
@@ -14,7 +18,8 @@ import SpeakerInfo from './SpeakerInfo.vue';
   components: { SpeakerInfo },
 })
 export default class SpeakerGroup extends Vue {
-  @Prop() private group!: ISpeakerGroup;
+  @Prop()
+  private group!: ISpeakerGroup;
 }
 </script>
 

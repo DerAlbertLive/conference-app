@@ -1,8 +1,12 @@
 <template>
   <div class="about">
     <h2>Sprecher</h2>
-    <SpeakerGroup v-for="group in groups" v-bind:key="group.title"  v-bind:group="group" class="speakerGroup">
-
+    <SpeakerGroup
+      v-for="group in groups"
+      v-bind:key="group.title"
+      v-bind:group="group"
+      class="speakerGroup"
+    >
     </SpeakerGroup>
   </div>
 </template>
@@ -31,5 +35,4 @@ export default class Speakers extends Vue {
   }
 }
 </script>
-<style lang="scss">
-</style>
+<style lang="scss"></style>

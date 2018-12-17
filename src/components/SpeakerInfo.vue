@@ -1,8 +1,8 @@
 <template>
-      <div class="speakerInfo">
-        <img v-bind:src="item.imageUrl" v-bind:alt="altText">
-        <p>{{ item.name }}</p>
-      </div>
+  <div class="speakerInfo">
+    <img v-bind:src="item.imageUrl" v-bind:alt="altText" />
+    <p>{{ item.name }}</p>
+  </div>
 </template>
 
 <script lang="ts">

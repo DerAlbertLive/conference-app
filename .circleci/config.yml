@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: npm install
+      - run: npm ci
       - run: npm run lint
       - run: npm run test:unit
       - run: npm run build

@@ -1,13 +1,19 @@
 version: 2
 jobs:
-  build:
+  check:
     docker:
-      - image: cypress/base:latest
+      - image: circleci/node:latest
     steps:
       - checkout
       - run: npm ci
       - run: npm run lint
       - run: npm run test:unit
+  e2e:
+    docker:
+      - image: cypress/base:latest
+    steps:
+      - checkout
+      - run: npm ci
       - run: npm run test:e2e:ci
       - store_artifacts:
           path: tests/e2e/videos
@@ -15,6 +21,22 @@ jobs:
           path: tests/e2e/screenshots
       - store_test_results:
           path: test-results.xml
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: npm ci
       - run: npm run build
       - store_artifacts:
           path: dist
+workflows:
+  version: 2
+  build:
+    jobs:
+      - check
+      - e2e
+      - build:
+          requires:
+            - check
+            - e2e

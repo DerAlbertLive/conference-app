@@ -1,4 +1,30 @@
-# conference-app
+# Die Konferenz App
+
+## Anwendungsbereich?
+
+Diese Anwendung soll dafür gedacht sein für den Teilnehmer einer Konferenz sich seine Konferenz optimal Planen zu können. 
+
+ * Sie soll eine PWA sein, um auch Offline zu funktionieren.
+ * Sie soll für beliebige Konferenzen verwendet werden können.
+ * Sie soll kein Backend benötigen, sie braucht nur die Daten.
+ * Sie soll keine Benutzeranmeldung erfordern.
+
+## Was soll sie nicht sein?
+
+Eine Planungs Anwendung mit der man aus Veranstaltersicht die Konferenz plant. 
+
+Das wie und womit man eine Konferenz plant gibt es schon Software für und viele machen es auf unterschiedliche Weise. Wenn man aus einem vorhandenn System die Daten rausnimmt und für diese App hier aufbereitet ist man schon fertig.
+
+Auch ohne eine Anwendung wäre es sogar möglich einfach die Daten irgendwo manuell zu erzeugen und statisch dort abzulegen wo die Anwendung zugriff hat. Und schon hat man eine komfortable Konferenz App.
+
+Jedoch kann sich ein anderes Projekt entwickeln mit dem man die Sessions aus Veranstaltersicht Planen kann, und dann die Daten entsprechend aufbereitet. Oder es können Konverter geschrieben werden die aus vorhandenen SaaS oder eigenen Lösungn die Daten aufbereitet. 
+
+## Technologien
+
+* VueJS als SPA Framework (hat die Abstimmung ergeben)
+* Keine fetten CSS Framework oder Control Libraries
+
+# Wie man sie zum entwickeln zu laufen bekommt
 
 ## Project setup
 ```

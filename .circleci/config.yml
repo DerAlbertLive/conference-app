@@ -10,9 +10,9 @@ jobs:
       - run: npm run test:unit
       - run: npm run test:e2e:ci
       - store_artifacts:
-          path: cypress/videos
+          path: tests/e2e/videos
       - store_artifacts:
-          path: cypress/screenshots
+          path: tests/e2e/screenshots
       - store_test_results:
           path: test-results.xml
       - run: npm run build

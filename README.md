@@ -1,5 +1,7 @@
 # Die Konferenz App
 
+[![CircleCI](https://circleci.com/gh/MariuszKogut/conference-app.svg?style=svg)](https://circleci.com/gh/MariuszKogut/conference-app)
+
 ## Anwendungsbereich?
 
 Diese Anwendung soll dafür gedacht sein für den Teilnehmer einer Konferenz sich seine Konferenz optimal Planen zu können. 

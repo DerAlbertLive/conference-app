@@ -2,11 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:latest
+      - image: cypress/base:latest
     steps:
       - checkout
       - run: npm ci
       - run: npm run lint
       - run: npm run test:unit
+      - run: npm run test:e2e:ci
       - run: npm run build
 

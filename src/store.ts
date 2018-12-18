@@ -1,10 +1,21 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, {StoreOptions, Store, Module }from 'vuex';
+import { IAppState } from "@/types";
+import app from './AppModule';
+import speakers from './Speakers';
+
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-});
+
+const options :  StoreOptions<IAppState> =  {
+  state: app.AppState,
+  strict: true,
+  actions: app.actions,
+  mutations: app.mutations,
+  modules: {
+    speakers
+  }
+}
+
+export default new Vuex.Store(options);

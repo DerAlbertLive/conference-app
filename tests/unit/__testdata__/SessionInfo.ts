@@ -1,6 +1,6 @@
-import { ISessionInfo } from '@/types';
+import { IDisplaySession } from '@/types';
 
-export const FullSessionInfo: ISessionInfo = {
+export const FullSessionInfo: IDisplaySession = {
   id: 1,
   title: 'Die Session',
   speakerName: 'Name',

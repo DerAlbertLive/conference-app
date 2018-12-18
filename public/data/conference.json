@@ -1,1 +1,982 @@
-{"title":"dotnet Cologne 2018","claims":[{"text":"","color":"#66ADD6"}],"locations":[{"id":21000023,"name":"Saal, Haus 7"},{"id":21000024,"name":"222, Haus 7"},{"id":21000025,"name":"313/314, Haus 7"},{"id":21000026,"name":"315/316, Haus 7"},{"id":21000027,"name":"1, Haus 6"},{"id":21000028,"name":"2/3, Haus 6"},{"id":21000029,"name":"4/5, Haus 6"}],"speakers":[{"id":10000026,"name":"Albert Weinert","photoUrl":"10000026.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/26","social":{},"bio":"Albert Weinert arbeitet als freiberuflicher Berater und Entwickler. Sein Spezialgebiet ist ASP.NET Architektur sowie Agile Techniken und für sein Community Engagement bekam er 2007-2016 die Microsoft MVP Auszeichnung verliehen. Er ist regelmäßiger Sprecher bei .NET User Groups sowie Konferenzen. Als Leiter der .net user group Köln veranstaltet er monatliche Treffen rund um die .NET Software-Entwicklung. Des Weiteren ist er Mitveranstalter der dotnet Cologne und Gründer der .NET Online User Group. Sie finden sein Blog unter blog.der-albert.com."},{"id":10000033,"name":"Melanie Eibl","photoUrl":"10000033.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/33","social":{},"bio":"Melanie Eibl entwickelt seit 1999 Software mit dem Schwerpunkt .NET und SQL Server. Sie besitzt Zertifizierungen in WCF, ADO.NET und ASP.NET und hat berufsbegleitend ein Masterstudium in Informatik absolviert. Ihre Tätigkeiten sind hauptsächlich das Design und die Implementierung von IT- und Softwarearchitekturen, sowie Projektleitung.\n\nInnerhalb der Community arbeitet Melanie Eibl seit 2010 bei der Organisation der dotnet Cologne mit und ist gelegentliche Sprecherin bei den Usergroups in Bonn und in Köln."},{"id":10000034,"name":"Stefan Lange","photoUrl":"10000034.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/34","social":{},"bio":"Stefan Lange hat Informatik in Bonn studiert und ist Gründer und Geschäftsführer der empira Software GmbH in Köln. Er beschäftigt sich seit mehr als 20 Jahren mit der Entwicklung von Windows-Anwendungen in C++ und C#. Seine Schwerpunkte liegen bei der Software-Architektur und der Gestaltung von grafischen Benutzeroberflächen. Es ist außerdem Autor der Open Source Bibliothek PDFsharp. Als Technologiebegeisterter ist er einer der Gründer der .net user group Köln und hält regelmäßig Vorträge. Seit Anfang 2017 leitet er die Software Research and Development Abteilung der binoNTech AG in Mainz."},{"id":10000061,"name":"Jan Fellien","photoUrl":"10000061.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/61","social":{},"bio":"BASIC, SYS, Modula 2, Pascal und dBase waren die ersten Sprachen, mit denen ich in Berührung kam. Das ist nun schon mehr als 25 Jahre her. Seit dem hat sich vieles verändert. Nun wird mit C# und JavaScript entwickelt, hauptsächlich für Backendsysteme in der Cloud. Seit 2010 verfolge ich den Ansatz von CQRS in der Implementierung und DDD in der Modellierung von Software. Zusammen mit meinen Teams lerne ich auf die Domain Experten zu hören und deren Bedürfnisse zu erkennen.\nIn Berlin bin ich in der Community tätig, organisiere Meetups und kleine Konferenzen. Ab und an schreibe ich Artikel oder Blog Posts."},{"id":10000081,"name":"Florian Bader","photoUrl":"10000081.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/81","social":{},"bio":"Florian Bader ist Senior Consultant bei der AIT GmbH & Co. KG in Stuttgart. Er berät Kunden im Bereich Microsoft .NET und Application Lifecycle Management mit Schwerpunkt in Softwareentwicklung und -architektur, Buildautomatisierung und Qualitätsmanagement. Sein Ziel ist es, Entwicklern das Leben so einfach wie möglich zu machen und gleichzeitig die Qualität des Projektes zu erhöhen. Durch seine Erfahrung in der Industrie und sein breitgefächertes Wissen, unterstützt er Unternehmen als Know-How-Lieferant in den unterschiedlichsten Bereichen."},{"id":10000093,"name":"Robert Wagner","photoUrl":"10000093.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/93","social":{},"bio":"Robert is a lead developer at Octopus Deploy, makers of the leading deployment automation server. Previously he worked as a consultant helping companies large and small build and automate their deployment pipelines. Now he works to improve how your bits get from A to B using Octopus Deploy."},{"id":10000058,"name":"Tim Borowski","photoUrl":"10000058.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/58","social":{},"bio":"im Borowski B.Sc. studierte Informatik an der TU Darmstadt und entwickelt seit klein auf Software mit .NET und C#. Er fokussierte sich im Studium auf 3D-Entwicklung und Grafische Datenverarbeitung als auch auf GPGPU. Außerhalb dieser Massiv-Parallelen Welt arbeitet er leidenschaftlich im .NET Bereich mit WPF, WCF, EF und ASP.NET-WebAPI und AngularJs via TS."},{"id":10000024,"name":"Rainer Stropek","photoUrl":"10000024.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/24","social":{},"bio":"Bild\n\tRainer Stropek\nrainer [at] software-architects.at\n\nRainer Stropek ist seit über 20 Jahren als Unternehmer in der IT-Industrie tätig. Er gründete und führte in dieser Zeit mehrere IT-Dienstleistungsunternehmen und entwickelt im Augenblick in seiner Firma \"software architects\" mit seinem Team die preisgekrönte Software \"time cockpit\".\n\nRainer hat Abschlüsse an der Höheren Technischen Schule für MIS, Leonding (AT) sowie der University of Derby (UK). Er ist Autor mehrerer Fachbücher und Artikel in Magazinen im Umfeld von Microsoft .NET und C#. Seine technischen Schwerpunkte sind C# und das .NET Framework, XAML, die Microsoft Azure Plattform, SQL Server sowie Web Development. Rainer tritt regelmäßig als Speaker und Trainer auf namhaften Konferenzen in Europa und den USA auf. 2010 wurde Rainer von Microsoft zu einem der ersten MVPs für die Windows Azure Plattform ernannt. Seit 2015 ist Rainer Microsoft Regional Director. 2016 hat Rainer zusätzlich den MVP Award für Visual Studio und Developer Technologies erhalten.\n\nSie können Rainer über Twitter, Facebook oder über seine Blogs unter www.timecockpit.com und www.software-architects.com folgen."},{"id":10000082,"name":"Stefan Dirschnabel","photoUrl":"10000082.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/82","social":{},"bio":"Stefan Dirschnabel\nstefan.dirschnabel [at] binarygears.de\n\nStefan Dirschnabel ist langjähriger Software-Architekt, -Trainer und -Berater. Sein Schwerpunkt ist der Webstack mit modernen SPA-Frameworks im Frontend und .NET im Backend.\n\nAls Geschäftsführer der BinaryGears GmbH unterstützt er Kunden bei der Konzeption und Umsetzung komplexer Geschäftsanwendungen. Als Sprecher und Trainer ist er im gesamten deutschsprachigen Raum mit einem Schulungsprogramm zu Clean-Code (für Web und für .NET) verfügbar.\n\nMehr über Stefan Dirschnabel erfahren Sie unter www.binarygears.de"},{"id":10000020,"name":"Nico Orschel","photoUrl":"10000020.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/20","social":{},"bio":"Nico Orschel ist Principal Consultant, Autor und Referent im Umfeld von Microsoft ALM bei der AIT GmbH & Co. KG in Stuttgart und wurde von Microsoft als Most Valuable Professional (MVP) für Visual Studio & Development Technologies ausgezeichnet. Er hilft Unternehmen, auf Basis von Microsoft Visual Studio Team Foundation Server effizienter Software zu entwickeln und zu testen und so ein höheres Qualitätsniveau bei kürzeren Releasezyklen zu erreichen. Seine Schwerpunkte sind u. a. Testmanagement und Testautomatisierung auf Basis der Visual-Studio-Plattform."},{"id":10000090,"name":"Thomas Rümmler","photoUrl":"10000090.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/90","social":{},"bio":"Thomas Rümmler arbeitet als Managing Consultant und Projektleiter bei AIT und ist von Microsoft als Most Valuable Professional (MVP) für Visual Studio & Development Technologies ausgezeichnet worden. Sein Arbeitsschwerpunkt liegt auf Application Lifecycle Management und DevOps. Thomas hilft Unternehmen ihren Entwicklungsprozess ganzheitlich zu verbessern. Seine Erfahrung gibt er als Autor des TFS-Blogs und Sprecher im Microsoft DevOps Umfeld weiter."},{"id":10000022,"name":"Holger Schwichtenberg","photoUrl":"10000022.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/22","social":{},"bio":"Dr. Holger Schwichtenberg ist Leiter des .NET-Expertennetzwerks www.IT-Visions.de, das zahlreiche Unternehmen in Europa durch Beratung, Schulung, Coaching und Support. Zudem ist er CTO bei der 5minds IT-Solutions Gmbh & Co KG, die Softwareentwicklungsprojekte durchführt.\n\nHolger Schwichtenberg arbeitet als Softwarearchitekt und Berater für .NET mit dem Schwerpunkt auf Webanwendungen, verteilten Systemen und Datenbankzugriffen. Durch seine Auftritte auf nationalen und internationalen Fachkonferenzen sowie zahlreiche Fachbücher für O'Reilly, Addison-Wesley, Microsoft Press und den Hanser-Verlag gehört er zu den bekanntesten .NET-Experten in Deutschland. Darüber hinaus ist er ständiger Mitarbeiter der Fachzeitschriften iX, windows developer und dotnetpro sowie bei heise.de.\n\nVon Microsoft ist er für sein .NET-Fachwissen seit nunmehr 14 Jahren ausgezeichnet als Microsoft Most Valuable Professional (MVP) für .NET/Visual Studio. Sein Weblog finden Sie unter www.dotnet-doktor.de. Bei Twitter folgen Sie ihm unter @dotnetdoktor."},{"id":10000086,"name":"Christian Liebel","photoUrl":"10000086.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/86","social":{},"bio":"Christian Liebel ist Softwareentwickler bei der Thinktecture AG in Karlsruhe. Dort entwickelt er moderne Cross-Plattform-Apps auf Basis von Angular, Cordova und .NET. Christian ist mit dem Web groß geworden und hat sein Handwerk mit Microsoft-Technologien gelernt. Er schreibt regelmäßig für die dotnetpro und ist begeistert von den neuen Möglichkeiten der Anwendungsentwicklung, die sich mit HTML5 und JavaScript erschließen. Auf Twitter erreichen Sie ihn unter @chris_liebel."},{"id":10000008,"name":"Jürgen Gutsch","photoUrl":"10000008.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/8","social":{},"bio":"Jürgen Gutsch ist Softwareentwickler, Berater und Trainer bei der YooApplications AG in Basel. Neben Familie und Beruf leitet Jürgen die INETA Germany und die .NET Usergroup Basel und betreibt ein Blog zum Thema \"ASP.NET und mehr...\" auf http://asp.net-hacker.rocks. Jürgen ist MVP für Visual Studio and Development Technologies."},{"id":10000021,"name":"Tobias Richling","photoUrl":"10000021.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/21","social":{},"bio":"Tobias Richling lebt im schönen Münsterland und arbeitet als Webentwickler bei der apetito AG. Schon früh hat er sich für die Softwareentwicklung interessiert und diese Leidenschaft nach einem Studium der Wirtschaftsinformatik in Münster zu seinem Beruf gemacht. Neben seiner Begeisterung für Technologie, insbesondere rund um den Microsoft-Stack, interessiert er sich für die Optimierung der täglichen Prozesse und Arbeitsabläufe.\nIn seiner Freizeit schreibt er Fachartikel und Bücher, spricht auf Konferenzen oder OpenSpaces. Wenn dann noch Zeit bleibt, braut er sein eigenes Bier."},{"id":10000044,"name":"Kostja Klein","photoUrl":"10000044.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/44","social":{},"bio":"Constantin arbeitet bei der Freudenberg IT GmbH & Co. KG. Dort beschäftigt er sich mit der Entwicklung von Lösungen auf Basis der Microsoft Produkte und Technologie Plattformen. Sein besonderes Interesse gilt dabei der Gewinnung, Verarbeitung und Nutzung von Daten und Informationen.\n\nEr ist MCSD, MCITP Database Developer und MCPD Web + Enterprise Application Developer. Seit 2010 wurde er jährlich von Microsoft zum Most Valuable Professional (MVP) für die Microsoft Data Platform ernannt.\n\nEr engagiert sich zusätzlich im Vorstand des Just Community e.V. und des PASS Deutschland e.V.. Er leitet außerdem die .NET User Group Frankfurt."},{"id":10000085,"name":"Jörg Krause","photoUrl":"10000085.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/85","social":{},"bio":"Jörg Krause, Jahrgang 1964, arbeitet als Fachautor, Trainer, Consultant und Softwareentwickler aus Leidenschaft. Schwerpunktthemen sind die Programmierung von Webapplikationen (Frontend mit Angular, React, TypeScript), Datenbanken und Cloud-Lösungen (AWS und Azure). Zu vielen Themen hat er Bücher verfasst, darunter einige Bestseller (Apress, Hanser, texxtoor), und bietet individuelle Workshops und Trainings auf hohem Niveau an.\n\nMehr Informationen unter www.joergkrause.de."},{"id":10000036,"name":"Gregor Biswanger","photoUrl":"10000036.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/36","social":{},"bio":"Gregor Biswanger (Microsoft MVP, Intel Black Belt & Intel Software Innovator) ist freier Dozent, Berater, Trainer, Autor und Sprecher. Er berät große und mittelständische Unternehmen, Organisationen und Agenturen rund um die Themen zur Softwarearchitektur, Web- und Cross-Platform-Entwicklung mit JavaScript. Außerdem schreibt er online als freier Autor für heise-developer und bringt für Fachmagazine auch gerne Artikel aufs Blatt. Er ist international als Sprecher auf zahlreichen Konferenzen und Communities unterwegs. Sie erreichen ihn unter www.cross-platform-blog.de"},{"id":10000092,"name":"David Tielke","photoUrl":"10000092.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/92","social":{},"bio":"David Tielke ist seit über 10 Jahren freiberuflicher Berater, Coach und Trainer auf dem Microsoft-Technologiestack und dabei zertifizierter Experte für die Themen Architektur und Softwarequalität. Er berät und schult seine Kunden europaweit und ist als Sprecher auf zahlreichen Konferenzen wie der Developer Week oder .NET Developer Conference sowie als Fachautor unterwegs. Als Trainer ist er auch für developer-media.de tätig."},{"id":10000023,"name":"Manfred Steyer","photoUrl":"10000023.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/23","social":{},"bio":"Trainer und Berater mit Fokus auf Angular, unterstützt Firmen im gesamten deutschen Sprachraum, Google Developer Expert (GDE) und Microsoft MVP, schreibt für O'Reilly, Heise und das Java-Magazin, spricht regelmäßig auf Konferenzen."},{"id":10000089,"name":"Adam Ralph","photoUrl":"10000089.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/89","social":{},"bio":"Adam is a distributed systems enthusiast and digital nomad working for Particular Software, the makers of NServiceBus. He likes to speak at conferences, maintain open source projects, and fix white space rule violations. He is a practiced tea drinker and snowboarder and has been spotted coding in launderettes throughout Western Europe."},{"id":10000017,"name":"Neno Loje","photoUrl":"10000017.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/17","social":{},"bio":"Neno Loje unterstützt als unabhängiger Berater und Professional Scrum Trainer große wie kleine Unternehmen und Teams dabei agiler zu werden, das Risiko zu minimieren, mehr zu automatisieren und mit pragmatischen Lösungen den Alltag aufzuwerten. Seine Schwerpunkte sind dabei MIcrosofts Team Foundation Server/Visual Studio Team Services, Scrum und DevOps."},{"id":10000047,"name":"Gad J. Meir","photoUrl":"10000047.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/47","social":{},"bio":"Gad has been working in the computer industry since 1975 in various positions ranging from design and building computer hardware via IT help desk, IT operations and every role in the software development process. Gad’s extensive field experience gives him a unique perspective that assist him in troubleshooting complex software and hardware problems, especially in production, enterprise and end user environments. Finding the specific bug is just the beginning. Determining how the bug managed to pass the process (design, codding, testing etc.) without being discovered is the real root cause of the failure and that’s Gad’s main goal in every customer engagement.\nSince the best economic and cost effective way to fix a bug is by eliminating it as early as possible, Gad uses his decades of experience to help customers on areas like: architecture, technology, development process, secure code practices, dev-ops integration based design and about how to prepare in advance for the unavoidable application and system failures.\nGad is an active technical community contributor and work at IDAG Ltd as R&D Manager."},{"id":10000091,"name":"Stefan Schukat","photoUrl":"10000091.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/91","social":{},"bio":"Stefan Schukat ist leitender Software Architekt bei der dSPACE GmbH, welches seit 30 Jahren Software und Hardware für die Steuergeräteentwicklung entwickelt. Bei der DotNet User Group Paderborn ist er stellvertretender Leiter.\n\nStefan Schukat entwickelt seit fast 30 Jahren Software in unterschiedlichen Sprachen und Bereichen. In den letzten 20 Jahren lag der Schwerpunkt bei C++/C#/Python und insbesondere der Interoperabilität zwischen verschieden Sprachen. Primär war dieses auf Windows Systemen Microsoft COM, wo er zu der Python COM Anbindung beigetragen hat. Mit dem Umstieg auf .NET basierte Software ist der Umweg über COM der direkten Python.NET Anbindung gewichen. Zu diesen Themen hat er innerhalb der dSPACE GmbH Trainings durchgeführt und sein Wissen in der Paderborner DotNet User Group weitergegeben.\n\nEr geht gerne schwierigen Problemen und hat als Interessenschwerpunkt offline und remote Analyse von Fehlern auf Produktionssystemen. Dazu gehört die Dumpfile Analyse mit den Debugging Tools für Windows."},{"id":10000080,"name":"Daniel Adolphs","photoUrl":"10000080.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/80","social":{},"bio":"Daniel Adolphs ist technischer Berater und Entwickler bei der novaCapta Software & Consulting GmbH. Ursprünglich hat er als klassischer Frontend-Entwickler mit Fokus auf JavaScript angefangen, beschäftigt sich mittlerweile aber vor allem mit den Möglichkeiten von C# bzw. Xamarin. Als Unity-User sind außerdem technische Spielereien wie die HoloLens und ihr produktiver Einsatz im Unternehmen besonders spannend für ihn."},{"id":10000056,"name":"Maarten Balliauw","photoUrl":"10000056.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/56","social":{},"bio":"Maarten Balliauw loves building web and cloud apps. His main interests are in ASP.NET MVC, C#, Microsoft Azure, PHP and application performance. He co-founded MyGet and is Developer Advocate at JetBrains. He’s an ASP Insider and MVP for Microsoft Azure. Maarten is a frequent speaker at various national and international events, organizes Azure User Group events and is a track owner for Techorama. In his free time, he likes brewing his own beer. Maarten’s blog can be found at blog.maartenballiauw.be"},{"id":10000004,"name":"Stefan Bamberg","photoUrl":"10000004.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/4","social":{},"bio":"Nach seinem Informatikstudium am Karlsruher Institut für Technologie (KIT) arbeitete er zuerst im Entwicklungsbereich, wechselte danach in das Projekt- und Produktmanagement eines Softwarehauses in Karlsruhe und leitete dort schließlich Vertrieb und Key Account Management im Umfeld großer ITK-Unternehmen. Seit Beginn 2012 ist er als Senior Key Account & Partner Manager bei Wibu-Systems tätig und leitet dort den Bereich Key Account Management."},{"id":10000083,"name":"Sia Ghassemi","photoUrl":"10000083.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/83","social":{},"bio":"Siavash Ghassemi ist Softwarearchitekt und -entwickler. Er ist ein MVP für Microsoft Azure und ein Experte für Xamarin. Seit drei Jahren ist er außerdem als Co-Organisator der .NET User Group Hamburg zusammen mit 3 weiteren Freunden aus Hamburg tätig und als Sprecher und Workshopleiter in ganz Deutschland und auf verschiedenen Community-Konferenzen unterwegs. Seit über einem Jahr lebt und arbeitet er nun in Vancouver, Kanada und ist auch in der dortigen Community aktiv. Seine Folien und Codebeispiele sind alle auf GitHub hinterlegt."},{"id":10000011,"name":"Thorsten Kansy","photoUrl":"10000011.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/11","social":{},"bio":"Mit Herz und Seele und gefühlt seit einer Ewigkeit (aka 25+ Jahre) Entwickler, Software Architekt und Mentor. Full Stack Developer meets Microsoft SQL Server!"},{"id":10000063,"name":"Marian Grzesik","photoUrl":"10000063.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/63","social":{},"bio":"Bild\n\tMarian Grzesik\ngrzesik [at] software2business.de\n\nMarian Grzesik ist der Gründer von Software2Business GmbH. Er arbeitet seit 1995 als Software-Entwickler und Software-Architekt.\n\nSein Schwerpunkt liegt aktuell in der Entwicklung von mobilen Applikationen für iOS, Android und Windows. Er ist ein Zertifizierter Xamarin Entwickler und die Firma Software2Business GmbH ist ein Zertifizierter Consulting Partner von Xamarin.\n\nWeitere Schwerpunkte liegen in der .NET/C# Desktop-Entwicklung, ASP.NET, Azure Cloud und Hardwarenahe-Softwareentwicklung.\n\nEr ist als MCPD Enterprise Developer, MCPD Web Applications, MCPD Windows Applications und Xamarin Certified Developer zertifiziert."},{"id":10000087,"name":"Björn Pasch","photoUrl":"10000087.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/87","social":{},"bio":"Studium der Wirtschaftsinformatik. 15 Jahre Erfahrung als Softwareentwickler und Architekt in der Finanz- und Telekommunikationsbranche. Verantwortlich für umfangreiche Modernisierungsprojekte. Seit 4 Jahren für Zurich als IT-/Enterprise Architect tätig."},{"id":10000088,"name":"Frank Simon","photoUrl":"10000088.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/88","social":{},"bio":"Studium der Informatik mit anschließender Promotion, anschließend 16 Jahre IT-Dienstleister mit Fokus auf Innovation und Business Development. Seit 1 Jahr in der Zurich verantwortlich für die IT-Security. Darüber hinaus Mitglied des German Testing Boards (GTB) und dort verantwortlich für Business Development und Security."},{"id":10000095,"name":"Anna Zietlow","photoUrl":"10000095.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/95","social":{},"bio":"Anna Zietlow is a software developer at Boeing Innovation Labs in Vancouver, Canada where she works with analytics teams to incubate new software solutions for the aviation industry. After focusing on web development for the first few years of her career, she’s now extremely excited to be shifting to analytics and big data solutions. In her spare time, Anna enjoys wandering around British Columbia’s mountains on foot or on snowboard. She also organizes Vancouver’s Azure user group. Anna is passionate about tech, data, and empowering all others to enjoy the same."},{"id":10000094,"name":"Don Wibier","photoUrl":"10000094.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/94","social":{},"bio":"At the age of 15, Don built a ticketing and reservation system in Clipper for his father's cinema. He and his friend were compensated with a brand new 386 PC!\n\nAfter studying electronics and IT, Don embarked on a career in development, working with some of the biggest companies in The Netherlands and developing multi-tier enterprise solutions. Seeing an exciting future with the World Wide Web, he started building Delphi based ISAPI dll’s in combination with application servers and databases. Working with an internet startup, he architected one of the fastest online services for finding and booking airfares.\n\nBefore joining DevExpress as Technical Evangelist, Don single-handedly built one of the most user-friendly Content Management Systems available, which is currently powering hundreds of web and mobile implementations across the world.\n\nAs Evangelist at DevExpress, Don is eager to share his knowledge and experience with you!"},{"id":10000014,"name":"André Krämer","photoUrl":"10000014.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/14","social":{},"bio":"André Krämer ist selbständiger Software Architekt, Entwickler, Trainer und Berater und Partner im www.it-visions.de Expertennetzwerk. Seine Schwerpunkte liegen in den Bereichen Webentwicklung mit ASP.NET und JavaScript, App Entwicklung mit Xamarin und Cordova, Application Life Cycle Management mit dem Microsoft Team Foundation Server sowie der Analyse von Memory Leaks und Performanceproblemen. Er ist regelmäßiger Autor für video2brain / LinkedIn Learning, wo er bereits mehr als 20 Video Trainings veröffentlicht hat. Er ist einer der Leiter und Gründer der .NET User Group Koblenz. Für sein Community Engangement wurde er als TX Text Control MVP, Infragistics MVP und Microsoft MVP ausgezeichnet."},{"id":10000076,"name":"Kristof Unterweger","photoUrl":"10000076.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/76","social":{},"bio":"Sauber strukturierte Softwaresysteme sind ein Ziel, das mich seit zwei Jahrzehnten umtreibt. Seit zehn Jahren ist daher Softwareentwicklung mein Beruf. Während meiner Promotion an der TU München habe ich in mehreren internationalen Projekten Architekturen für Hochleistungssystemen entwickelt. Die Erstellung effizienter Programme auf Basis von C++ verfolgt mich bis heute, ebenso wie der Wunsch nach einer wissenschaftlichen Herangehensweise an Probleme.\n\nInzwischen hat es mich nach Stuttgart in den Automotivebereich und damit (wieder) in die Welt von .Net verschlagen. Bei der Vector Informatik GmbH treibe ich die Entwicklung und Integration der Anwendungssoftware für die Parametrisierung von Steuergeräten voran. Hier liegt der Fokus nicht ganz so auf maximaler Laufzeiteffizienz, dafür ist die Komplexität der Anwendungslandschaft um ein Vielfaches höher. Doch hier wie dort hilft am Ende nur eins: sauber strukturierte Softwaresysteme."},{"id":10000084,"name":"Tobias Hoppenthaler","photoUrl":"10000084.jpg","imageUrl":"https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/84","social":{},"bio":"Xamarin, .net, Java, Android, OSGi, Eclipse RCP, martial arts, love travelling and languages. Founder of Xamarin User Group Cologne, Certified Xamurai."}],"tracks":[{"id":20000023,"title":"Track A","shortTitle":"A","color":"#3c5e95"},{"id":20000024,"title":"Track B","shortTitle":"B","color":"#7F3F58"},{"id":20000025,"title":"Track C","shortTitle":"C","color":"#885511"},{"id":20000026,"title":"Track D","shortTitle":"D","color":"#557766"},{"id":20000027,"title":"Track E","shortTitle":"E","color":"#992244"},{"id":20000028,"title":"Track F","shortTitle":"F","color":"#118855"},{"id":20000029,"title":"Track G","shortTitle":"G","color":"#3D434C"}],"sessions":[{"id":30000342,"trackId":20000023,"locationId":21000023,"title":"Begrüßung","abstract":"Begrüßung","begin":"2018-05-04T08:00:00+01:00","end":"2018-05-04T08:15:00+01:00"},{"id":30000304,"trackId":20000025,"locationId":21000025,"title":"Am Tag als Bob der Baumeister starb","abstract":"Stein um Stein bauen wir Software, ganz wie es sich der Software Architekt überlegt hat. Das klappt schon seit Jahren perfekt und niemand käme auf die Idee etwas daran zu ändern. Außer vielleicht eine Quadrillion Softwareentwickler, die nicht das Gefühl haben, dass man eine Applikation einfach, mir nichts, dir nichts, zusammenstecken kann. Die Metapher der Baumeister in der Softwareentwicklung ist schlichtweg falsch. Es Zeit für eine Retrospektive. Schauen wir uns die letzten 50 Jahre Softwareentwicklung an und evaluieren, Wer, Wie und Was wir sind. Das Ergebnis ist überraschend.","begin":"2018-05-04T08:30:00+01:00","end":"2018-05-04T09:30:00+01:00"},{"id":30000296,"trackId":20000023,"locationId":21000023,"title":"Web Assembly - eine Revolution des Webs","abstract":"Ein Web ohne JavaScript ist heute undenkbar. Doch die Skriptsprache bekommt Konkurrenz: Von Web Assembly. Web Assembly ist ein Low-Level Bytecode Format für den Browser. Dabei führt es unter Berücksichtigung der Hardwareressourcen zu einer schnelleren Ladezeit und Ausführung. Aktuell können C oder C++ in Web Assembly Bytecode kompiliert werden und weitere problemorientierte Sprachen wie C# oder Java sind bereits angedacht. Werden wir also in Zukunft auf JavaScript verzichten können und nur noch Assembler im Web machen oder was hat es hiermit auf sich?\n\nAuf Basis eines Projektes aus der Praxis erfahren Sie, wie man bestehenden Anwendungen im Web lauffähig bekommt, welche Vorteile und Nachteile das neue Format mit sich bringt und für welche Anwendungsfälle es besonders geeignet ist. Kann in Zukunft auf JavaScript verzichtet werden oder deckt Web Assembly nur eine Nische ab?","begin":"2018-05-04T08:30:00+01:00","end":"2018-05-04T09:30:00+01:00"},{"id":30000332,"trackId":20000024,"locationId":21000024,"title":"Angriff der Klonkrieger - Automated Disposable Infrastructure","abstract":"Deploying to production should be boring. Automating your build and deployment process reduces the potential excitement involved in human mistakes as you move from environment to environment.\nHowever, what about the machines you deploy to? Is their setup and install automated? Are you sure that the versions and setting in your test environment match production?\nIn this session, Robert Wagner, lead developer at Octopus Deploy, will cover how to automate your environment setup using Packer and Terraform. allowing you to provision a new Linux environment with your application dependencies on every deployment. Then we will automatically provision this immutable infrastructure environment on deployment of a .NET Core application, and switch it live.","begin":"2018-05-04T14:35:00+01:00","end":"2018-05-04T15:35:00+01:00"},{"id":30000301,"trackId":20000025,"locationId":21000025,"title":"Generic <S>","abstract":"Generics sind nichts Neues und auch kein neuer Trend. Dennoch sieht man im Alltag immer wieder Code, der auf Generics konsequent verzichtet. C# Generics unterscheiden sich grundlegend von Templates, die Sie aus C kennen und Generics aus Java. Generics können sowohl zur Laufzeit, als auch zur Compilezeit enorme Vorteile bieten. Um sie sinnvoll einzusetzen, muss aber auch die Codebasis passend gestaltet sein. In dieser Session möchte ich Ihr Auge bezüglich der Trennung von Daten, Algorithmen unter dem Fokus Generics schärfen. Zudem werden Sie verstehen, wie die CLR mit Generics umgeht.","begin":"2018-05-04T14:35:00+01:00","end":"2018-05-04T15:35:00+01:00"},{"id":30000330,"trackId":20000023,"locationId":21000023,"title":"WebAssembly Revolution am Beispiel von C# und Blazor","abstract":"JavaScript hatte bisher ein Monopol bei der clientseitigen Webentwicklung. Bei den Frameworks haben wir zwar die Wahl zwischen Angular, React, Vue & Co, am Ende des Tages läuft aber alles auf JavaScript hinaus. Damit ist jetzt Schluss. WebAssembly hat das Zeug, Entwicklung im Browser komplett auf den Kopf zu stellen. In dieser Session möchte Rainer das am Beispiel von Blazor zeigen. Blazor ist ein (experimentelles) Open Source Single Page App (SPA) Framework von Microsoft, das C# und Razor nach WebAssembly und damit in den Browser bringt. Viele Live-Demos, wenige Slides und viele Neuigkeiten, die hoffentlich begeistern und zum Nachdenken anregen.","begin":"2018-05-04T10:00:00+01:00","end":"2018-05-04T11:00:00+01:00"},{"id":30000302,"trackId":20000023,"locationId":21000023,"title":"ASYNC HARDCORE","abstract":"Ganz sicher haben Sie die folgenden Begriffe schon gehört: Threads, Tasks (Task.Factory vs. Task.Run()), TPL, Async / Await, Thread-Pool, Scheduler, usw. Ganz sicher wissen Sie auch worin sich diese Begriffe unterscheiden. Natürlich wissen Sie, dass es Unterschiede zwischen Foreground und Background-Threads gibt. Sie wissen wie async / await funktioniert. Sie wissen was async / await für ihre Software-Architektur bedeutet und was IO-bound bzw. CPU-bound Operations sind und warum bei einem Task eben nicht immer ein Thread auf der CPU ausgeführt wird. Sie verstehen ganz genau wann es bei async / await zu Deadlocks kommen kann, wie man async / await innerhalb von Bibliotheken implementiert und selbstverständlich kennen Sie den Einsatz von ConfigureAwait(…) aus dem Schlaf. Richtig verstanden haben Sie auch die Probleme die im Zusammenhang zwischen Events und der nebenläufigen Programmierung auftreten können..\n\n...oder etwa nicht?\n\nEin detailliertes Verständnis der oben genannten Thematiken wird für die moderne Softwareentwicklung immer wichtiger. Neue Bibliotheken wie wir sie im Azure Umfeld vorfinden arbeiten nur noch asynchron. In diesem Vortrag werde ich alle oben genannten Themen ansprechen und vor allem: verständlich erklären. Wir werden die asynchrone Programmierung endlich vollständig verstehen. Vorbeischauen und anschnallen.","begin":"2018-05-04T11:15:00+01:00","end":"2018-05-04T12:15:00+01:00"},{"id":30000325,"trackId":20000023,"locationId":21000023,"title":"Continuous Delivery in der Praxis","abstract":"Stündliche Releases zu ermöglichen ist das Ziel einer Continuous Delivery (CD) Pipeline. Dafür ist neben einer neuen Arbeitskultur auch die Automatisierung der kompletten Pipeline erforderlich. Was mit Hello World Beispielen einfach aussieht, birgt in der Praxis einige Tücken. Berechtigungen, Verfügbarkeit von Build- und Testservern, das Signieren mittels Hardware-Token sowie besonders schützenswerte Zugangsdaten sind Themen, die über das reine Build hinausgehen. Doch genau diese Praxisthemen sind zu lösen, bevor man von einer vollautomatisierten Delivery Pipeline sprechen kann. Wir zeigen an einem Praxisbeispiel, wie man diese Herausforderungen lösen kann. Dabei setzen wir technologisch EV Code Signing mit USB Token, .NET, VS Tools for Office und VSTS ein. Der Vortrag zeigt Konfigurationen, Schritte und PowerShell-Scripts, mit denen wir die Herausforderungen einer vollautomatisierten Pipeline gelöst haben und damit CI/CD auf verschiedenen Release Trains ermöglichen.","begin":"2018-05-04T14:35:00+01:00","end":"2018-05-04T15:35:00+01:00"},{"id":30000303,"trackId":20000023,"locationId":21000023,"title":"SOLID für .NET und JavaScript","abstract":"SOLID, das sind fünf Prinzipien zum Entwurf und der Entwicklung wartbarer Software-Systeme. Das Wissen um und über diese Prinzipien sollte zur Basis jedes Software-Entwicklers gehören! Die durch Uncle Bob bekannt gewordenen Prinzipien werden praktisch immer anhand stark typisierter Sprachen erklärt. In der immer stärkeren werdenden Webentwicklung spielt jedoch Javascript als dynamisch typisierte Sprache eine entscheidende Rolle. Im Web-Frontend kommen auch .NET Entwickler nicht mehr an JS vorbei. Lassen sich die SOLID Prinzipien, z.B. das Interface Segregation Principle überhaupt auf JS anwenden wenn es doch gar keine Interfaces gibt? Auch in der Literatur ist sind die Zusammenhänge zwischen JS und SOLID praktisch nicht existent.\n\nIn diesem Vortrag werden die SOLID Prinzipien und ihre Umsetzungsmöglichkeiten an einem ausführlichen Beispiel in C#.NET sowie zusätzlich in Javascript detailiert erklärt. Ziel des Vortrages ist es, dass Sie direkt am nächsten Tag von dem neu erworbenen Wissen profitieren und SOLID einfach erkennen + fixen können. Deswegen zeige ich Ihnen gegen Ende des Vortrags wie Sie anhand einfacher Codesmells die SOLID Prinzip erkennen und beheben können.","begin":"2018-05-04T16:00:00+01:00","end":"2018-05-04T17:00:00+01:00"},{"id":30000327,"trackId":20000023,"locationId":21000023,"title":"Von C# 7 zu C# 8","abstract":"C# wird mittlerweile wie viele andere Microsoft-Produkt in kleineren Schritten weiterentwickelt. In diesem Kurzvortrag stellt Dr. Holger Schwichtenberg die Neuerungen vor, die es seit C# 7.0 gibt, z.B. Nullable Reference Types, Async Main, Tuple Table Inference, Ref Readonly, Private Protected, Non-trailing Named Arguments, Ranges und Default Interface Methods. Sehen Sie auch, wie es nun möglich ist, die Sprachversion unabhängig von der Visual Studio- und .NET-Version zu wählen.","begin":"2018-05-04T13:20:00+01:00","end":"2018-05-04T14:20:00+01:00"},{"id":30000316,"trackId":20000025,"locationId":21000025,"title":"Progressive Web Apps mit Angular: das Web wird nativ(er)","abstract":"Progressive Web Apps (PWA) sind das heiße und topaktuelle Thema in der Webentwicklung. Hinter dem Begriff verbergen sich eine ganze Reihe von Webtechnologien und Vorgehensweisen. Das Ziel: Dem Anwender einer Webanwendung dieselbe User Experience zu bieten, die er von nativen Anwendungen kennt. Das schließt Offlinefähigkeit, Datensynchronisation und Pushbenachrichtigungen mit ein. Gefällt dem Benutzer eine Webanwendung, wird sie mit einem Fingertipp zur auf dem Gerät installierten App – inklusive Icon auf dem Home-Screen. Christian Liebel von Thinktecture zeigt Ihnen die verschiedenen PWA-Features anhand einer Beispielanwendung in Angular – dem Framework zur Implementierung von Single-Page Applications (SPA) von Google, das sich auch zur Programmierung von PWAs hervorragend eignet.","begin":"2018-05-04T10:00:00+01:00","end":"2018-05-04T11:00:00+01:00"},{"id":30000308,"trackId":20000025,"locationId":21000025,"title":"Customizing ASP.NET Core","abstract":"ASP.NET Core bietet viele Möglichkeiten, um auf individuelle Anforderungen angepasst zu werden. So gibt es einige Stellschrauben, die gedreht werden können um Module und Komponenten beliebig zu modifizieren oder gar zu ersetzen. Das Logging passt euch nicht? Ihr nutzt andere Konfigurationen? Ihr nutzt eine bessere Dependency Injection Library? Kein Problem, wir zeigen euch die wichtigsten Stellschrauben.","begin":"2018-05-04T11:15:00+01:00","end":"2018-05-04T12:15:00+01:00"},{"id":30000323,"trackId":20000025,"locationId":21000025,"title":"Wie RESTful ist dein API?","abstract":"Fast jedes API möchte sich heutzutage REST-API nennen dürfen. Dabei gibt es für die Erteilung dieser Plakette klare Regeln. Anhand des Richardson Maturity Model kann man den Grad der Zielerreichung messen. In der Session wird ein Service entwickelt, der das maximale RMM-Level erreicht. Auf dem Weg dahin kann man gut nochmal revue passieren lassen, was man so alles über das HTTP-Protokoll weiß und vielleicht sogar noch etwas dazu lernen. Mit einer fertigen Lösung in der Hand kann man dann über das Für und Wider der einzelnen Anfroderungen diskutieren.","begin":"2018-05-04T13:20:00+01:00","end":"2018-05-04T14:20:00+01:00"},{"id":30000312,"trackId":20000025,"locationId":21000025,"title":"Intelligenz als Basis für Anwendungen der nächsten Generation","abstract":"Alle Welt spricht von AI oder künstlicher Intelligenz, doch warum ist dieses Thema auch für Entwickler interessant? Was genau macht denn eigentlich eine intelligente Anwendung aus und wie helfen Angebote der Microsoft AI Platform, wie z.B. Cognitive Services, dabei die eigene Applikation mit Intelligenz anzureichern? In dieser Session gibt es einen Rundflug über verschiedene Angebote und Möglichkeiten die eigene Anwendung intelligenter zu machen, aber auch Einblicke, wie schnell und einfach ein intelligenter Bot entwickelt werden kann.","begin":"2018-05-04T16:00:00+01:00","end":"2018-05-04T17:00:00+01:00"},{"id":30000315,"trackId":20000028,"locationId":21000028,"title":"Dock mal wieder!","abstract":"Docker gibt's ja schon eine Weile. Aus den ganzen Ankündigungen wurde Ernst - also Praxis. Die Session zeigt, wie man auf Linux und auf Windows Server Docker installiert, einrichtet und ein Projekt lokal deployed. Benutzt wird in beiden Fällen .NET Core. Erklärt wird das Prinzip der Lösung Docker und dessen Vorteile, auch im Vergleich zu VMs. Die Bestandteile einer auf Microservices ausgerichteten Architektur werden gezeigt und die Prozedur im Live-Coding vorgeführt. Die Session eignet sich für Anfänger in Container-Technologien, die jedoch aktive Entwickler von Web-Applikationen sein sollten. Der Vortrag wird abgerundet durch Hosting-Tipps für Amazon AWS und Microsoft Azure, erklärt, was es mit Kubernetes auf sich hat und was demnächst so kommt.","begin":"2018-05-04T08:30:00+01:00","end":"2018-05-04T09:30:00+01:00"},{"id":30000313,"trackId":20000028,"locationId":21000028,"title":"SQL Server 2017 für Entwickler","abstract":"Seit Oktober 2017 ist der neue SQL Server da und hat etliche Neuerungen in allen Bereichen mit im Gepäck. Doch vieles davon begeistert zwar den DBA oder den BI-ler, aber sind denn auch spannende Features für den Entwickler dabei? Und falls ja, welche sind das? Ich habe mich auf die Suche begeben und möchte dieser Frage in meiner Session auf den Grund gehen.","begin":"2018-05-04T10:00:00+01:00","end":"2018-05-04T11:00:00+01:00"},{"id":30000299,"trackId":20000028,"locationId":21000028,"title":"Electron: Einstieg in die Entwicklung von Cross-Platform Desktop Software","abstract":"Bring Your Own Device wird für Unternehmen immer wichtiger. Die Software soll nicht nur auf dem Windows Computer, sondern ebenfalls auf dem Mac eingesetzt werden. Das funktioniert leider nicht mit dem .NET-Framework oder der Java Runtime. Die Lösung: Electron! Mit nur einem Code wird eine hoch performante Geschäftsanwendung für Windows, Mac und Linux entwickelt. Sie steigen mit den Grundlagen von Electron ein und werden dann mit den wichtigsten Tools und Vorgehensweisen vertraut gemacht. Mit diesen Infos steigen Sie rasch zum versierten Cross-Platform Entwickler auf.","begin":"2018-05-04T11:15:00+01:00","end":"2018-05-04T12:15:00+01:00"},{"id":30000331,"trackId":20000028,"locationId":21000028,"title":"Serviceorientierte Architekturen","abstract":"SOA ist von gestern, Microservices sind die Gegenwart. So oder so ähnlich lautet heute die weit verbreitete Meinung, wenn es um die Wahl einer richtigen Architektur geht – zu veraltet und komplex sind die damit assoziierten Technologien wie SOAP oder WSDL. In dieser Session zeigt Architekturexperte David Tielke warum diese Aussage nicht wahr ist. Neben den grundlegenden Prinzipien von SOA, geht es vor allem darum, die Vorteile dieses Ansatzes in nahezu jeder Architektur nutzbar zu machen – egal ob für ein verteiltes System oder ein einzelnes System. Dabei zeigt David zahlreiche Beispiele aus seinem Berateralltag und den damit verbunden Kundenprojekten. Am Ende wird Ihre Meinung zu SOA garantiert eine andere sein.","begin":"2018-05-04T13:20:00+01:00","end":"2018-05-04T14:20:00+01:00"},{"id":30000328,"trackId":20000028,"locationId":21000028,"title":"Angular und Microservices – Wie passt das zusammen?","abstract":"Microservices sind derzeit ein beliebter Architekturstil. Single Page Applications (SPA) auch! Aber wie lassen sich diese beiden Architekturen kombinieren? Die Gute Nachricht: Es existieren hierfür gleich mehrere Ansätze und natürlich hat jeder seine ganz eigenen Vor- und Nachteile. Diese Session diskutiert anhand einer Angular-Anwendung diese Ansätze, die in der Praxis bereits erfolgreich umgesetzt wurden. Die damit einhergehenden Konsequenzen werden aufgezeigt und Möglichkeiten zum Kompensieren der vorherrschenden Nachteile präsentiert.","begin":"2018-05-04T14:35:00+01:00","end":"2018-05-04T15:35:00+01:00"},{"id":30000321,"trackId":20000028,"locationId":21000028,"title":"What is .NET Standard?","abstract":".NET Standard is one of many new technologies to emerge from the mass of open source .NET initiatives during the past year. Compared to what's come before, .NET Standard is not only a more effective way to use NuGet packages cross platform, it's also way simpler.\n\nIt has the potential to remove most, if not all, of the current confusion surrounding cross platform multi-targeting. So what is exactly is it and how does it work? How does it relate to .NET Core? Join Adam as he answers these questions and more, and takes a dive into some of the magic which makes .NET Standard work.","begin":"2018-05-04T16:00:00+01:00","end":"2018-05-04T17:00:00+01:00"},{"id":30000309,"trackId":20000026,"locationId":21000026,"title":"Was ist neu in ASP.NET Core 2.x?","abstract":"ASP.NET Core 2.0 ist seit letztem Sommer released, die Version 2.1 steht kurz bevor, aber was hat sich getan seit der Version 1.1? Kann man ASP.NET Core nun ohne bedenken und ohne Einschränkungen in echten Projekten nutzen? In diesem Vortrag zeigen wir Ihnen die wichtigsten neuen Features der aktuellen Version 2.0 und interessante Neuerungen der kommenden Version 2.1.","begin":"2018-05-04T08:30:00+01:00","end":"2018-05-04T09:30:00+01:00"},{"id":30000317,"trackId":20000026,"locationId":21000026,"title":"Die neue Art zu Arbeiten bei Microsoft: Releases alle 3 Wochen statt 2 Jahre","abstract":"Vergleicht man das Microsoft von heute mit dem Microsoft von vor ein paar Jahren, mag man manchmal kaum glauben, dass es sich um die gleiche Firma handelt: eine ganz neue Offenheit im Hinblick auf Technologien und Prozesse. Ein ganz neues Selbstverständnis und Mitarbeiter, die das neue Mindset verkörpern – was in letzter Konsequenz auch zu Produkten führt, die die neue Vision widerspiegeln. In diesem Workshop geht es am Beispiel von Microsoft um die Reise zu mehr Agilität, um Themen wie Open Source, Git und DevOps, und wie diese Themen Einzug in die Produktentwicklung bei Microsoft und den Alltag von Entwicklern finden. Besuchen Sie diesen Vortrag und holen Sie sich wertvolle Ideen und Inspiration für Ihren Entwicklungsprozess!","begin":"2018-05-04T10:00:00+01:00","end":"2018-05-04T11:00:00+01:00"},{"id":30000318,"trackId":20000026,"locationId":21000026,"title":"Debugging bugs and performance issues in the field","abstract":"In the field and at customers' site most of the tools used in development are not available and can’t be installed. Microsoft give you many tools, some of them are built into the OS and the others can be used without installation. Those tools can be used in such environments to collect debugging and performance data without intervening with the IT operations. In this practical and demo-based talk, we will introduce and demo tools for the field like Debugging tools for windows, Dump analysis, Windows performance toolkit and many other tools and methods you can use to handle bugs and performance issues in customer's sites and in QA / test environments.","begin":"2018-05-04T11:15:00+01:00","end":"2018-05-04T12:15:00+01:00"},{"id":30000326,"trackId":20000026,"locationId":21000026,"title":"Einführung in Python.NET","abstract":"Python.NET als Bibliothek für C-Python bietet die Möglichkeit auf .NET-Objekte zuzugreifen und dabei die einfach zu lernende Sprache Python zu nutzen. Da Python mit dem Nutzen in der Big Data Analyse einen weiteren Schwung bekommt lohnt sich ein Blick aus der C# Entwicklerbrille auf Python. Entsprechend stellt dieser Vortrag die Möglichkeiten vor, die Python.NET einem Entwickler bietet verschiedene Sprachkonstrukte aus C# in Python zu überführen, um bekannte Bibliotheken aus C# weiter zu nutzen. Damit erschliesst sich dem Entwickler die einfache Welt einer Skriptsprache und deren Vorteilen. Mit IDEs die eine REPL (Read Eval Print Loop) und Intellisense unterstützen hat man schnell eine Skripting Unterstützung für seine C# Projekte und kann schnell etwas ausprobieren. Gleiches gilt für die Einbindung einer Skripting Lösung in ein .NET Programm, d.h., der Anwender kann relativ leicht mal eben etwas skripten. Umgekehrt kann ein Python-Entwickler die vollen Möglichkeiten der BCL nutzen statt sich dafür entsprechende Python Bibliotheken zu suchen. Vor den Möglichkeiten der Bibliothek wird noch ein Überblick über die Historie, Motivation und die Architektur der Bibliothek gegeben.","begin":"2018-05-04T13:20:00+01:00","end":"2018-05-04T14:20:00+01:00"},{"id":30000295,"trackId":20000026,"locationId":21000026,"title":"Wir holen Berlin nach Köln – Ein HoloLens-Hackathon","abstract":"Virtual-, Augmented- und Mixed Reality sind stetig wachsende Begriffe, die nicht nur Gamer-Herzen höherschlagen lassen. Mit stetig verbesserter Technologie und steigendem Marktanteil sind auch den Einsatzmöglichkeiten in industriellen Bereichen kaum Grenzen gesetzt.\n\nBei dieser immer rasanter fortschreitenden Entwicklung werden die Fragen immer größer: Wie kann ich möglichst schnell und effizient in diese Entwicklung einsteigen? Welche Technologien muss man sich aneignen und worauf sollte dabei geachtet werden? Wie so oft führen auch hier viele Wege nach Rom.\n\nInspiriert durch Anwendungsfälle in der Baubranche und unter Zuhilfenahme des Unity3D-Frameworks, haben wir im Rahmen eines internen Hackathons eine kleine MR-App für den Einsatz auf Microsofts HoloLens umgesetzt. In diesem Erfahrungsbericht gibt Daniel Adolphs einen Einblick in diese Variante der App-Entwicklung für HoloLens und damit verbundene Herausforderungen – mit anschließender interaktiver Demo!","begin":"2018-05-04T14:35:00+01:00","end":"2018-05-04T15:35:00+01:00"},{"id":30000297,"trackId":20000029,"locationId":21000029,"title":"Become a productive .NET developer with JetBrains Rider","abstract":"With .NET Core, an explosion of .NET IDE's happened! There's good old Visual Studio, but also VS Code and JetBrains Rider. In this talk, we'll dive into the latter. We'll explore navigation, automatic inspections and quick fixes, code generation, built-in tooling like version control integration and local history and look at the special scenario's the debugger has to offer, like conditional breakpoints and on-the-fly decompilation of third party libraries. Come to this session to learn about this new (and fast!) kid on the block and learn plenty of tips & tricks to enhance your development productivity.","begin":"2018-05-04T08:30:00+01:00","end":"2018-05-04T09:30:00+01:00"},{"id":30000298,"trackId":20000029,"locationId":21000029,"title":"Hab ich was vergessen? Ihre ultimative Checkliste für Schutz und Lizenzierung","abstract":"Will ich meine Software erfolgreich am Markt etablieren, dann muss ich auf der einen Seite dafür sorgen, dass niemand an mein in der Software enthaltenes Know-how herankommt, aber auf der anderen Seite auch Lizenzmodelle integrieren, mit denen ich attraktiv und damit wettbewerbsfähig bin. Möchte ich international unterwegs sein? Setze ich besser auf Dongles oder auf Softwarelizenzen? Werde ich früher oder später meine Software auch in die Cloud bringen? Wie baue ich Schutz und Lizenzierung in meine Software ein? Wieviel Zeit brauche ich dafür? Wie kommen die Kunden an Ihre Lizenzen? Fragen über Fragen, auf die man gerne eine Antwort hätte. Genau diese wird der Vortrag liefern. Holen Sie sich Ihre Checkliste für Schutz und Lizenzierung.","begin":"2018-05-04T10:00:00+01:00","end":"2018-05-04T11:00:00+01:00"},{"id":30000329,"trackId":20000029,"locationId":21000029,"title":"Querschnittsfunktionen in Angular gekonnt implementieren","abstract":"Die Umsetzung von Querschnittsfunktionen kann lästig und fehleranfällig sein, weil es sie immer und immer wieder zu Berücksichtigen gilt. Typische Beispiele sind Autorisierung, Warnmeldungen, Fehlerbehandlung oder Caching. In dieser Session erfahren Sie anhand einiger Beispiele, wie Sie solche Anforderungen in Ihren Angular-Projekten gekonnt realisieren können. Dazu kommen Konzepte wie Direktiven, Router Guards und Interceptoren zum Einsatz. Am Ende kennen Sie Ihre Optionen, um Querschnittsfunktionen global zu implementieren.","begin":"2018-05-04T11:15:00+01:00","end":"2018-05-04T12:15:00+01:00"},{"id":30000319,"trackId":20000029,"locationId":21000029,"title":"Windows Performance toolkit deep dive","abstract":"Windows performance toolkit is a free Microsoft collecting and analysis tool. This tool is currently the most advanced toolset available to diagnose complex performance issues. The collector tools can be used without installation and the analyzing tool is very easy to use (but not that easy to interpreted). The tools are useful to developers, Test and QA and IT operations. It can give deep insight into the real time behavior of the software during development and in production. This talk will deep dive on the tools and features included in the windows performance toolkit. Show and demo how to get the tool, use it without installation, collect data and interpret the results. We will demo several practical real live scenarios. Experience based tips and guideline will be shared and discussed.","begin":"2018-05-04T13:20:00+01:00","end":"2018-05-04T14:20:00+01:00"},{"id":30000322,"trackId":20000029,"locationId":21000029,"title":"Finding your service boundaries - a practical guide","abstract":"We know it's useful to split complex systems into logical services. We feel the benefits of modular deployment of microservices, and our cognitive load is eased when we only deal with one piece of code at a time. But how do we know where to draw the service boundaries? In complex business domains, it's often difficult to know where to start. And when you get your boundaries wrong, it's often only a matter of time before you hear yourself say \"it would be easier to re-write everything\".\n\nJoin Adam as he shares practical advice on how to discover the service boundaries hidden in your systems. We'll examine a sample business domain and discover the techniques we can apply to tease out the natural separation of concerns. We'll investigate some of the common pitfalls, including some of the crazy mistakes Adam has made during the last 20 years of developing complex systems.","begin":"2018-05-04T14:35:00+01:00","end":"2018-05-04T15:35:00+01:00"},{"id":30000300,"trackId":20000029,"locationId":21000029,"title":"Die GPU und .NET","abstract":"Liest man von Grafikkarten, dann meist im Zusammenhang von Computerspielen und Bitcoins. Aber nicht nur deswegen werden Grafikkarten immer wichtiger. Während die Leistungszuwächse einzelner Prozessoren nicht mehr so rasant voranschreiten, steigt die Anzahl der Shader-Module auf Grafikkarten unbeirrt weiter. Die Einstiegshürde und die Berührungsängste sind leider recht hoch. In dieser Session möchte ich Ihnen den Einstieg in die Grafikkartenentwicklung via C#.NET erleichtern. Dazu nutzen wir einen C#-Direct3D Wrapper namens SharpDX. Ich werde Ihnen die Konzepte der Grafikkartenentwicklung samt der Renderpipeline näher bringen, um Ihnen den Weg zur GPU zu ebnen.","begin":"2018-05-04T16:00:00+01:00","end":"2018-05-04T17:00:00+01:00"},{"id":30000345,"trackId":20000027,"locationId":21000027,"title":"Was sind eigentlich Azure Functions?","abstract":"Diese Session gibt einen Überblick über Azure Functions und erläutert die Grundlagen von \"Serverless Computing\". Sie zeigt anhand von Beispielen aus dem \"echten Leben\" wie man eigene Anwendungen auf funktionaler Ebene quasi \"grenzenlos\" und zu einem Bruchteil der Kosten on-demand skalieren kann. \"Serverless Computing\" ist zu recht eines der kommenden großen Themenfelder und wird den Bereich rund um \"verteiltes Rechnen\" ganz neu definieren.","begin":"2018-05-04T08:30:00+01:00","end":"2018-05-04T09:30:00+01:00"},{"id":30000324,"trackId":20000027,"locationId":21000027,"title":"Turn on the SWAG - mit der OpenAPI Specification 3.0","abstract":"Wer kümmert sich schon gern um die Dokumentation die APIs die er baut? Aber was wäre wenn entweder die Dokumentation sich automatisch erstellt und sogar automatisch eine Testoberfläche mitbringen würde? Oder wenn man aus der Dokumentation direkt ein API erstellen könnte? Das alles und noch viel mehr ermöglicht die OpenAPI Specification, a.k.a. Swagger. In der Session wird erklärt was Swagger ist und was es kann. Außerdem wird auf die Neuerungen in der neuen Version 3.0 der zugrunde liegenden Spezifikation eingegangen.","begin":"2018-05-04T10:00:00+01:00","end":"2018-05-04T11:00:00+01:00"},{"id":30000307,"trackId":20000027,"locationId":21000027,"title":"Xamarin.Forms Apps mit CQRS und EventSourcing","abstract":"Die Flux-Architektur ist mittlerweile dank Patterns wie Redux sehr bekannt und gemeinsam mit dem React-Framework ist es mittlerweile ein Quasi-Standard für WebApps. Oft werde ich gefragt, ob es nicht auch Sinn ergibt die Flux-Architektur für native Mobile Apps einzusetzen. Bei nährerer betrachtung stellt man schnell fest, dass es sich bei Redux um nichts anderes als eine kombination aus CQRS und einer CurrentState in sogenanten StateStores handelt. Es gibt mittlerweile Redux implementierungen für .NET und damit auch für Xamarin und Xamarin.Forms. Also stellte sich die Frage, ob es auch möglich ist eine implementierung mit CQRS und EventSourcing umzusetzen und dabei Events zu erzeugen und den CurrentState einfach aus der Events zu erzeugen. Dieser Vortrag zeigt eine Beispielimplementierung mit Xamarin.Forms, Prism.Forms und einem einfach in-memory EventStore. Dabei wird dann auch auf die Vor- und Nachteile einer solcher Implementierung eingegangen.","begin":"2018-05-04T11:15:00+01:00","end":"2018-05-04T12:15:00+01:00"},{"id":30000311,"trackId":20000027,"locationId":21000027,"title":"Azure Cosmos DB","abstract":"Diese Session stellt Ihnen die wichtigen Grundlagen für den Einsatz in eigenen Projekten vor und nimmt eine Einordnung in den Kontext der Azure Cosmos DB vor. Es zeigt anhand praktischer Beispiele, wie eine funktionsfähige Datenbank angelegt und mit Daten gefüllt wird und wie die Daten abgefragt werden können. Dabei erläutert Thorsten Kansy alle wichtige Grundbegriffe, so dass dem eigenen Einstieg in diese Technologie nichts mehr im Wege steht.","begin":"2018-05-04T13:20:00+01:00","end":"2018-05-04T14:20:00+01:00"},{"id":30000305,"trackId":20000027,"locationId":21000027,"title":"Xamarin Show","abstract":"\"Xamarin Show\" is eine Präsentation der aktuellen Möglichkeiten der App-Entwicklung mit Xamarin.\n\nDie wichtigsten Punkte der Präsentation:\n\n    Installation von Visual Studio 2017 mit Xamarin\n    Simulatoren für Android und iOS\n    Testen auf dem Handy\n    iOS Designer, Android Designer, Xamarin Live Player\n    iOS Provisioning / Android App Signieren & Packaging\n    Xamarin University Training\n    Native Views vs. Xamarin.Forms\n    Xamarin.Forms Rendering, Animations, SkiaSharp, ...\n    .NET Standard Libraries mit Xamarin\n    Prism für Xamarin.Forms\n    Continuous Integration, Cloud Tests in Visual Studio App Center kurz darstellen","begin":"2018-05-04T14:35:00+01:00","end":"2018-05-04T15:35:00+01:00"},{"id":30000306,"trackId":20000027,"locationId":21000027,"title":"Azure Functions Deep Dive","abstract":"Serverless ist eine beliebte Architektur, kostengünstig und hilft zuverlässige und skalierbare Services zu erstellen. Azure Functions, die serverless Implementierung in Microsoft Azure, ist ein etablierter Service und bekommt in letzter Zeit immer mehr Aufmerksamkeit.\n\nAber oft kommt die frage auf wie es unter der Haube aussieht. Wie ist Azure Functions aufgebaut und wie können wir das debuggen, falls notwendig? Dieser Vortrag gibt einen tieferen Einblick in Functions and zeigt auf wie und wo man startet wenn man eine Function lokal testen und debuggen möchte. Das ist ein guter start um sich an dem open-source-project zu beteiligen.","begin":"2018-05-04T16:00:00+01:00","end":"2018-05-04T17:00:00+01:00"},{"id":30000320,"trackId":20000024,"locationId":21000024,"title":"API-First: Wie Versicherungen sexy werden und sich mit House-Keeping-Aufaben rüsten","abstract":"Die Digitalisierung macht auch vor Versicherungen keinen Halt. Das gilt nicht nur intern, sondern natürlich auch gegenüber unseren Endkunden, die eine immer größere Erwartung an digitale Services haben. Im Zuge dieser ganz neuen, zusätzlichen Anforderungen an Versicherungen stellen sich diese immer häufiger die Frage nach ihrer Kernkompetenz: Gehört es zur Kernkompetenz einer Versicherung, sexy Apps zu programmieren, über die ihre Kunden Versicherungen einsehen und modifizieren können? Und intern gefragt: Gehört es zur Kernkompetenz einer Versicherung, E-mail-Server zu hosten oder CRM-Systeme zu betreiben? Eine Antwort auf viele dieser Fragen lässt sich unter dem Begriff API-first subsumieren: Anstatt für alle Frontends selbst verantwortlich zu sein fokussiert eine Versicherung auf einen API-erzeugten Abstraktionslayer, der den Plattformgedanken implementiert. Unternehmen wie John Deere (ja, die Trecker) praktizieren dies seit Jahren. Für Versicherungen besteht allerdings hier häufig das Problem einer intern gewachsenen und seit Jahren erfolgreich betriebenen IT-Architektur: So sehr alle die Digitalisierung begrüßen und sie beschleunigen wollen, die interne IT-Struktur ist dem noch nicht in allen Facetten gewachsen. So existiert das Spannungsfeld zwischen klassischen House-Keeping-Aufgaben, die lediglich das Ziel haben, eine gegebene Infrastruktur zu modernisieren, und echten nach außen gerichteten Innovationen. Der Vortrag wird diese beiden Facetten gleichwertig nebeneinander beleuchten.","begin":"2018-05-04T16:00:00+01:00","end":"2018-05-04T17:00:00+01:00"},{"id":30000346,"trackId":20000024,"locationId":21000024,"title":"Immer mit dem Strom - Datastreaming","abstract":"Relationale Datenbanken sind ja sowas von vorgestern und mit unstrukturierten Datenhaltungen sieht es auch nicht besser aus. Stück für Stück mutieren sämtliche Datensenken zu unwartbaren inperformanten Datenklumpen, denen man nicht ansehen kann, wie sie entstanden sind. Wie kommt das nur?\nWeil wir Entwickler immernoch hauptsächlich in Daten denken und dabei die Realität aus den Augen verlieren. Wie funktioniert denn in Wirklichkeit das Business? Es geschehen sogenannte Geschäftsereignisse. Sie bestimmen in Form von zeitlichen Veränderungen, was tatsächlich passiert. Darum brauchen wir eine neue Form der Datenhaltung, den Stream. Hiermit werden Daten nicht mehr überschrieben, so dass jeder erdenkliche Datenzustand der Vergangenheit wieder hergestellt werden kann.\nWie man eine Applikation mit Streams steuert und entwickelt soll dieser konzeptionelle Vortrag zeigen.","begin":"2018-05-04T13:20:00+01:00","end":"2018-05-04T14:20:00+01:00"},{"id":30000335,"trackId":20000024,"locationId":21000024,"title":"Challenges and Surprises from Big Data and Analytics","abstract":"Working alongside analytics teams can be challenging: shared lanaguage with different meanings, opposing goals, differing processes. Meanwhile, your traditional development technologies crumble under the weight of big data. This session gives an overview of challenges, surprises, and lessons learned from diving into big data and analytics.","begin":"2018-05-04T11:15:00+01:00","end":"2018-05-04T12:15:00+01:00"},{"id":30000333,"trackId":20000024,"locationId":21000024,"title":"Keyboards? Where we're going we don't need keyboards","abstract":"One of the cornerstones in Microsoft’s digital assistant Cortana are cognitive services. Instead of the traditional Screen / Keyboard / Mouse combination for user interaction with your application, it offers different ways of handling user input.\n\nThink about vision, speech and language – the new way of communicating with your devices – but also how to analyze and structure these kinds of user input.\n\nThis session will give you an introduction on the Cognitive Services Platform – show how it can help your end-users – and with live coding examples you will experience how easy it is to start using this incredibly cool API.","begin":"2018-05-04T10:00:00+01:00","end":"2018-05-04T11:00:00+01:00"},{"id":30000314,"trackId":20000024,"locationId":21000024,"title":"Xamarin ohne Mac und Android SDK? So weit kommen Sie mit dem Xamarin Live Player","abstract":"Wer in die App-Entwicklung mit Xamarin einsteigen möchte braucht Geld, Geduld und starke Nerven. Geld, weil für die iOS-Entwicklung ein Mac notwendig ist. Geduld, weil das mehrere Gigabyte umfassende Android SDK inklusive Emulatoren heruntergeladen und installiert werden muss, ehe man auch nur eine Zeile Code für Android übersetzen kann. Starke Nerven, weil es alles andere als intuitiv ist, Mac, XCode, Android und Windows synchron up to date zu halten. Dank des Xamarin Live Players könnte damit endlich Schluss sein. Bereits mit einer minimalen Visual-Studio-Installation können Sie – ganz ohne Mac – Xamarin-Apps entwickeln. Wie weit Sie mit dem Player kommen und ab wann Sie doch einen Mac und ein Android SDK benötigen, erfahren Sie in dieser Session.","begin":"2018-05-04T08:30:00+01:00","end":"2018-05-04T09:30:00+01:00"},{"id":30000340,"trackId":20000023,"locationId":21000023,"title":"Auf der Suche nach dem heiligen Gral: Versionstolerante Schnittstellen in .Net","abstract":"Heutige Anwendungen wachsen immer weiter zusammen, da Daten zwischen ihnen ausgetauscht und Anwendungsfälle der einen möglichst nahtlos in die andere integriert werden sollen. Egal ob die Integration per Plugin, Addin oder Automatisierungsschnittstelle gelöst ist, irgendwo verläuft dabei immer der Bruch zwischen zwei sich unabhängig voneinander weiterentwickelnden Systemen. Dieser Bruch führt zu einem immensen Aufwand, um die entsprechenden Schnittstellen synchron zu halten.\n\nWie können wir hier sowohl aktuelle Features schnell ausrollen und gleichzeitig die Abwärtskompatibilität erhalten ohne die Schnittstelle unnötig aufzublähen? Dieser Vortrag gibt einen Einblick in unsere Erfahrungen, zwei unabhängige Anwendungen mit unterschiedlichen Releasezyklen zu koppeln. Er zeigt unseren aktuellen Entwicklungsstand und unsere Konzepte den Aufwand für das Generieren der nötigen Adapterschicht möglichst gering zu halten um am Ende nicht in der Versionshölle zu schmoren.","begin":"2018-05-04T12:50:00+01:00","end":"2018-05-04T13:10:00+01:00"},{"id":30000337,"trackId":20000024,"locationId":21000024,"title":"Microsoft AppCenter Quicktour","abstract":"Microsoft App Center bietet ein umfangreiches Toolset für Continous Integration, Continous Deployment und mehr. Eine kurze LIVE-Tour durch das App Center gibt einen Überblick über die Funktionalität.","begin":"2018-05-04T12:50:00+01:00","end":"2018-05-04T13:10:00+01:00"},{"id":30000343,"trackId":20000025,"locationId":21000025,"title":"Electron.NET: Cross-Platform Desktop Software mit ASP.NET Core","abstract":"Das Open Source Projekt Electron.NET verbindet Ihr bekanntes C# & ASP.NET Core KnowHow mit den Möglichkeiten von Electron. In Kombination von C# und HTML5 können hoch performante Desktop Geschäftsanwendung für Windows, Mac und Linux entwickelt werden.Gregor stellt sein Project was er zusammen mit Robert Mühsig ins Leben gerufen hat vor.","begin":"2018-05-04T12:50:00+01:00","end":"2018-05-04T13:10:00+01:00"},{"id":30000339,"trackId":20000026,"locationId":21000026,"title":"DevOps: Entwickeln Sie noch oder liefern Sie schon?","abstract":"Könnten Sie in Ihrem Projekt problemlos 10 Releases am Tag durchführen? Damit sind wir schon gleich bei einem derzeit aktuellen Thema, nämlich: \"DevOps\" - der nächsten Evolutionsstufe der Agilität.\n\nDer digitale Wandel bietet für Unternehmen Chancen und Risiken zugleich. In diesem Vortrag geben Neno Loje einen Überblick, wie sich Unternehmen optimal aufstellen können, was es mit ‘DevOps’ und ‘Business Agility’ auf sich hat und warum diese auch für Ihr Unternehmen hochgradig relevant sind. Holen sie sich wichtige Anregungen, wie Sie das Innovationspotenzial Ihrer Softwareentwicklung maximieren können.","begin":"2018-05-04T12:50:00+01:00","end":"2018-05-04T13:10:00+01:00"},{"id":30000338,"trackId":20000028,"locationId":21000028,"title":"Hype or Hot - das ist hier die Frage","abstract":"Disruptiv - so wird die Veränderung in unserer Branche, ja vielleicht unseres Zeitalters gerne genannt. Darum möchte ich zwar an die Tradition meiner Lunch-Sessions aus den Vorjahren anknüpfen, aber diesmal den Fokus besonders auf die Frage legen welche Auswirkungen die Digitalisierung denn eigentlich auf uns IT-ler und die Anforderungen an uns hat.\n\nIch freue mich, wenn Ihr in einer kurzweiligen und interaktiven Session mit mir darüber diskutiert.","begin":"2018-05-04T12:50:00+01:00","end":"2018-05-04T13:10:00+01:00"},{"id":30000336,"trackId":20000029,"locationId":21000029,"title":"Fußball in der Cloud - der FC Basel auf Azure","abstract":"Vor drei Jahren haben wir die komplett neue Version des digitalen Auftritts, eines der erfolgreichsten Fußballclubs der Schweiz, released. Alle Komponenten des digitalen Auftritts (unter anderem bestehend aus: Website, Mobile-Apps, Live-Ticker, Image Database, Videos, Shop, Extranet) wurden designed um auf Azure zu laufen. Seit dem arbeiten wir kontinuierlich an der Platform um neue Features und neue Services zu integrieren, oder um die Performance und die Sicherheit zu erhöhen. Dieser Vortrag zeigt aus was dieser digitale Auftritt besteht, wie dieser gebaut wurde, wie er arbeitet und wie wir kontinuierlich weitere Features und Verbesserungen nach Azure publizieren.","begin":"2018-05-04T12:50:00+01:00","end":"2018-05-04T13:10:00+01:00"},{"id":30000344,"trackId":20000023,"locationId":21000023,"title":"Verabschiedung","abstract":"sdf","begin":"2018-05-04T17:15:00+01:00","end":"2018-05-04T17:45:00+01:00"}],"sessionSpeakerMaps":[{"id":40001255,"sessionId":30000342,"speakerId":10000026},{"id":40001255,"sessionId":30000342,"speakerId":10000033},{"id":40001255,"sessionId":30000342,"speakerId":10000034},{"id":40001257,"sessionId":30000304,"speakerId":10000061},{"id":40001258,"sessionId":30000296,"speakerId":10000081},{"id":40001267,"sessionId":30000332,"speakerId":10000093},{"id":40001268,"sessionId":30000301,"speakerId":10000058},{"id":40001269,"sessionId":30000330,"speakerId":10000024},{"id":40001270,"sessionId":30000302,"speakerId":10000082},{"id":40001272,"sessionId":30000325,"speakerId":10000020},{"id":40001272,"sessionId":30000325,"speakerId":10000090},{"id":40001273,"sessionId":30000303,"speakerId":10000082},{"id":40001274,"sessionId":30000327,"speakerId":10000022},{"id":40001275,"sessionId":30000316,"speakerId":10000086},{"id":40001276,"sessionId":30000308,"speakerId":10000008},{"id":40001277,"sessionId":30000323,"speakerId":10000021},{"id":40001278,"sessionId":30000312,"speakerId":10000044},{"id":40001282,"sessionId":30000315,"speakerId":10000085},{"id":40001283,"sessionId":30000313,"speakerId":10000044},{"id":40001284,"sessionId":30000299,"speakerId":10000036},{"id":40001285,"sessionId":30000331,"speakerId":10000092},{"id":40001286,"sessionId":30000328,"speakerId":10000023},{"id":40001287,"sessionId":30000321,"speakerId":10000089},{"id":40001288,"sessionId":30000309,"speakerId":10000008},{"id":40001289,"sessionId":30000317,"speakerId":10000017},{"id":40001290,"sessionId":30000318,"speakerId":10000047},{"id":40001291,"sessionId":30000326,"speakerId":10000091},{"id":40001292,"sessionId":30000295,"speakerId":10000080},{"id":40001295,"sessionId":30000297,"speakerId":10000056},{"id":40001296,"sessionId":30000298,"speakerId":10000004},{"id":40001297,"sessionId":30000329,"speakerId":10000023},{"id":40001298,"sessionId":30000319,"speakerId":10000047},{"id":40001299,"sessionId":30000322,"speakerId":10000089},{"id":40001300,"sessionId":30000300,"speakerId":10000058},{"id":40001302,"sessionId":30000345,"speakerId":10000083},{"id":40001303,"sessionId":30000324,"speakerId":10000021},{"id":40001304,"sessionId":30000307,"speakerId":10000083},{"id":40001305,"sessionId":30000311,"speakerId":10000011},{"id":40001306,"sessionId":30000305,"speakerId":10000063},{"id":40001307,"sessionId":30000306,"speakerId":10000083},{"id":40001308,"sessionId":30000320,"speakerId":10000087},{"id":40001308,"sessionId":30000320,"speakerId":10000088},{"id":40001309,"sessionId":30000346,"speakerId":10000061},{"id":40001310,"sessionId":30000335,"speakerId":10000095},{"id":40001311,"sessionId":30000333,"speakerId":10000094},{"id":40001312,"sessionId":30000314,"speakerId":10000014},{"id":40001313,"sessionId":30000340,"speakerId":10000076},{"id":40001314,"sessionId":30000337,"speakerId":10000084},{"id":40001315,"sessionId":30000343,"speakerId":10000036},{"id":40001316,"sessionId":30000339,"speakerId":10000017},{"id":40001318,"sessionId":30000338,"speakerId":10000044},{"id":40001319,"sessionId":30000336,"speakerId":10000008},{"id":40001320,"sessionId":30000344,"speakerId":10000026},{"id":40001320,"sessionId":30000344,"speakerId":10000033},{"id":40001320,"sessionId":30000344,"speakerId":10000034}]}
+{
+  "title": "dotnet Cologne 2018",
+  "claims": [{ "text": "", "color": "#66ADD6" }],
+  "locations": [
+    { "id": 21000023, "name": "Saal, Haus 7" },
+    { "id": 21000024, "name": "222, Haus 7" },
+    { "id": 21000025, "name": "313/314, Haus 7" },
+    { "id": 21000026, "name": "315/316, Haus 7" },
+    { "id": 21000027, "name": "1, Haus 6" },
+    { "id": 21000028, "name": "2/3, Haus 6" },
+    { "id": 21000029, "name": "4/5, Haus 6" }
+  ],
+  "speakers": [
+    {
+      "id": 10000026,
+      "name": "Albert Weinert",
+      "photoUrl": "10000026.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/26",
+      "social": {},
+      "bio":
+        "Albert Weinert arbeitet als freiberuflicher Berater und Entwickler. Sein Spezialgebiet ist ASP.NET Architektur sowie Agile Techniken und für sein Community Engagement bekam er 2007-2016 die Microsoft MVP Auszeichnung verliehen. Er ist regelmäßiger Sprecher bei .NET User Groups sowie Konferenzen. Als Leiter der .net user group Köln veranstaltet er monatliche Treffen rund um die .NET Software-Entwicklung. Des Weiteren ist er Mitveranstalter der dotnet Cologne und Gründer der .NET Online User Group. Sie finden sein Blog unter blog.der-albert.com."
+    },
+    {
+      "id": 10000033,
+      "name": "Melanie Eibl",
+      "photoUrl": "10000033.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/33",
+      "social": {},
+      "bio":
+        "Melanie Eibl entwickelt seit 1999 Software mit dem Schwerpunkt .NET und SQL Server. Sie besitzt Zertifizierungen in WCF, ADO.NET und ASP.NET und hat berufsbegleitend ein Masterstudium in Informatik absolviert. Ihre Tätigkeiten sind hauptsächlich das Design und die Implementierung von IT- und Softwarearchitekturen, sowie Projektleitung.\n\nInnerhalb der Community arbeitet Melanie Eibl seit 2010 bei der Organisation der dotnet Cologne mit und ist gelegentliche Sprecherin bei den Usergroups in Bonn und in Köln."
+    },
+    {
+      "id": 10000034,
+      "name": "Stefan Lange",
+      "photoUrl": "10000034.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/34",
+      "social": {},
+      "bio":
+        "Stefan Lange hat Informatik in Bonn studiert und ist Gründer und Geschäftsführer der empira Software GmbH in Köln. Er beschäftigt sich seit mehr als 20 Jahren mit der Entwicklung von Windows-Anwendungen in C++ und C#. Seine Schwerpunkte liegen bei der Software-Architektur und der Gestaltung von grafischen Benutzeroberflächen. Es ist außerdem Autor der Open Source Bibliothek PDFsharp. Als Technologiebegeisterter ist er einer der Gründer der .net user group Köln und hält regelmäßig Vorträge. Seit Anfang 2017 leitet er die Software Research and Development Abteilung der binoNTech AG in Mainz."
+    },
+    {
+      "id": 10000061,
+      "name": "Jan Fellien",
+      "photoUrl": "10000061.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/61",
+      "social": {},
+      "bio":
+        "BASIC, SYS, Modula 2, Pascal und dBase waren die ersten Sprachen, mit denen ich in Berührung kam. Das ist nun schon mehr als 25 Jahre her. Seit dem hat sich vieles verändert. Nun wird mit C# und JavaScript entwickelt, hauptsächlich für Backendsysteme in der Cloud. Seit 2010 verfolge ich den Ansatz von CQRS in der Implementierung und DDD in der Modellierung von Software. Zusammen mit meinen Teams lerne ich auf die Domain Experten zu hören und deren Bedürfnisse zu erkennen.\nIn Berlin bin ich in der Community tätig, organisiere Meetups und kleine Konferenzen. Ab und an schreibe ich Artikel oder Blog Posts."
+    },
+    {
+      "id": 10000081,
+      "name": "Florian Bader",
+      "photoUrl": "10000081.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/81",
+      "social": {},
+      "bio":
+        "Florian Bader ist Senior Consultant bei der AIT GmbH & Co. KG in Stuttgart. Er berät Kunden im Bereich Microsoft .NET und Application Lifecycle Management mit Schwerpunkt in Softwareentwicklung und -architektur, Buildautomatisierung und Qualitätsmanagement. Sein Ziel ist es, Entwicklern das Leben so einfach wie möglich zu machen und gleichzeitig die Qualität des Projektes zu erhöhen. Durch seine Erfahrung in der Industrie und sein breitgefächertes Wissen, unterstützt er Unternehmen als Know-How-Lieferant in den unterschiedlichsten Bereichen."
+    },
+    {
+      "id": 10000093,
+      "name": "Robert Wagner",
+      "photoUrl": "10000093.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/93",
+      "social": {},
+      "bio":
+        "Robert is a lead developer at Octopus Deploy, makers of the leading deployment automation server. Previously he worked as a consultant helping companies large and small build and automate their deployment pipelines. Now he works to improve how your bits get from A to B using Octopus Deploy."
+    },
+    {
+      "id": 10000058,
+      "name": "Tim Borowski",
+      "photoUrl": "10000058.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/58",
+      "social": {},
+      "bio":
+        "im Borowski B.Sc. studierte Informatik an der TU Darmstadt und entwickelt seit klein auf Software mit .NET und C#. Er fokussierte sich im Studium auf 3D-Entwicklung und Grafische Datenverarbeitung als auch auf GPGPU. Außerhalb dieser Massiv-Parallelen Welt arbeitet er leidenschaftlich im .NET Bereich mit WPF, WCF, EF und ASP.NET-WebAPI und AngularJs via TS."
+    },
+    {
+      "id": 10000024,
+      "name": "Rainer Stropek",
+      "photoUrl": "10000024.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/24",
+      "social": {},
+      "bio":
+        "Bild\n\tRainer Stropek\nrainer [at] software-architects.at\n\nRainer Stropek ist seit über 20 Jahren als Unternehmer in der IT-Industrie tätig. Er gründete und führte in dieser Zeit mehrere IT-Dienstleistungsunternehmen und entwickelt im Augenblick in seiner Firma \"software architects\" mit seinem Team die preisgekrönte Software \"time cockpit\".\n\nRainer hat Abschlüsse an der Höheren Technischen Schule für MIS, Leonding (AT) sowie der University of Derby (UK). Er ist Autor mehrerer Fachbücher und Artikel in Magazinen im Umfeld von Microsoft .NET und C#. Seine technischen Schwerpunkte sind C# und das .NET Framework, XAML, die Microsoft Azure Plattform, SQL Server sowie Web Development. Rainer tritt regelmäßig als Speaker und Trainer auf namhaften Konferenzen in Europa und den USA auf. 2010 wurde Rainer von Microsoft zu einem der ersten MVPs für die Windows Azure Plattform ernannt. Seit 2015 ist Rainer Microsoft Regional Director. 2016 hat Rainer zusätzlich den MVP Award für Visual Studio und Developer Technologies erhalten.\n\nSie können Rainer über Twitter, Facebook oder über seine Blogs unter www.timecockpit.com und www.software-architects.com folgen."
+    },
+    {
+      "id": 10000082,
+      "name": "Stefan Dirschnabel",
+      "photoUrl": "10000082.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/82",
+      "social": {},
+      "bio":
+        "Stefan Dirschnabel\nstefan.dirschnabel [at] binarygears.de\n\nStefan Dirschnabel ist langjähriger Software-Architekt, -Trainer und -Berater. Sein Schwerpunkt ist der Webstack mit modernen SPA-Frameworks im Frontend und .NET im Backend.\n\nAls Geschäftsführer der BinaryGears GmbH unterstützt er Kunden bei der Konzeption und Umsetzung komplexer Geschäftsanwendungen. Als Sprecher und Trainer ist er im gesamten deutschsprachigen Raum mit einem Schulungsprogramm zu Clean-Code (für Web und für .NET) verfügbar.\n\nMehr über Stefan Dirschnabel erfahren Sie unter www.binarygears.de"
+    },
+    {
+      "id": 10000020,
+      "name": "Nico Orschel",
+      "photoUrl": "10000020.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/20",
+      "social": {},
+      "bio":
+        "Nico Orschel ist Principal Consultant, Autor und Referent im Umfeld von Microsoft ALM bei der AIT GmbH & Co. KG in Stuttgart und wurde von Microsoft als Most Valuable Professional (MVP) für Visual Studio & Development Technologies ausgezeichnet. Er hilft Unternehmen, auf Basis von Microsoft Visual Studio Team Foundation Server effizienter Software zu entwickeln und zu testen und so ein höheres Qualitätsniveau bei kürzeren Releasezyklen zu erreichen. Seine Schwerpunkte sind u. a. Testmanagement und Testautomatisierung auf Basis der Visual-Studio-Plattform."
+    },
+    {
+      "id": 10000090,
+      "name": "Thomas Rümmler",
+      "photoUrl": "10000090.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/90",
+      "social": {},
+      "bio":
+        "Thomas Rümmler arbeitet als Managing Consultant und Projektleiter bei AIT und ist von Microsoft als Most Valuable Professional (MVP) für Visual Studio & Development Technologies ausgezeichnet worden. Sein Arbeitsschwerpunkt liegt auf Application Lifecycle Management und DevOps. Thomas hilft Unternehmen ihren Entwicklungsprozess ganzheitlich zu verbessern. Seine Erfahrung gibt er als Autor des TFS-Blogs und Sprecher im Microsoft DevOps Umfeld weiter."
+    },
+    {
+      "id": 10000022,
+      "name": "Holger Schwichtenberg",
+      "photoUrl": "10000022.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/22",
+      "social": {},
+      "bio":
+        "Dr. Holger Schwichtenberg ist Leiter des .NET-Expertennetzwerks www.IT-Visions.de, das zahlreiche Unternehmen in Europa durch Beratung, Schulung, Coaching und Support. Zudem ist er CTO bei der 5minds IT-Solutions Gmbh & Co KG, die Softwareentwicklungsprojekte durchführt.\n\nHolger Schwichtenberg arbeitet als Softwarearchitekt und Berater für .NET mit dem Schwerpunkt auf Webanwendungen, verteilten Systemen und Datenbankzugriffen. Durch seine Auftritte auf nationalen und internationalen Fachkonferenzen sowie zahlreiche Fachbücher für O'Reilly, Addison-Wesley, Microsoft Press und den Hanser-Verlag gehört er zu den bekanntesten .NET-Experten in Deutschland. Darüber hinaus ist er ständiger Mitarbeiter der Fachzeitschriften iX, windows developer und dotnetpro sowie bei heise.de.\n\nVon Microsoft ist er für sein .NET-Fachwissen seit nunmehr 14 Jahren ausgezeichnet als Microsoft Most Valuable Professional (MVP) für .NET/Visual Studio. Sein Weblog finden Sie unter www.dotnet-doktor.de. Bei Twitter folgen Sie ihm unter @dotnetdoktor."
+    },
+    {
+      "id": 10000086,
+      "name": "Christian Liebel",
+      "photoUrl": "10000086.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/86",
+      "social": {},
+      "bio":
+        "Christian Liebel ist Softwareentwickler bei der Thinktecture AG in Karlsruhe. Dort entwickelt er moderne Cross-Plattform-Apps auf Basis von Angular, Cordova und .NET. Christian ist mit dem Web groß geworden und hat sein Handwerk mit Microsoft-Technologien gelernt. Er schreibt regelmäßig für die dotnetpro und ist begeistert von den neuen Möglichkeiten der Anwendungsentwicklung, die sich mit HTML5 und JavaScript erschließen. Auf Twitter erreichen Sie ihn unter @chris_liebel."
+    },
+    {
+      "id": 10000008,
+      "name": "Jürgen Gutsch",
+      "photoUrl": "10000008.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/8",
+      "social": {},
+      "bio":
+        "Jürgen Gutsch ist Softwareentwickler, Berater und Trainer bei der YooApplications AG in Basel. Neben Familie und Beruf leitet Jürgen die INETA Germany und die .NET Usergroup Basel und betreibt ein Blog zum Thema \"ASP.NET und mehr...\" auf http://asp.net-hacker.rocks. Jürgen ist MVP für Visual Studio and Development Technologies."
+    },
+    {
+      "id": 10000021,
+      "name": "Tobias Richling",
+      "photoUrl": "10000021.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/21",
+      "social": {},
+      "bio":
+        "Tobias Richling lebt im schönen Münsterland und arbeitet als Webentwickler bei der apetito AG. Schon früh hat er sich für die Softwareentwicklung interessiert und diese Leidenschaft nach einem Studium der Wirtschaftsinformatik in Münster zu seinem Beruf gemacht. Neben seiner Begeisterung für Technologie, insbesondere rund um den Microsoft-Stack, interessiert er sich für die Optimierung der täglichen Prozesse und Arbeitsabläufe.\nIn seiner Freizeit schreibt er Fachartikel und Bücher, spricht auf Konferenzen oder OpenSpaces. Wenn dann noch Zeit bleibt, braut er sein eigenes Bier."
+    },
+    {
+      "id": 10000044,
+      "name": "Kostja Klein",
+      "photoUrl": "10000044.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/44",
+      "social": {},
+      "bio":
+        "Constantin arbeitet bei der Freudenberg IT GmbH & Co. KG. Dort beschäftigt er sich mit der Entwicklung von Lösungen auf Basis der Microsoft Produkte und Technologie Plattformen. Sein besonderes Interesse gilt dabei der Gewinnung, Verarbeitung und Nutzung von Daten und Informationen.\n\nEr ist MCSD, MCITP Database Developer und MCPD Web + Enterprise Application Developer. Seit 2010 wurde er jährlich von Microsoft zum Most Valuable Professional (MVP) für die Microsoft Data Platform ernannt.\n\nEr engagiert sich zusätzlich im Vorstand des Just Community e.V. und des PASS Deutschland e.V.. Er leitet außerdem die .NET User Group Frankfurt."
+    },
+    {
+      "id": 10000085,
+      "name": "Jörg Krause",
+      "photoUrl": "10000085.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/85",
+      "social": {},
+      "bio":
+        "Jörg Krause, Jahrgang 1964, arbeitet als Fachautor, Trainer, Consultant und Softwareentwickler aus Leidenschaft. Schwerpunktthemen sind die Programmierung von Webapplikationen (Frontend mit Angular, React, TypeScript), Datenbanken und Cloud-Lösungen (AWS und Azure). Zu vielen Themen hat er Bücher verfasst, darunter einige Bestseller (Apress, Hanser, texxtoor), und bietet individuelle Workshops und Trainings auf hohem Niveau an.\n\nMehr Informationen unter www.joergkrause.de."
+    },
+    {
+      "id": 10000036,
+      "name": "Gregor Biswanger",
+      "photoUrl": "10000036.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/36",
+      "social": {},
+      "bio":
+        "Gregor Biswanger (Microsoft MVP, Intel Black Belt & Intel Software Innovator) ist freier Dozent, Berater, Trainer, Autor und Sprecher. Er berät große und mittelständische Unternehmen, Organisationen und Agenturen rund um die Themen zur Softwarearchitektur, Web- und Cross-Platform-Entwicklung mit JavaScript. Außerdem schreibt er online als freier Autor für heise-developer und bringt für Fachmagazine auch gerne Artikel aufs Blatt. Er ist international als Sprecher auf zahlreichen Konferenzen und Communities unterwegs. Sie erreichen ihn unter www.cross-platform-blog.de"
+    },
+    {
+      "id": 10000092,
+      "name": "David Tielke",
+      "photoUrl": "10000092.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/92",
+      "social": {},
+      "bio":
+        "David Tielke ist seit über 10 Jahren freiberuflicher Berater, Coach und Trainer auf dem Microsoft-Technologiestack und dabei zertifizierter Experte für die Themen Architektur und Softwarequalität. Er berät und schult seine Kunden europaweit und ist als Sprecher auf zahlreichen Konferenzen wie der Developer Week oder .NET Developer Conference sowie als Fachautor unterwegs. Als Trainer ist er auch für developer-media.de tätig."
+    },
+    {
+      "id": 10000023,
+      "name": "Manfred Steyer",
+      "photoUrl": "10000023.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/23",
+      "social": {},
+      "bio":
+        "Trainer und Berater mit Fokus auf Angular, unterstützt Firmen im gesamten deutschen Sprachraum, Google Developer Expert (GDE) und Microsoft MVP, schreibt für O'Reilly, Heise und das Java-Magazin, spricht regelmäßig auf Konferenzen."
+    },
+    {
+      "id": 10000089,
+      "name": "Adam Ralph",
+      "photoUrl": "10000089.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/89",
+      "social": {},
+      "bio":
+        "Adam is a distributed systems enthusiast and digital nomad working for Particular Software, the makers of NServiceBus. He likes to speak at conferences, maintain open source projects, and fix white space rule violations. He is a practiced tea drinker and snowboarder and has been spotted coding in launderettes throughout Western Europe."
+    },
+    {
+      "id": 10000017,
+      "name": "Neno Loje",
+      "photoUrl": "10000017.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/17",
+      "social": {},
+      "bio":
+        "Neno Loje unterstützt als unabhängiger Berater und Professional Scrum Trainer große wie kleine Unternehmen und Teams dabei agiler zu werden, das Risiko zu minimieren, mehr zu automatisieren und mit pragmatischen Lösungen den Alltag aufzuwerten. Seine Schwerpunkte sind dabei MIcrosofts Team Foundation Server/Visual Studio Team Services, Scrum und DevOps."
+    },
+    {
+      "id": 10000047,
+      "name": "Gad J. Meir",
+      "photoUrl": "10000047.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/47",
+      "social": {},
+      "bio":
+        "Gad has been working in the computer industry since 1975 in various positions ranging from design and building computer hardware via IT help desk, IT operations and every role in the software development process. Gad’s extensive field experience gives him a unique perspective that assist him in troubleshooting complex software and hardware problems, especially in production, enterprise and end user environments. Finding the specific bug is just the beginning. Determining how the bug managed to pass the process (design, codding, testing etc.) without being discovered is the real root cause of the failure and that’s Gad’s main goal in every customer engagement.\nSince the best economic and cost effective way to fix a bug is by eliminating it as early as possible, Gad uses his decades of experience to help customers on areas like: architecture, technology, development process, secure code practices, dev-ops integration based design and about how to prepare in advance for the unavoidable application and system failures.\nGad is an active technical community contributor and work at IDAG Ltd as R&D Manager."
+    },
+    {
+      "id": 10000091,
+      "name": "Stefan Schukat",
+      "photoUrl": "10000091.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/91",
+      "social": {},
+      "bio":
+        "Stefan Schukat ist leitender Software Architekt bei der dSPACE GmbH, welches seit 30 Jahren Software und Hardware für die Steuergeräteentwicklung entwickelt. Bei der DotNet User Group Paderborn ist er stellvertretender Leiter.\n\nStefan Schukat entwickelt seit fast 30 Jahren Software in unterschiedlichen Sprachen und Bereichen. In den letzten 20 Jahren lag der Schwerpunkt bei C++/C#/Python und insbesondere der Interoperabilität zwischen verschieden Sprachen. Primär war dieses auf Windows Systemen Microsoft COM, wo er zu der Python COM Anbindung beigetragen hat. Mit dem Umstieg auf .NET basierte Software ist der Umweg über COM der direkten Python.NET Anbindung gewichen. Zu diesen Themen hat er innerhalb der dSPACE GmbH Trainings durchgeführt und sein Wissen in der Paderborner DotNet User Group weitergegeben.\n\nEr geht gerne schwierigen Problemen und hat als Interessenschwerpunkt offline und remote Analyse von Fehlern auf Produktionssystemen. Dazu gehört die Dumpfile Analyse mit den Debugging Tools für Windows."
+    },
+    {
+      "id": 10000080,
+      "name": "Daniel Adolphs",
+      "photoUrl": "10000080.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/80",
+      "social": {},
+      "bio":
+        "Daniel Adolphs ist technischer Berater und Entwickler bei der novaCapta Software & Consulting GmbH. Ursprünglich hat er als klassischer Frontend-Entwickler mit Fokus auf JavaScript angefangen, beschäftigt sich mittlerweile aber vor allem mit den Möglichkeiten von C# bzw. Xamarin. Als Unity-User sind außerdem technische Spielereien wie die HoloLens und ihr produktiver Einsatz im Unternehmen besonders spannend für ihn."
+    },
+    {
+      "id": 10000056,
+      "name": "Maarten Balliauw",
+      "photoUrl": "10000056.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/56",
+      "social": {},
+      "bio":
+        "Maarten Balliauw loves building web and cloud apps. His main interests are in ASP.NET MVC, C#, Microsoft Azure, PHP and application performance. He co-founded MyGet and is Developer Advocate at JetBrains. He’s an ASP Insider and MVP for Microsoft Azure. Maarten is a frequent speaker at various national and international events, organizes Azure User Group events and is a track owner for Techorama. In his free time, he likes brewing his own beer. Maarten’s blog can be found at blog.maartenballiauw.be"
+    },
+    {
+      "id": 10000004,
+      "name": "Stefan Bamberg",
+      "photoUrl": "10000004.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/4",
+      "social": {},
+      "bio":
+        "Nach seinem Informatikstudium am Karlsruher Institut für Technologie (KIT) arbeitete er zuerst im Entwicklungsbereich, wechselte danach in das Projekt- und Produktmanagement eines Softwarehauses in Karlsruhe und leitete dort schließlich Vertrieb und Key Account Management im Umfeld großer ITK-Unternehmen. Seit Beginn 2012 ist er als Senior Key Account & Partner Manager bei Wibu-Systems tätig und leitet dort den Bereich Key Account Management."
+    },
+    {
+      "id": 10000083,
+      "name": "Sia Ghassemi",
+      "photoUrl": "10000083.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/83",
+      "social": {},
+      "bio":
+        "Siavash Ghassemi ist Softwarearchitekt und -entwickler. Er ist ein MVP für Microsoft Azure und ein Experte für Xamarin. Seit drei Jahren ist er außerdem als Co-Organisator der .NET User Group Hamburg zusammen mit 3 weiteren Freunden aus Hamburg tätig und als Sprecher und Workshopleiter in ganz Deutschland und auf verschiedenen Community-Konferenzen unterwegs. Seit über einem Jahr lebt und arbeitet er nun in Vancouver, Kanada und ist auch in der dortigen Community aktiv. Seine Folien und Codebeispiele sind alle auf GitHub hinterlegt."
+    },
+    {
+      "id": 10000011,
+      "name": "Thorsten Kansy",
+      "photoUrl": "10000011.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/11",
+      "social": {},
+      "bio":
+        "Mit Herz und Seele und gefühlt seit einer Ewigkeit (aka 25+ Jahre) Entwickler, Software Architekt und Mentor. Full Stack Developer meets Microsoft SQL Server!"
+    },
+    {
+      "id": 10000063,
+      "name": "Marian Grzesik",
+      "photoUrl": "10000063.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/63",
+      "social": {},
+      "bio":
+        "Bild\n\tMarian Grzesik\ngrzesik [at] software2business.de\n\nMarian Grzesik ist der Gründer von Software2Business GmbH. Er arbeitet seit 1995 als Software-Entwickler und Software-Architekt.\n\nSein Schwerpunkt liegt aktuell in der Entwicklung von mobilen Applikationen für iOS, Android und Windows. Er ist ein Zertifizierter Xamarin Entwickler und die Firma Software2Business GmbH ist ein Zertifizierter Consulting Partner von Xamarin.\n\nWeitere Schwerpunkte liegen in der .NET/C# Desktop-Entwicklung, ASP.NET, Azure Cloud und Hardwarenahe-Softwareentwicklung.\n\nEr ist als MCPD Enterprise Developer, MCPD Web Applications, MCPD Windows Applications und Xamarin Certified Developer zertifiziert."
+    },
+    {
+      "id": 10000087,
+      "name": "Björn Pasch",
+      "photoUrl": "10000087.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/87",
+      "social": {},
+      "bio":
+        "Studium der Wirtschaftsinformatik. 15 Jahre Erfahrung als Softwareentwickler und Architekt in der Finanz- und Telekommunikationsbranche. Verantwortlich für umfangreiche Modernisierungsprojekte. Seit 4 Jahren für Zurich als IT-/Enterprise Architect tätig."
+    },
+    {
+      "id": 10000088,
+      "name": "Frank Simon",
+      "photoUrl": "10000088.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/88",
+      "social": {},
+      "bio":
+        "Studium der Informatik mit anschließender Promotion, anschließend 16 Jahre IT-Dienstleister mit Fokus auf Innovation und Business Development. Seit 1 Jahr in der Zurich verantwortlich für die IT-Security. Darüber hinaus Mitglied des German Testing Boards (GTB) und dort verantwortlich für Business Development und Security."
+    },
+    {
+      "id": 10000095,
+      "name": "Anna Zietlow",
+      "photoUrl": "10000095.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/95",
+      "social": {},
+      "bio":
+        "Anna Zietlow is a software developer at Boeing Innovation Labs in Vancouver, Canada where she works with analytics teams to incubate new software solutions for the aviation industry. After focusing on web development for the first few years of her career, she’s now extremely excited to be shifting to analytics and big data solutions. In her spare time, Anna enjoys wandering around British Columbia’s mountains on foot or on snowboard. She also organizes Vancouver’s Azure user group. Anna is passionate about tech, data, and empowering all others to enjoy the same."
+    },
+    {
+      "id": 10000094,
+      "name": "Don Wibier",
+      "photoUrl": "10000094.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/94",
+      "social": {},
+      "bio":
+        "At the age of 15, Don built a ticketing and reservation system in Clipper for his father's cinema. He and his friend were compensated with a brand new 386 PC!\n\nAfter studying electronics and IT, Don embarked on a career in development, working with some of the biggest companies in The Netherlands and developing multi-tier enterprise solutions. Seeing an exciting future with the World Wide Web, he started building Delphi based ISAPI dll’s in combination with application servers and databases. Working with an internet startup, he architected one of the fastest online services for finding and booking airfares.\n\nBefore joining DevExpress as Technical Evangelist, Don single-handedly built one of the most user-friendly Content Management Systems available, which is currently powering hundreds of web and mobile implementations across the world.\n\nAs Evangelist at DevExpress, Don is eager to share his knowledge and experience with you!"
+    },
+    {
+      "id": 10000014,
+      "name": "André Krämer",
+      "photoUrl": "10000014.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/14",
+      "social": {},
+      "bio":
+        "André Krämer ist selbständiger Software Architekt, Entwickler, Trainer und Berater und Partner im www.it-visions.de Expertennetzwerk. Seine Schwerpunkte liegen in den Bereichen Webentwicklung mit ASP.NET und JavaScript, App Entwicklung mit Xamarin und Cordova, Application Life Cycle Management mit dem Microsoft Team Foundation Server sowie der Analyse von Memory Leaks und Performanceproblemen. Er ist regelmäßiger Autor für video2brain / LinkedIn Learning, wo er bereits mehr als 20 Video Trainings veröffentlicht hat. Er ist einer der Leiter und Gründer der .NET User Group Koblenz. Für sein Community Engangement wurde er als TX Text Control MVP, Infragistics MVP und Microsoft MVP ausgezeichnet."
+    },
+    {
+      "id": 10000076,
+      "name": "Kristof Unterweger",
+      "photoUrl": "10000076.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/76",
+      "social": {},
+      "bio":
+        "Sauber strukturierte Softwaresysteme sind ein Ziel, das mich seit zwei Jahrzehnten umtreibt. Seit zehn Jahren ist daher Softwareentwicklung mein Beruf. Während meiner Promotion an der TU München habe ich in mehreren internationalen Projekten Architekturen für Hochleistungssystemen entwickelt. Die Erstellung effizienter Programme auf Basis von C++ verfolgt mich bis heute, ebenso wie der Wunsch nach einer wissenschaftlichen Herangehensweise an Probleme.\n\nInzwischen hat es mich nach Stuttgart in den Automotivebereich und damit (wieder) in die Welt von .Net verschlagen. Bei der Vector Informatik GmbH treibe ich die Entwicklung und Integration der Anwendungssoftware für die Parametrisierung von Steuergeräten voran. Hier liegt der Fokus nicht ganz so auf maximaler Laufzeiteffizienz, dafür ist die Komplexität der Anwendungslandschaft um ein Vielfaches höher. Doch hier wie dort hilft am Ende nur eins: sauber strukturierte Softwaresysteme."
+    },
+    {
+      "id": 10000084,
+      "name": "Tobias Hoppenthaler",
+      "photoUrl": "10000084.jpg",
+      "imageUrl":
+        "https://dotnetcologne.azurewebsites.net/api/app/0/speakerpicture/84",
+      "social": {},
+      "bio":
+        "Xamarin, .net, Java, Android, OSGi, Eclipse RCP, martial arts, love travelling and languages. Founder of Xamarin User Group Cologne, Certified Xamurai."
+    }
+  ],
+  "tracks": [
+    {
+      "id": 20000023,
+      "title": "Track A",
+      "shortTitle": "A",
+      "color": "#3c5e95"
+    },
+    {
+      "id": 20000024,
+      "title": "Track B",
+      "shortTitle": "B",
+      "color": "#7F3F58"
+    },
+    {
+      "id": 20000025,
+      "title": "Track C",
+      "shortTitle": "C",
+      "color": "#885511"
+    },
+    {
+      "id": 20000026,
+      "title": "Track D",
+      "shortTitle": "D",
+      "color": "#557766"
+    },
+    {
+      "id": 20000027,
+      "title": "Track E",
+      "shortTitle": "E",
+      "color": "#992244"
+    },
+    {
+      "id": 20000028,
+      "title": "Track F",
+      "shortTitle": "F",
+      "color": "#118855"
+    },
+    {
+      "id": 20000029,
+      "title": "Track G",
+      "shortTitle": "G",
+      "color": "#3D434C"
+    }
+  ],
+  "sessions": [
+    {
+      "id": 30000342,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title": "Begrüßung",
+      "abstract": "Begrüßung",
+      "begin": "2018-05-04T08:00:00+01:00",
+      "end": "2018-05-04T08:15:00+01:00"
+    },
+    {
+      "id": 30000304,
+      "trackId": 20000025,
+      "locationId": 21000025,
+      "title": "Am Tag als Bob der Baumeister starb",
+      "abstract":
+        "Stein um Stein bauen wir Software, ganz wie es sich der Software Architekt überlegt hat. Das klappt schon seit Jahren perfekt und niemand käme auf die Idee etwas daran zu ändern. Außer vielleicht eine Quadrillion Softwareentwickler, die nicht das Gefühl haben, dass man eine Applikation einfach, mir nichts, dir nichts, zusammenstecken kann. Die Metapher der Baumeister in der Softwareentwicklung ist schlichtweg falsch. Es Zeit für eine Retrospektive. Schauen wir uns die letzten 50 Jahre Softwareentwicklung an und evaluieren, Wer, Wie und Was wir sind. Das Ergebnis ist überraschend.",
+      "begin": "2018-05-04T08:30:00+01:00",
+      "end": "2018-05-04T09:30:00+01:00"
+    },
+    {
+      "id": 30000296,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title": "Web Assembly - eine Revolution des Webs",
+      "abstract":
+        "Ein Web ohne JavaScript ist heute undenkbar. Doch die Skriptsprache bekommt Konkurrenz: Von Web Assembly. Web Assembly ist ein Low-Level Bytecode Format für den Browser. Dabei führt es unter Berücksichtigung der Hardwareressourcen zu einer schnelleren Ladezeit und Ausführung. Aktuell können C oder C++ in Web Assembly Bytecode kompiliert werden und weitere problemorientierte Sprachen wie C# oder Java sind bereits angedacht. Werden wir also in Zukunft auf JavaScript verzichten können und nur noch Assembler im Web machen oder was hat es hiermit auf sich?\n\nAuf Basis eines Projektes aus der Praxis erfahren Sie, wie man bestehenden Anwendungen im Web lauffähig bekommt, welche Vorteile und Nachteile das neue Format mit sich bringt und für welche Anwendungsfälle es besonders geeignet ist. Kann in Zukunft auf JavaScript verzichtet werden oder deckt Web Assembly nur eine Nische ab?",
+      "begin": "2018-05-04T08:30:00+01:00",
+      "end": "2018-05-04T09:30:00+01:00"
+    },
+    {
+      "id": 30000332,
+      "trackId": 20000024,
+      "locationId": 21000024,
+      "title": "Angriff der Klonkrieger - Automated Disposable Infrastructure",
+      "abstract":
+        "Deploying to production should be boring. Automating your build and deployment process reduces the potential excitement involved in human mistakes as you move from environment to environment.\nHowever, what about the machines you deploy to? Is their setup and install automated? Are you sure that the versions and setting in your test environment match production?\nIn this session, Robert Wagner, lead developer at Octopus Deploy, will cover how to automate your environment setup using Packer and Terraform. allowing you to provision a new Linux environment with your application dependencies on every deployment. Then we will automatically provision this immutable infrastructure environment on deployment of a .NET Core application, and switch it live.",
+      "begin": "2018-05-04T14:35:00+01:00",
+      "end": "2018-05-04T15:35:00+01:00"
+    },
+    {
+      "id": 30000301,
+      "trackId": 20000025,
+      "locationId": 21000025,
+      "title": "Generic <S>",
+      "abstract":
+        "Generics sind nichts Neues und auch kein neuer Trend. Dennoch sieht man im Alltag immer wieder Code, der auf Generics konsequent verzichtet. C# Generics unterscheiden sich grundlegend von Templates, die Sie aus C kennen und Generics aus Java. Generics können sowohl zur Laufzeit, als auch zur Compilezeit enorme Vorteile bieten. Um sie sinnvoll einzusetzen, muss aber auch die Codebasis passend gestaltet sein. In dieser Session möchte ich Ihr Auge bezüglich der Trennung von Daten, Algorithmen unter dem Fokus Generics schärfen. Zudem werden Sie verstehen, wie die CLR mit Generics umgeht.",
+      "begin": "2018-05-04T14:35:00+01:00",
+      "end": "2018-05-04T15:35:00+01:00"
+    },
+    {
+      "id": 30000330,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title": "WebAssembly Revolution am Beispiel von C# und Blazor",
+      "abstract":
+        "JavaScript hatte bisher ein Monopol bei der clientseitigen Webentwicklung. Bei den Frameworks haben wir zwar die Wahl zwischen Angular, React, Vue & Co, am Ende des Tages läuft aber alles auf JavaScript hinaus. Damit ist jetzt Schluss. WebAssembly hat das Zeug, Entwicklung im Browser komplett auf den Kopf zu stellen. In dieser Session möchte Rainer das am Beispiel von Blazor zeigen. Blazor ist ein (experimentelles) Open Source Single Page App (SPA) Framework von Microsoft, das C# und Razor nach WebAssembly und damit in den Browser bringt. Viele Live-Demos, wenige Slides und viele Neuigkeiten, die hoffentlich begeistern und zum Nachdenken anregen.",
+      "begin": "2018-05-04T10:00:00+01:00",
+      "end": "2018-05-04T11:00:00+01:00"
+    },
+    {
+      "id": 30000302,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title": "ASYNC HARDCORE",
+      "abstract":
+        "Ganz sicher haben Sie die folgenden Begriffe schon gehört: Threads, Tasks (Task.Factory vs. Task.Run()), TPL, Async / Await, Thread-Pool, Scheduler, usw. Ganz sicher wissen Sie auch worin sich diese Begriffe unterscheiden. Natürlich wissen Sie, dass es Unterschiede zwischen Foreground und Background-Threads gibt. Sie wissen wie async / await funktioniert. Sie wissen was async / await für ihre Software-Architektur bedeutet und was IO-bound bzw. CPU-bound Operations sind und warum bei einem Task eben nicht immer ein Thread auf der CPU ausgeführt wird. Sie verstehen ganz genau wann es bei async / await zu Deadlocks kommen kann, wie man async / await innerhalb von Bibliotheken implementiert und selbstverständlich kennen Sie den Einsatz von ConfigureAwait(…) aus dem Schlaf. Richtig verstanden haben Sie auch die Probleme die im Zusammenhang zwischen Events und der nebenläufigen Programmierung auftreten können..\n\n...oder etwa nicht?\n\nEin detailliertes Verständnis der oben genannten Thematiken wird für die moderne Softwareentwicklung immer wichtiger. Neue Bibliotheken wie wir sie im Azure Umfeld vorfinden arbeiten nur noch asynchron. In diesem Vortrag werde ich alle oben genannten Themen ansprechen und vor allem: verständlich erklären. Wir werden die asynchrone Programmierung endlich vollständig verstehen. Vorbeischauen und anschnallen.",
+      "begin": "2018-05-04T11:15:00+01:00",
+      "end": "2018-05-04T12:15:00+01:00"
+    },
+    {
+      "id": 30000325,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title": "Continuous Delivery in der Praxis",
+      "abstract":
+        "Stündliche Releases zu ermöglichen ist das Ziel einer Continuous Delivery (CD) Pipeline. Dafür ist neben einer neuen Arbeitskultur auch die Automatisierung der kompletten Pipeline erforderlich. Was mit Hello World Beispielen einfach aussieht, birgt in der Praxis einige Tücken. Berechtigungen, Verfügbarkeit von Build- und Testservern, das Signieren mittels Hardware-Token sowie besonders schützenswerte Zugangsdaten sind Themen, die über das reine Build hinausgehen. Doch genau diese Praxisthemen sind zu lösen, bevor man von einer vollautomatisierten Delivery Pipeline sprechen kann. Wir zeigen an einem Praxisbeispiel, wie man diese Herausforderungen lösen kann. Dabei setzen wir technologisch EV Code Signing mit USB Token, .NET, VS Tools for Office und VSTS ein. Der Vortrag zeigt Konfigurationen, Schritte und PowerShell-Scripts, mit denen wir die Herausforderungen einer vollautomatisierten Pipeline gelöst haben und damit CI/CD auf verschiedenen Release Trains ermöglichen.",
+      "begin": "2018-05-04T14:35:00+01:00",
+      "end": "2018-05-04T15:35:00+01:00"
+    },
+    {
+      "id": 30000303,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title": "SOLID für .NET und JavaScript",
+      "abstract":
+        "SOLID, das sind fünf Prinzipien zum Entwurf und der Entwicklung wartbarer Software-Systeme. Das Wissen um und über diese Prinzipien sollte zur Basis jedes Software-Entwicklers gehören! Die durch Uncle Bob bekannt gewordenen Prinzipien werden praktisch immer anhand stark typisierter Sprachen erklärt. In der immer stärkeren werdenden Webentwicklung spielt jedoch Javascript als dynamisch typisierte Sprache eine entscheidende Rolle. Im Web-Frontend kommen auch .NET Entwickler nicht mehr an JS vorbei. Lassen sich die SOLID Prinzipien, z.B. das Interface Segregation Principle überhaupt auf JS anwenden wenn es doch gar keine Interfaces gibt? Auch in der Literatur ist sind die Zusammenhänge zwischen JS und SOLID praktisch nicht existent.\n\nIn diesem Vortrag werden die SOLID Prinzipien und ihre Umsetzungsmöglichkeiten an einem ausführlichen Beispiel in C#.NET sowie zusätzlich in Javascript detailiert erklärt. Ziel des Vortrages ist es, dass Sie direkt am nächsten Tag von dem neu erworbenen Wissen profitieren und SOLID einfach erkennen + fixen können. Deswegen zeige ich Ihnen gegen Ende des Vortrags wie Sie anhand einfacher Codesmells die SOLID Prinzip erkennen und beheben können.",
+      "begin": "2018-05-04T16:00:00+01:00",
+      "end": "2018-05-04T17:00:00+01:00"
+    },
+    {
+      "id": 30000327,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title": "Von C# 7 zu C# 8",
+      "abstract":
+        "C# wird mittlerweile wie viele andere Microsoft-Produkt in kleineren Schritten weiterentwickelt. In diesem Kurzvortrag stellt Dr. Holger Schwichtenberg die Neuerungen vor, die es seit C# 7.0 gibt, z.B. Nullable Reference Types, Async Main, Tuple Table Inference, Ref Readonly, Private Protected, Non-trailing Named Arguments, Ranges und Default Interface Methods. Sehen Sie auch, wie es nun möglich ist, die Sprachversion unabhängig von der Visual Studio- und .NET-Version zu wählen.",
+      "begin": "2018-05-04T13:20:00+01:00",
+      "end": "2018-05-04T14:20:00+01:00"
+    },
+    {
+      "id": 30000316,
+      "trackId": 20000025,
+      "locationId": 21000025,
+      "title": "Progressive Web Apps mit Angular: das Web wird nativ(er)",
+      "abstract":
+        "Progressive Web Apps (PWA) sind das heiße und topaktuelle Thema in der Webentwicklung. Hinter dem Begriff verbergen sich eine ganze Reihe von Webtechnologien und Vorgehensweisen. Das Ziel: Dem Anwender einer Webanwendung dieselbe User Experience zu bieten, die er von nativen Anwendungen kennt. Das schließt Offlinefähigkeit, Datensynchronisation und Pushbenachrichtigungen mit ein. Gefällt dem Benutzer eine Webanwendung, wird sie mit einem Fingertipp zur auf dem Gerät installierten App – inklusive Icon auf dem Home-Screen. Christian Liebel von Thinktecture zeigt Ihnen die verschiedenen PWA-Features anhand einer Beispielanwendung in Angular – dem Framework zur Implementierung von Single-Page Applications (SPA) von Google, das sich auch zur Programmierung von PWAs hervorragend eignet.",
+      "begin": "2018-05-04T10:00:00+01:00",
+      "end": "2018-05-04T11:00:00+01:00"
+    },
+    {
+      "id": 30000308,
+      "trackId": 20000025,
+      "locationId": 21000025,
+      "title": "Customizing ASP.NET Core",
+      "abstract":
+        "ASP.NET Core bietet viele Möglichkeiten, um auf individuelle Anforderungen angepasst zu werden. So gibt es einige Stellschrauben, die gedreht werden können um Module und Komponenten beliebig zu modifizieren oder gar zu ersetzen. Das Logging passt euch nicht? Ihr nutzt andere Konfigurationen? Ihr nutzt eine bessere Dependency Injection Library? Kein Problem, wir zeigen euch die wichtigsten Stellschrauben.",
+      "begin": "2018-05-04T11:15:00+01:00",
+      "end": "2018-05-04T12:15:00+01:00"
+    },
+    {
+      "id": 30000323,
+      "trackId": 20000025,
+      "locationId": 21000025,
+      "title": "Wie RESTful ist dein API?",
+      "abstract":
+        "Fast jedes API möchte sich heutzutage REST-API nennen dürfen. Dabei gibt es für die Erteilung dieser Plakette klare Regeln. Anhand des Richardson Maturity Model kann man den Grad der Zielerreichung messen. In der Session wird ein Service entwickelt, der das maximale RMM-Level erreicht. Auf dem Weg dahin kann man gut nochmal revue passieren lassen, was man so alles über das HTTP-Protokoll weiß und vielleicht sogar noch etwas dazu lernen. Mit einer fertigen Lösung in der Hand kann man dann über das Für und Wider der einzelnen Anfroderungen diskutieren.",
+      "begin": "2018-05-04T13:20:00+01:00",
+      "end": "2018-05-04T14:20:00+01:00"
+    },
+    {
+      "id": 30000312,
+      "trackId": 20000025,
+      "locationId": 21000025,
+      "title": "Intelligenz als Basis für Anwendungen der nächsten Generation",
+      "abstract":
+        "Alle Welt spricht von AI oder künstlicher Intelligenz, doch warum ist dieses Thema auch für Entwickler interessant? Was genau macht denn eigentlich eine intelligente Anwendung aus und wie helfen Angebote der Microsoft AI Platform, wie z.B. Cognitive Services, dabei die eigene Applikation mit Intelligenz anzureichern? In dieser Session gibt es einen Rundflug über verschiedene Angebote und Möglichkeiten die eigene Anwendung intelligenter zu machen, aber auch Einblicke, wie schnell und einfach ein intelligenter Bot entwickelt werden kann.",
+      "begin": "2018-05-04T16:00:00+01:00",
+      "end": "2018-05-04T17:00:00+01:00"
+    },
+    {
+      "id": 30000315,
+      "trackId": 20000028,
+      "locationId": 21000028,
+      "title": "Dock mal wieder!",
+      "abstract":
+        "Docker gibt's ja schon eine Weile. Aus den ganzen Ankündigungen wurde Ernst - also Praxis. Die Session zeigt, wie man auf Linux und auf Windows Server Docker installiert, einrichtet und ein Projekt lokal deployed. Benutzt wird in beiden Fällen .NET Core. Erklärt wird das Prinzip der Lösung Docker und dessen Vorteile, auch im Vergleich zu VMs. Die Bestandteile einer auf Microservices ausgerichteten Architektur werden gezeigt und die Prozedur im Live-Coding vorgeführt. Die Session eignet sich für Anfänger in Container-Technologien, die jedoch aktive Entwickler von Web-Applikationen sein sollten. Der Vortrag wird abgerundet durch Hosting-Tipps für Amazon AWS und Microsoft Azure, erklärt, was es mit Kubernetes auf sich hat und was demnächst so kommt.",
+      "begin": "2018-05-04T08:30:00+01:00",
+      "end": "2018-05-04T09:30:00+01:00"
+    },
+    {
+      "id": 30000313,
+      "trackId": 20000028,
+      "locationId": 21000028,
+      "title": "SQL Server 2017 für Entwickler",
+      "abstract":
+        "Seit Oktober 2017 ist der neue SQL Server da und hat etliche Neuerungen in allen Bereichen mit im Gepäck. Doch vieles davon begeistert zwar den DBA oder den BI-ler, aber sind denn auch spannende Features für den Entwickler dabei? Und falls ja, welche sind das? Ich habe mich auf die Suche begeben und möchte dieser Frage in meiner Session auf den Grund gehen.",
+      "begin": "2018-05-04T10:00:00+01:00",
+      "end": "2018-05-04T11:00:00+01:00"
+    },
+    {
+      "id": 30000299,
+      "trackId": 20000028,
+      "locationId": 21000028,
+      "title":
+        "Electron: Einstieg in die Entwicklung von Cross-Platform Desktop Software",
+      "abstract":
+        "Bring Your Own Device wird für Unternehmen immer wichtiger. Die Software soll nicht nur auf dem Windows Computer, sondern ebenfalls auf dem Mac eingesetzt werden. Das funktioniert leider nicht mit dem .NET-Framework oder der Java Runtime. Die Lösung: Electron! Mit nur einem Code wird eine hoch performante Geschäftsanwendung für Windows, Mac und Linux entwickelt. Sie steigen mit den Grundlagen von Electron ein und werden dann mit den wichtigsten Tools und Vorgehensweisen vertraut gemacht. Mit diesen Infos steigen Sie rasch zum versierten Cross-Platform Entwickler auf.",
+      "begin": "2018-05-04T11:15:00+01:00",
+      "end": "2018-05-04T12:15:00+01:00"
+    },
+    {
+      "id": 30000331,
+      "trackId": 20000028,
+      "locationId": 21000028,
+      "title": "Serviceorientierte Architekturen",
+      "abstract":
+        "SOA ist von gestern, Microservices sind die Gegenwart. So oder so ähnlich lautet heute die weit verbreitete Meinung, wenn es um die Wahl einer richtigen Architektur geht – zu veraltet und komplex sind die damit assoziierten Technologien wie SOAP oder WSDL. In dieser Session zeigt Architekturexperte David Tielke warum diese Aussage nicht wahr ist. Neben den grundlegenden Prinzipien von SOA, geht es vor allem darum, die Vorteile dieses Ansatzes in nahezu jeder Architektur nutzbar zu machen – egal ob für ein verteiltes System oder ein einzelnes System. Dabei zeigt David zahlreiche Beispiele aus seinem Berateralltag und den damit verbunden Kundenprojekten. Am Ende wird Ihre Meinung zu SOA garantiert eine andere sein.",
+      "begin": "2018-05-04T13:20:00+01:00",
+      "end": "2018-05-04T14:20:00+01:00"
+    },
+    {
+      "id": 30000328,
+      "trackId": 20000028,
+      "locationId": 21000028,
+      "title": "Angular und Microservices – Wie passt das zusammen?",
+      "abstract":
+        "Microservices sind derzeit ein beliebter Architekturstil. Single Page Applications (SPA) auch! Aber wie lassen sich diese beiden Architekturen kombinieren? Die Gute Nachricht: Es existieren hierfür gleich mehrere Ansätze und natürlich hat jeder seine ganz eigenen Vor- und Nachteile. Diese Session diskutiert anhand einer Angular-Anwendung diese Ansätze, die in der Praxis bereits erfolgreich umgesetzt wurden. Die damit einhergehenden Konsequenzen werden aufgezeigt und Möglichkeiten zum Kompensieren der vorherrschenden Nachteile präsentiert.",
+      "begin": "2018-05-04T14:35:00+01:00",
+      "end": "2018-05-04T15:35:00+01:00"
+    },
+    {
+      "id": 30000321,
+      "trackId": 20000028,
+      "locationId": 21000028,
+      "title": "What is .NET Standard?",
+      "abstract":
+        ".NET Standard is one of many new technologies to emerge from the mass of open source .NET initiatives during the past year. Compared to what's come before, .NET Standard is not only a more effective way to use NuGet packages cross platform, it's also way simpler.\n\nIt has the potential to remove most, if not all, of the current confusion surrounding cross platform multi-targeting. So what is exactly is it and how does it work? How does it relate to .NET Core? Join Adam as he answers these questions and more, and takes a dive into some of the magic which makes .NET Standard work.",
+      "begin": "2018-05-04T16:00:00+01:00",
+      "end": "2018-05-04T17:00:00+01:00"
+    },
+    {
+      "id": 30000309,
+      "trackId": 20000026,
+      "locationId": 21000026,
+      "title": "Was ist neu in ASP.NET Core 2.x?",
+      "abstract":
+        "ASP.NET Core 2.0 ist seit letztem Sommer released, die Version 2.1 steht kurz bevor, aber was hat sich getan seit der Version 1.1? Kann man ASP.NET Core nun ohne bedenken und ohne Einschränkungen in echten Projekten nutzen? In diesem Vortrag zeigen wir Ihnen die wichtigsten neuen Features der aktuellen Version 2.0 und interessante Neuerungen der kommenden Version 2.1.",
+      "begin": "2018-05-04T08:30:00+01:00",
+      "end": "2018-05-04T09:30:00+01:00"
+    },
+    {
+      "id": 30000317,
+      "trackId": 20000026,
+      "locationId": 21000026,
+      "title":
+        "Die neue Art zu Arbeiten bei Microsoft: Releases alle 3 Wochen statt 2 Jahre",
+      "abstract":
+        "Vergleicht man das Microsoft von heute mit dem Microsoft von vor ein paar Jahren, mag man manchmal kaum glauben, dass es sich um die gleiche Firma handelt: eine ganz neue Offenheit im Hinblick auf Technologien und Prozesse. Ein ganz neues Selbstverständnis und Mitarbeiter, die das neue Mindset verkörpern – was in letzter Konsequenz auch zu Produkten führt, die die neue Vision widerspiegeln. In diesem Workshop geht es am Beispiel von Microsoft um die Reise zu mehr Agilität, um Themen wie Open Source, Git und DevOps, und wie diese Themen Einzug in die Produktentwicklung bei Microsoft und den Alltag von Entwicklern finden. Besuchen Sie diesen Vortrag und holen Sie sich wertvolle Ideen und Inspiration für Ihren Entwicklungsprozess!",
+      "begin": "2018-05-04T10:00:00+01:00",
+      "end": "2018-05-04T11:00:00+01:00"
+    },
+    {
+      "id": 30000318,
+      "trackId": 20000026,
+      "locationId": 21000026,
+      "title": "Debugging bugs and performance issues in the field",
+      "abstract":
+        "In the field and at customers' site most of the tools used in development are not available and can’t be installed. Microsoft give you many tools, some of them are built into the OS and the others can be used without installation. Those tools can be used in such environments to collect debugging and performance data without intervening with the IT operations. In this practical and demo-based talk, we will introduce and demo tools for the field like Debugging tools for windows, Dump analysis, Windows performance toolkit and many other tools and methods you can use to handle bugs and performance issues in customer's sites and in QA / test environments.",
+      "begin": "2018-05-04T11:15:00+01:00",
+      "end": "2018-05-04T12:15:00+01:00"
+    },
+    {
+      "id": 30000326,
+      "trackId": 20000026,
+      "locationId": 21000026,
+      "title": "Einführung in Python.NET",
+      "abstract":
+        "Python.NET als Bibliothek für C-Python bietet die Möglichkeit auf .NET-Objekte zuzugreifen und dabei die einfach zu lernende Sprache Python zu nutzen. Da Python mit dem Nutzen in der Big Data Analyse einen weiteren Schwung bekommt lohnt sich ein Blick aus der C# Entwicklerbrille auf Python. Entsprechend stellt dieser Vortrag die Möglichkeiten vor, die Python.NET einem Entwickler bietet verschiedene Sprachkonstrukte aus C# in Python zu überführen, um bekannte Bibliotheken aus C# weiter zu nutzen. Damit erschliesst sich dem Entwickler die einfache Welt einer Skriptsprache und deren Vorteilen. Mit IDEs die eine REPL (Read Eval Print Loop) und Intellisense unterstützen hat man schnell eine Skripting Unterstützung für seine C# Projekte und kann schnell etwas ausprobieren. Gleiches gilt für die Einbindung einer Skripting Lösung in ein .NET Programm, d.h., der Anwender kann relativ leicht mal eben etwas skripten. Umgekehrt kann ein Python-Entwickler die vollen Möglichkeiten der BCL nutzen statt sich dafür entsprechende Python Bibliotheken zu suchen. Vor den Möglichkeiten der Bibliothek wird noch ein Überblick über die Historie, Motivation und die Architektur der Bibliothek gegeben.",
+      "begin": "2018-05-04T13:20:00+01:00",
+      "end": "2018-05-04T14:20:00+01:00"
+    },
+    {
+      "id": 30000295,
+      "trackId": 20000026,
+      "locationId": 21000026,
+      "title": "Wir holen Berlin nach Köln – Ein HoloLens-Hackathon",
+      "abstract":
+        "Virtual-, Augmented- und Mixed Reality sind stetig wachsende Begriffe, die nicht nur Gamer-Herzen höherschlagen lassen. Mit stetig verbesserter Technologie und steigendem Marktanteil sind auch den Einsatzmöglichkeiten in industriellen Bereichen kaum Grenzen gesetzt.\n\nBei dieser immer rasanter fortschreitenden Entwicklung werden die Fragen immer größer: Wie kann ich möglichst schnell und effizient in diese Entwicklung einsteigen? Welche Technologien muss man sich aneignen und worauf sollte dabei geachtet werden? Wie so oft führen auch hier viele Wege nach Rom.\n\nInspiriert durch Anwendungsfälle in der Baubranche und unter Zuhilfenahme des Unity3D-Frameworks, haben wir im Rahmen eines internen Hackathons eine kleine MR-App für den Einsatz auf Microsofts HoloLens umgesetzt. In diesem Erfahrungsbericht gibt Daniel Adolphs einen Einblick in diese Variante der App-Entwicklung für HoloLens und damit verbundene Herausforderungen – mit anschließender interaktiver Demo!",
+      "begin": "2018-05-04T14:35:00+01:00",
+      "end": "2018-05-04T15:35:00+01:00"
+    },
+    {
+      "id": 30000297,
+      "trackId": 20000029,
+      "locationId": 21000029,
+      "title": "Become a productive .NET developer with JetBrains Rider",
+      "abstract":
+        "With .NET Core, an explosion of .NET IDE's happened! There's good old Visual Studio, but also VS Code and JetBrains Rider. In this talk, we'll dive into the latter. We'll explore navigation, automatic inspections and quick fixes, code generation, built-in tooling like version control integration and local history and look at the special scenario's the debugger has to offer, like conditional breakpoints and on-the-fly decompilation of third party libraries. Come to this session to learn about this new (and fast!) kid on the block and learn plenty of tips & tricks to enhance your development productivity.",
+      "begin": "2018-05-04T08:30:00+01:00",
+      "end": "2018-05-04T09:30:00+01:00"
+    },
+    {
+      "id": 30000298,
+      "trackId": 20000029,
+      "locationId": 21000029,
+      "title":
+        "Hab ich was vergessen? Ihre ultimative Checkliste für Schutz und Lizenzierung",
+      "abstract":
+        "Will ich meine Software erfolgreich am Markt etablieren, dann muss ich auf der einen Seite dafür sorgen, dass niemand an mein in der Software enthaltenes Know-how herankommt, aber auf der anderen Seite auch Lizenzmodelle integrieren, mit denen ich attraktiv und damit wettbewerbsfähig bin. Möchte ich international unterwegs sein? Setze ich besser auf Dongles oder auf Softwarelizenzen? Werde ich früher oder später meine Software auch in die Cloud bringen? Wie baue ich Schutz und Lizenzierung in meine Software ein? Wieviel Zeit brauche ich dafür? Wie kommen die Kunden an Ihre Lizenzen? Fragen über Fragen, auf die man gerne eine Antwort hätte. Genau diese wird der Vortrag liefern. Holen Sie sich Ihre Checkliste für Schutz und Lizenzierung.",
+      "begin": "2018-05-04T10:00:00+01:00",
+      "end": "2018-05-04T11:00:00+01:00"
+    },
+    {
+      "id": 30000329,
+      "trackId": 20000029,
+      "locationId": 21000029,
+      "title": "Querschnittsfunktionen in Angular gekonnt implementieren",
+      "abstract":
+        "Die Umsetzung von Querschnittsfunktionen kann lästig und fehleranfällig sein, weil es sie immer und immer wieder zu Berücksichtigen gilt. Typische Beispiele sind Autorisierung, Warnmeldungen, Fehlerbehandlung oder Caching. In dieser Session erfahren Sie anhand einiger Beispiele, wie Sie solche Anforderungen in Ihren Angular-Projekten gekonnt realisieren können. Dazu kommen Konzepte wie Direktiven, Router Guards und Interceptoren zum Einsatz. Am Ende kennen Sie Ihre Optionen, um Querschnittsfunktionen global zu implementieren.",
+      "begin": "2018-05-04T11:15:00+01:00",
+      "end": "2018-05-04T12:15:00+01:00"
+    },
+    {
+      "id": 30000319,
+      "trackId": 20000029,
+      "locationId": 21000029,
+      "title": "Windows Performance toolkit deep dive",
+      "abstract":
+        "Windows performance toolkit is a free Microsoft collecting and analysis tool. This tool is currently the most advanced toolset available to diagnose complex performance issues. The collector tools can be used without installation and the analyzing tool is very easy to use (but not that easy to interpreted). The tools are useful to developers, Test and QA and IT operations. It can give deep insight into the real time behavior of the software during development and in production. This talk will deep dive on the tools and features included in the windows performance toolkit. Show and demo how to get the tool, use it without installation, collect data and interpret the results. We will demo several practical real live scenarios. Experience based tips and guideline will be shared and discussed.",
+      "begin": "2018-05-04T13:20:00+01:00",
+      "end": "2018-05-04T14:20:00+01:00"
+    },
+    {
+      "id": 30000322,
+      "trackId": 20000029,
+      "locationId": 21000029,
+      "title": "Finding your service boundaries - a practical guide",
+      "abstract":
+        "We know it's useful to split complex systems into logical services. We feel the benefits of modular deployment of microservices, and our cognitive load is eased when we only deal with one piece of code at a time. But how do we know where to draw the service boundaries? In complex business domains, it's often difficult to know where to start. And when you get your boundaries wrong, it's often only a matter of time before you hear yourself say \"it would be easier to re-write everything\".\n\nJoin Adam as he shares practical advice on how to discover the service boundaries hidden in your systems. We'll examine a sample business domain and discover the techniques we can apply to tease out the natural separation of concerns. We'll investigate some of the common pitfalls, including some of the crazy mistakes Adam has made during the last 20 years of developing complex systems.",
+      "begin": "2018-05-04T14:35:00+01:00",
+      "end": "2018-05-04T15:35:00+01:00"
+    },
+    {
+      "id": 30000300,
+      "trackId": 20000029,
+      "locationId": 21000029,
+      "title": "Die GPU und .NET",
+      "abstract":
+        "Liest man von Grafikkarten, dann meist im Zusammenhang von Computerspielen und Bitcoins. Aber nicht nur deswegen werden Grafikkarten immer wichtiger. Während die Leistungszuwächse einzelner Prozessoren nicht mehr so rasant voranschreiten, steigt die Anzahl der Shader-Module auf Grafikkarten unbeirrt weiter. Die Einstiegshürde und die Berührungsängste sind leider recht hoch. In dieser Session möchte ich Ihnen den Einstieg in die Grafikkartenentwicklung via C#.NET erleichtern. Dazu nutzen wir einen C#-Direct3D Wrapper namens SharpDX. Ich werde Ihnen die Konzepte der Grafikkartenentwicklung samt der Renderpipeline näher bringen, um Ihnen den Weg zur GPU zu ebnen.",
+      "begin": "2018-05-04T16:00:00+01:00",
+      "end": "2018-05-04T17:00:00+01:00"
+    },
+    {
+      "id": 30000345,
+      "trackId": 20000027,
+      "locationId": 21000027,
+      "title": "Was sind eigentlich Azure Functions?",
+      "abstract":
+        "Diese Session gibt einen Überblick über Azure Functions und erläutert die Grundlagen von \"Serverless Computing\". Sie zeigt anhand von Beispielen aus dem \"echten Leben\" wie man eigene Anwendungen auf funktionaler Ebene quasi \"grenzenlos\" und zu einem Bruchteil der Kosten on-demand skalieren kann. \"Serverless Computing\" ist zu recht eines der kommenden großen Themenfelder und wird den Bereich rund um \"verteiltes Rechnen\" ganz neu definieren.",
+      "begin": "2018-05-04T08:30:00+01:00",
+      "end": "2018-05-04T09:30:00+01:00"
+    },
+    {
+      "id": 30000324,
+      "trackId": 20000027,
+      "locationId": 21000027,
+      "title": "Turn on the SWAG - mit der OpenAPI Specification 3.0",
+      "abstract":
+        "Wer kümmert sich schon gern um die Dokumentation die APIs die er baut? Aber was wäre wenn entweder die Dokumentation sich automatisch erstellt und sogar automatisch eine Testoberfläche mitbringen würde? Oder wenn man aus der Dokumentation direkt ein API erstellen könnte? Das alles und noch viel mehr ermöglicht die OpenAPI Specification, a.k.a. Swagger. In der Session wird erklärt was Swagger ist und was es kann. Außerdem wird auf die Neuerungen in der neuen Version 3.0 der zugrunde liegenden Spezifikation eingegangen.",
+      "begin": "2018-05-04T10:00:00+01:00",
+      "end": "2018-05-04T11:00:00+01:00"
+    },
+    {
+      "id": 30000307,
+      "trackId": 20000027,
+      "locationId": 21000027,
+      "title": "Xamarin.Forms Apps mit CQRS und EventSourcing",
+      "abstract":
+        "Die Flux-Architektur ist mittlerweile dank Patterns wie Redux sehr bekannt und gemeinsam mit dem React-Framework ist es mittlerweile ein Quasi-Standard für WebApps. Oft werde ich gefragt, ob es nicht auch Sinn ergibt die Flux-Architektur für native Mobile Apps einzusetzen. Bei nährerer betrachtung stellt man schnell fest, dass es sich bei Redux um nichts anderes als eine kombination aus CQRS und einer CurrentState in sogenanten StateStores handelt. Es gibt mittlerweile Redux implementierungen für .NET und damit auch für Xamarin und Xamarin.Forms. Also stellte sich die Frage, ob es auch möglich ist eine implementierung mit CQRS und EventSourcing umzusetzen und dabei Events zu erzeugen und den CurrentState einfach aus der Events zu erzeugen. Dieser Vortrag zeigt eine Beispielimplementierung mit Xamarin.Forms, Prism.Forms und einem einfach in-memory EventStore. Dabei wird dann auch auf die Vor- und Nachteile einer solcher Implementierung eingegangen.",
+      "begin": "2018-05-04T11:15:00+01:00",
+      "end": "2018-05-04T12:15:00+01:00"
+    },
+    {
+      "id": 30000311,
+      "trackId": 20000027,
+      "locationId": 21000027,
+      "title": "Azure Cosmos DB",
+      "abstract":
+        "Diese Session stellt Ihnen die wichtigen Grundlagen für den Einsatz in eigenen Projekten vor und nimmt eine Einordnung in den Kontext der Azure Cosmos DB vor. Es zeigt anhand praktischer Beispiele, wie eine funktionsfähige Datenbank angelegt und mit Daten gefüllt wird und wie die Daten abgefragt werden können. Dabei erläutert Thorsten Kansy alle wichtige Grundbegriffe, so dass dem eigenen Einstieg in diese Technologie nichts mehr im Wege steht.",
+      "begin": "2018-05-04T13:20:00+01:00",
+      "end": "2018-05-04T14:20:00+01:00"
+    },
+    {
+      "id": 30000305,
+      "trackId": 20000027,
+      "locationId": 21000027,
+      "title": "Xamarin Show",
+      "abstract":
+        "\"Xamarin Show\" is eine Präsentation der aktuellen Möglichkeiten der App-Entwicklung mit Xamarin.\n\nDie wichtigsten Punkte der Präsentation:\n\n    Installation von Visual Studio 2017 mit Xamarin\n    Simulatoren für Android und iOS\n    Testen auf dem Handy\n    iOS Designer, Android Designer, Xamarin Live Player\n    iOS Provisioning / Android App Signieren & Packaging\n    Xamarin University Training\n    Native Views vs. Xamarin.Forms\n    Xamarin.Forms Rendering, Animations, SkiaSharp, ...\n    .NET Standard Libraries mit Xamarin\n    Prism für Xamarin.Forms\n    Continuous Integration, Cloud Tests in Visual Studio App Center kurz darstellen",
+      "begin": "2018-05-04T14:35:00+01:00",
+      "end": "2018-05-04T15:35:00+01:00"
+    },
+    {
+      "id": 30000306,
+      "trackId": 20000027,
+      "locationId": 21000027,
+      "title": "Azure Functions Deep Dive",
+      "abstract":
+        "Serverless ist eine beliebte Architektur, kostengünstig und hilft zuverlässige und skalierbare Services zu erstellen. Azure Functions, die serverless Implementierung in Microsoft Azure, ist ein etablierter Service und bekommt in letzter Zeit immer mehr Aufmerksamkeit.\n\nAber oft kommt die frage auf wie es unter der Haube aussieht. Wie ist Azure Functions aufgebaut und wie können wir das debuggen, falls notwendig? Dieser Vortrag gibt einen tieferen Einblick in Functions and zeigt auf wie und wo man startet wenn man eine Function lokal testen und debuggen möchte. Das ist ein guter start um sich an dem open-source-project zu beteiligen.",
+      "begin": "2018-05-04T16:00:00+01:00",
+      "end": "2018-05-04T17:00:00+01:00"
+    },
+    {
+      "id": 30000320,
+      "trackId": 20000024,
+      "locationId": 21000024,
+      "title":
+        "API-First: Wie Versicherungen sexy werden und sich mit House-Keeping-Aufaben rüsten",
+      "abstract":
+        "Die Digitalisierung macht auch vor Versicherungen keinen Halt. Das gilt nicht nur intern, sondern natürlich auch gegenüber unseren Endkunden, die eine immer größere Erwartung an digitale Services haben. Im Zuge dieser ganz neuen, zusätzlichen Anforderungen an Versicherungen stellen sich diese immer häufiger die Frage nach ihrer Kernkompetenz: Gehört es zur Kernkompetenz einer Versicherung, sexy Apps zu programmieren, über die ihre Kunden Versicherungen einsehen und modifizieren können? Und intern gefragt: Gehört es zur Kernkompetenz einer Versicherung, E-mail-Server zu hosten oder CRM-Systeme zu betreiben? Eine Antwort auf viele dieser Fragen lässt sich unter dem Begriff API-first subsumieren: Anstatt für alle Frontends selbst verantwortlich zu sein fokussiert eine Versicherung auf einen API-erzeugten Abstraktionslayer, der den Plattformgedanken implementiert. Unternehmen wie John Deere (ja, die Trecker) praktizieren dies seit Jahren. Für Versicherungen besteht allerdings hier häufig das Problem einer intern gewachsenen und seit Jahren erfolgreich betriebenen IT-Architektur: So sehr alle die Digitalisierung begrüßen und sie beschleunigen wollen, die interne IT-Struktur ist dem noch nicht in allen Facetten gewachsen. So existiert das Spannungsfeld zwischen klassischen House-Keeping-Aufgaben, die lediglich das Ziel haben, eine gegebene Infrastruktur zu modernisieren, und echten nach außen gerichteten Innovationen. Der Vortrag wird diese beiden Facetten gleichwertig nebeneinander beleuchten.",
+      "begin": "2018-05-04T16:00:00+01:00",
+      "end": "2018-05-04T17:00:00+01:00"
+    },
+    {
+      "id": 30000346,
+      "trackId": 20000024,
+      "locationId": 21000024,
+      "title": "Immer mit dem Strom - Datastreaming",
+      "abstract":
+        "Relationale Datenbanken sind ja sowas von vorgestern und mit unstrukturierten Datenhaltungen sieht es auch nicht besser aus. Stück für Stück mutieren sämtliche Datensenken zu unwartbaren inperformanten Datenklumpen, denen man nicht ansehen kann, wie sie entstanden sind. Wie kommt das nur?\nWeil wir Entwickler immernoch hauptsächlich in Daten denken und dabei die Realität aus den Augen verlieren. Wie funktioniert denn in Wirklichkeit das Business? Es geschehen sogenannte Geschäftsereignisse. Sie bestimmen in Form von zeitlichen Veränderungen, was tatsächlich passiert. Darum brauchen wir eine neue Form der Datenhaltung, den Stream. Hiermit werden Daten nicht mehr überschrieben, so dass jeder erdenkliche Datenzustand der Vergangenheit wieder hergestellt werden kann.\nWie man eine Applikation mit Streams steuert und entwickelt soll dieser konzeptionelle Vortrag zeigen.",
+      "begin": "2018-05-04T13:20:00+01:00",
+      "end": "2018-05-04T14:20:00+01:00"
+    },
+    {
+      "id": 30000335,
+      "trackId": 20000024,
+      "locationId": 21000024,
+      "title": "Challenges and Surprises from Big Data and Analytics",
+      "abstract":
+        "Working alongside analytics teams can be challenging: shared lanaguage with different meanings, opposing goals, differing processes. Meanwhile, your traditional development technologies crumble under the weight of big data. This session gives an overview of challenges, surprises, and lessons learned from diving into big data and analytics.",
+      "begin": "2018-05-04T11:15:00+01:00",
+      "end": "2018-05-04T12:15:00+01:00"
+    },
+    {
+      "id": 30000333,
+      "trackId": 20000024,
+      "locationId": 21000024,
+      "title": "Keyboards? Where we're going we don't need keyboards",
+      "abstract":
+        "One of the cornerstones in Microsoft’s digital assistant Cortana are cognitive services. Instead of the traditional Screen / Keyboard / Mouse combination for user interaction with your application, it offers different ways of handling user input.\n\nThink about vision, speech and language – the new way of communicating with your devices – but also how to analyze and structure these kinds of user input.\n\nThis session will give you an introduction on the Cognitive Services Platform – show how it can help your end-users – and with live coding examples you will experience how easy it is to start using this incredibly cool API.",
+      "begin": "2018-05-04T10:00:00+01:00",
+      "end": "2018-05-04T11:00:00+01:00"
+    },
+    {
+      "id": 30000314,
+      "trackId": 20000024,
+      "locationId": 21000024,
+      "title":
+        "Xamarin ohne Mac und Android SDK? So weit kommen Sie mit dem Xamarin Live Player",
+      "abstract":
+        "Wer in die App-Entwicklung mit Xamarin einsteigen möchte braucht Geld, Geduld und starke Nerven. Geld, weil für die iOS-Entwicklung ein Mac notwendig ist. Geduld, weil das mehrere Gigabyte umfassende Android SDK inklusive Emulatoren heruntergeladen und installiert werden muss, ehe man auch nur eine Zeile Code für Android übersetzen kann. Starke Nerven, weil es alles andere als intuitiv ist, Mac, XCode, Android und Windows synchron up to date zu halten. Dank des Xamarin Live Players könnte damit endlich Schluss sein. Bereits mit einer minimalen Visual-Studio-Installation können Sie – ganz ohne Mac – Xamarin-Apps entwickeln. Wie weit Sie mit dem Player kommen und ab wann Sie doch einen Mac und ein Android SDK benötigen, erfahren Sie in dieser Session.",
+      "begin": "2018-05-04T08:30:00+01:00",
+      "end": "2018-05-04T09:30:00+01:00"
+    },
+    {
+      "id": 30000340,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title":
+        "Auf der Suche nach dem heiligen Gral: Versionstolerante Schnittstellen in .Net",
+      "abstract":
+        "Heutige Anwendungen wachsen immer weiter zusammen, da Daten zwischen ihnen ausgetauscht und Anwendungsfälle der einen möglichst nahtlos in die andere integriert werden sollen. Egal ob die Integration per Plugin, Addin oder Automatisierungsschnittstelle gelöst ist, irgendwo verläuft dabei immer der Bruch zwischen zwei sich unabhängig voneinander weiterentwickelnden Systemen. Dieser Bruch führt zu einem immensen Aufwand, um die entsprechenden Schnittstellen synchron zu halten.\n\nWie können wir hier sowohl aktuelle Features schnell ausrollen und gleichzeitig die Abwärtskompatibilität erhalten ohne die Schnittstelle unnötig aufzublähen? Dieser Vortrag gibt einen Einblick in unsere Erfahrungen, zwei unabhängige Anwendungen mit unterschiedlichen Releasezyklen zu koppeln. Er zeigt unseren aktuellen Entwicklungsstand und unsere Konzepte den Aufwand für das Generieren der nötigen Adapterschicht möglichst gering zu halten um am Ende nicht in der Versionshölle zu schmoren.",
+      "begin": "2018-05-04T12:50:00+01:00",
+      "end": "2018-05-04T13:10:00+01:00"
+    },
+    {
+      "id": 30000337,
+      "trackId": 20000024,
+      "locationId": 21000024,
+      "title": "Microsoft AppCenter Quicktour",
+      "abstract":
+        "Microsoft App Center bietet ein umfangreiches Toolset für Continous Integration, Continous Deployment und mehr. Eine kurze LIVE-Tour durch das App Center gibt einen Überblick über die Funktionalität.",
+      "begin": "2018-05-04T12:50:00+01:00",
+      "end": "2018-05-04T13:10:00+01:00"
+    },
+    {
+      "id": 30000343,
+      "trackId": 20000025,
+      "locationId": 21000025,
+      "title": "Electron.NET: Cross-Platform Desktop Software mit ASP.NET Core",
+      "abstract":
+        "Das Open Source Projekt Electron.NET verbindet Ihr bekanntes C# & ASP.NET Core KnowHow mit den Möglichkeiten von Electron. In Kombination von C# und HTML5 können hoch performante Desktop Geschäftsanwendung für Windows, Mac und Linux entwickelt werden.Gregor stellt sein Project was er zusammen mit Robert Mühsig ins Leben gerufen hat vor.",
+      "begin": "2018-05-04T12:50:00+01:00",
+      "end": "2018-05-04T13:10:00+01:00"
+    },
+    {
+      "id": 30000339,
+      "trackId": 20000026,
+      "locationId": 21000026,
+      "title": "DevOps: Entwickeln Sie noch oder liefern Sie schon?",
+      "abstract":
+        "Könnten Sie in Ihrem Projekt problemlos 10 Releases am Tag durchführen? Damit sind wir schon gleich bei einem derzeit aktuellen Thema, nämlich: \"DevOps\" - der nächsten Evolutionsstufe der Agilität.\n\nDer digitale Wandel bietet für Unternehmen Chancen und Risiken zugleich. In diesem Vortrag geben Neno Loje einen Überblick, wie sich Unternehmen optimal aufstellen können, was es mit ‘DevOps’ und ‘Business Agility’ auf sich hat und warum diese auch für Ihr Unternehmen hochgradig relevant sind. Holen sie sich wichtige Anregungen, wie Sie das Innovationspotenzial Ihrer Softwareentwicklung maximieren können.",
+      "begin": "2018-05-04T12:50:00+01:00",
+      "end": "2018-05-04T13:10:00+01:00"
+    },
+    {
+      "id": 30000338,
+      "trackId": 20000028,
+      "locationId": 21000028,
+      "title": "Hype or Hot - das ist hier die Frage",
+      "abstract":
+        "Disruptiv - so wird die Veränderung in unserer Branche, ja vielleicht unseres Zeitalters gerne genannt. Darum möchte ich zwar an die Tradition meiner Lunch-Sessions aus den Vorjahren anknüpfen, aber diesmal den Fokus besonders auf die Frage legen welche Auswirkungen die Digitalisierung denn eigentlich auf uns IT-ler und die Anforderungen an uns hat.\n\nIch freue mich, wenn Ihr in einer kurzweiligen und interaktiven Session mit mir darüber diskutiert.",
+      "begin": "2018-05-04T12:50:00+01:00",
+      "end": "2018-05-04T13:10:00+01:00"
+    },
+    {
+      "id": 30000336,
+      "trackId": 20000029,
+      "locationId": 21000029,
+      "title": "Fußball in der Cloud - der FC Basel auf Azure",
+      "abstract":
+        "Vor drei Jahren haben wir die komplett neue Version des digitalen Auftritts, eines der erfolgreichsten Fußballclubs der Schweiz, released. Alle Komponenten des digitalen Auftritts (unter anderem bestehend aus: Website, Mobile-Apps, Live-Ticker, Image Database, Videos, Shop, Extranet) wurden designed um auf Azure zu laufen. Seit dem arbeiten wir kontinuierlich an der Platform um neue Features und neue Services zu integrieren, oder um die Performance und die Sicherheit zu erhöhen. Dieser Vortrag zeigt aus was dieser digitale Auftritt besteht, wie dieser gebaut wurde, wie er arbeitet und wie wir kontinuierlich weitere Features und Verbesserungen nach Azure publizieren.",
+      "begin": "2018-05-04T12:50:00+01:00",
+      "end": "2018-05-04T13:10:00+01:00"
+    },
+    {
+      "id": 30000344,
+      "trackId": 20000023,
+      "locationId": 21000023,
+      "title": "Verabschiedung",
+      "abstract": "sdf",
+      "begin": "2018-05-04T17:15:00+01:00",
+      "end": "2018-05-04T17:45:00+01:00"
+    }
+  ],
+  "sessionSpeakerMaps": [
+    { "id": 40001255, "sessionId": 30000342, "speakerId": 10000026 },
+    { "id": 40001255, "sessionId": 30000342, "speakerId": 10000033 },
+    { "id": 40001255, "sessionId": 30000342, "speakerId": 10000034 },
+    { "id": 40001257, "sessionId": 30000304, "speakerId": 10000061 },
+    { "id": 40001258, "sessionId": 30000296, "speakerId": 10000081 },
+    { "id": 40001267, "sessionId": 30000332, "speakerId": 10000093 },
+    { "id": 40001268, "sessionId": 30000301, "speakerId": 10000058 },
+    { "id": 40001269, "sessionId": 30000330, "speakerId": 10000024 },
+    { "id": 40001270, "sessionId": 30000302, "speakerId": 10000082 },
+    { "id": 40001272, "sessionId": 30000325, "speakerId": 10000020 },
+    { "id": 40001272, "sessionId": 30000325, "speakerId": 10000090 },
+    { "id": 40001273, "sessionId": 30000303, "speakerId": 10000082 },
+    { "id": 40001274, "sessionId": 30000327, "speakerId": 10000022 },
+    { "id": 40001275, "sessionId": 30000316, "speakerId": 10000086 },
+    { "id": 40001276, "sessionId": 30000308, "speakerId": 10000008 },
+    { "id": 40001277, "sessionId": 30000323, "speakerId": 10000021 },
+    { "id": 40001278, "sessionId": 30000312, "speakerId": 10000044 },
+    { "id": 40001282, "sessionId": 30000315, "speakerId": 10000085 },
+    { "id": 40001283, "sessionId": 30000313, "speakerId": 10000044 },
+    { "id": 40001284, "sessionId": 30000299, "speakerId": 10000036 },
+    { "id": 40001285, "sessionId": 30000331, "speakerId": 10000092 },
+    { "id": 40001286, "sessionId": 30000328, "speakerId": 10000023 },
+    { "id": 40001287, "sessionId": 30000321, "speakerId": 10000089 },
+    { "id": 40001288, "sessionId": 30000309, "speakerId": 10000008 },
+    { "id": 40001289, "sessionId": 30000317, "speakerId": 10000017 },
+    { "id": 40001290, "sessionId": 30000318, "speakerId": 10000047 },
+    { "id": 40001291, "sessionId": 30000326, "speakerId": 10000091 },
+    { "id": 40001292, "sessionId": 30000295, "speakerId": 10000080 },
+    { "id": 40001295, "sessionId": 30000297, "speakerId": 10000056 },
+    { "id": 40001296, "sessionId": 30000298, "speakerId": 10000004 },
+    { "id": 40001297, "sessionId": 30000329, "speakerId": 10000023 },
+    { "id": 40001298, "sessionId": 30000319, "speakerId": 10000047 },
+    { "id": 40001299, "sessionId": 30000322, "speakerId": 10000089 },
+    { "id": 40001300, "sessionId": 30000300, "speakerId": 10000058 },
+    { "id": 40001302, "sessionId": 30000345, "speakerId": 10000083 },
+    { "id": 40001303, "sessionId": 30000324, "speakerId": 10000021 },
+    { "id": 40001304, "sessionId": 30000307, "speakerId": 10000083 },
+    { "id": 40001305, "sessionId": 30000311, "speakerId": 10000011 },
+    { "id": 40001306, "sessionId": 30000305, "speakerId": 10000063 },
+    { "id": 40001307, "sessionId": 30000306, "speakerId": 10000083 },
+    { "id": 40001308, "sessionId": 30000320, "speakerId": 10000087 },
+    { "id": 40001308, "sessionId": 30000320, "speakerId": 10000088 },
+    { "id": 40001309, "sessionId": 30000346, "speakerId": 10000061 },
+    { "id": 40001310, "sessionId": 30000335, "speakerId": 10000095 },
+    { "id": 40001311, "sessionId": 30000333, "speakerId": 10000094 },
+    { "id": 40001312, "sessionId": 30000314, "speakerId": 10000014 },
+    { "id": 40001313, "sessionId": 30000340, "speakerId": 10000076 },
+    { "id": 40001314, "sessionId": 30000337, "speakerId": 10000084 },
+    { "id": 40001315, "sessionId": 30000343, "speakerId": 10000036 },
+    { "id": 40001316, "sessionId": 30000339, "speakerId": 10000017 },
+    { "id": 40001318, "sessionId": 30000338, "speakerId": 10000044 },
+    { "id": 40001319, "sessionId": 30000336, "speakerId": 10000008 },
+    { "id": 40001320, "sessionId": 30000344, "speakerId": 10000026 },
+    { "id": 40001320, "sessionId": 30000344, "speakerId": 10000033 },
+    { "id": 40001320, "sessionId": 30000344, "speakerId": 10000034 }
+  ]
+}

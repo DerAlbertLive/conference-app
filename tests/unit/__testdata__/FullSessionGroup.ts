@@ -1,7 +1,7 @@
-import { ISessionGroup } from '@/types';
+import { IDisplaySessionGroup } from '@/types';
 import { FullSessionInfo } from './SessionInfo';
 
-export const FullSessionGroup: ISessionGroup = {
+export const FullSessionGroup: IDisplaySessionGroup = {
   title: 'Group1',
   sessions: [FullSessionInfo],
 };

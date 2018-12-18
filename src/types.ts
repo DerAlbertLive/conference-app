@@ -1,5 +1,5 @@
 export interface IAppState {
-  data: IConferenceData;  
+  data: IDisplayConference;
 }
 
 export interface IConferenceData {

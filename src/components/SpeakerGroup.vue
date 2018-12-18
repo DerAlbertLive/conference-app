@@ -1,7 +1,11 @@
 <template>
   <section>
     <h3>{{ group.title }}</h3>
-    <SpeakerInfo v-for="speaker in group.speakers" :key="speaker.id" :item="speaker"/>
+    <SpeakerInfo
+      v-for="speaker in group.speakers"
+      :key="speaker.id"
+      :item="speaker"
+    />
   </section>
 </template>
 

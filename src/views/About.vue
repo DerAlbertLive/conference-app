@@ -1,5 +1,3 @@
 <template>
-  <div class="about">
-    <h2>Über</h2>
-  </div>
+  <div class="about"><h2>Über</h2></div>
 </template>

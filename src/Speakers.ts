@@ -1,18 +1,12 @@
 import { IAppState, IDisplaySpeaker, IDisplaySpeakerGroup } from '@/types';
-import {
-  ActionContext,
-  GetterTree,
-  ActionTree,
-  MutationTree,
-  Module,
-} from 'vuex';
+import { GetterTree, ActionTree, MutationTree, Module } from 'vuex';
 
 interface ISpeakersState {
   groups: IDisplaySpeakerGroup[];
 }
 
 const state: ISpeakersState = {
-  groups: [] = [],
+  groups: [],
 };
 
 function getGroups(speakers: IDisplaySpeaker[]): IDisplaySpeakerGroup[] {

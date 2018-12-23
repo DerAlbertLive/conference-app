@@ -10,15 +10,15 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { ISessionGroup } from '@/types';
-import SessionInfo from './SessionInfo.vue';
+import { IDisplaySessionGroup } from '@/types';
+import SessionInfo from '@/components/SessionInfo.vue';
 
 @Component({
   components: { SessionInfo },
 })
 export default class SessionGroup extends Vue {
   @Prop({ default: {} })
-  private group!: ISessionGroup;
+  private group!: IDisplaySessionGroup;
 }
 </script>
 

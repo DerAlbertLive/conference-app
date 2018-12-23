@@ -52,6 +52,7 @@ export interface IDisplayConference {
   title: string;
   sessions: IDisplaySession[];
   speakers: IDisplaySpeaker[];
+  sessionSpeakerMaps: ISessionSpeakerMap[];
 }
 
 export interface IDisplaySession {
@@ -76,4 +77,5 @@ export interface IDisplaySpeaker {
   id: number;
   name: string;
   imageUrl: string;
+  sessions: IDisplaySession[];
 }

@@ -7,6 +7,6 @@ export const FullSession: ISession = {
   title: 'Session',
   abstract:
     'Minions ipsum chasy butt uuuhhh. Butt pepete belloo! Bappleees ti aamoo! Bananaaaa.',
-  begin: new Date(),
-  end: new Date(),
+  begin: '',
+  end: '',
 };

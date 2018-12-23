@@ -6,12 +6,10 @@ export const AppState: IAppState = {
   data: {} as any,
 };
 
-let applicationInitialized = false;
-
 let initializing = false;
 
 const actions: ActionTree<IAppState, IAppState> = {
-  async initializeApplication({ commit, state, rootState }) {
+  async initializeApplication({ commit, rootState }) {
     if (initializing) {
       return;
     }

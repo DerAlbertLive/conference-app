@@ -2,9 +2,10 @@
   <div class="about">
     <h2>Sprecher</h2>
     <SpeakerGroup
-      v-for="group in groups"
-      v-bind:key="group.title"
-      v-bind:group="group"
+      v-for="(group, index) in groups"
+      :key="group.title"
+      :group="group"
+      :data-cy="'group-' + index"
       class="speakerGroup"
     ></SpeakerGroup>
   </div>
@@ -14,21 +15,20 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { IDisplaySpeakerGroup } from '@/types';
 import { namespace, Action } from 'vuex-class';
-import SpeakerGroup from '../components/SpeakerGroup.vue';
-import { SessionService } from '../services/SessionService';
+import SpeakerGroup from './SpeakerGroup.vue';
+import { SessionService } from '@/services/SessionService';
 
 const mod = namespace('speakers');
-const modG = namespace('global');
 
 @Component({
   components: { SpeakerGroup },
 })
 export default class Speakers extends Vue {
-  @Action initializeApplication!: () => void;
-  @mod.Action loadGroups!: () => void;
-  @mod.Getter groups!: IDisplaySpeakerGroup[];
+  @Action private initializeApplication!: () => void;
+  @mod.Action private loadGroups!: () => void;
+  @mod.Getter private groups!: IDisplaySpeakerGroup[];
 
-  async mounted() {
+  private async mounted() {
     await this.initializeApplication();
     await this.loadGroups();
   }

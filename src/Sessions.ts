@@ -5,7 +5,7 @@ interface ISessionsState {
   groups: IDisplaySessionGroup[];
 }
 
-const state: ISessionsState = {
+const sessionsState: ISessionsState = {
   groups: [],
 };
 
@@ -13,13 +13,13 @@ function getGroups(sessions: IDisplaySession[]): IDisplaySessionGroup[] {
   return [
     {
       title: 'Eins',
-      sessions: sessions,
+      sessions,
     },
   ];
 }
 const actions: ActionTree<ISessionsState, IAppState> = {
-  async loadGroups({ commit, state, rootState }) {
-    var groups = getGroups(rootState.data.sessions);
+  async loadGroups({ commit, rootState }) {
+    const groups = getGroups(rootState.data.sessions);
     commit('groupsLoaded', groups);
   },
 };
@@ -36,11 +36,11 @@ const mutations: MutationTree<ISessionsState> = {
   },
 };
 
-const module: Module<ISessionsState, IAppState> = {
+const moduleSessions: Module<ISessionsState, IAppState> = {
   namespaced: true,
-  state,
+  state: sessionsState,
   actions,
   getters,
   mutations,
 };
-export default module;
+export default moduleSessions;

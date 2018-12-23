@@ -1,9 +1,11 @@
 <template>
   <section>
+    <h2 data-cy="title">{{ group.title }}</h2>
     <SessionInfo
-      v-for="item in group.sessions"
-      v-bind:item="item"
-      v-bind:key="item.id"
+      v-for="(item, index) in group.sessions"
+      :item="item"
+      :key="item.id"
+      :data-cy="'info-' + index"
     />
   </section>
 </template>

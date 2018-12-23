@@ -5,7 +5,7 @@
       v-for="(group, index) in groups"
       :group="group"
       :key="group.title"
-      :data-cy="'speaker-group-' + index"
+      :data-cy="'group-' + index"
     />
   </div>
 </template>

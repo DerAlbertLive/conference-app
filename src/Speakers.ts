@@ -51,7 +51,7 @@ function findSpeaker(id: number, data: IDisplayConference) {
   }
 
   const sessions: IDisplaySession[] = [];
-  if (!speaker.sessions) {
+  if (!speaker.sessions || speaker.sessions.length === 0) {
     const sessionIds = data.sessionSpeakerMaps
       .filter((m) => m.speakerId === id)
       .map((m) => m.sessionId);

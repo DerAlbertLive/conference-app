@@ -48,6 +48,7 @@ export interface ISessionSpeakerMap {
   speakerId: number;
 }
 
+
 export interface IDisplayConference {
   title: string;
   sessions: IDisplaySession[];
@@ -58,9 +59,12 @@ export interface IDisplayConference {
 export interface IDisplaySession {
   id: number;
   title: string;
-  speakerName: string;
-  speakerImage: string;
+  abstract: string;
+  speaker: IDisplaySpeaker;
   favorite?: boolean;
+  track: ITrack;
+  location: ILocation;
+  sessionTime: string;
 }
 
 export interface IDisplaySessionGroup {
@@ -76,6 +80,7 @@ export interface IDisplaySpeakerGroup {
 export interface IDisplaySpeaker {
   id: number;
   name: string;
+  bio: string;
   imageUrl: string;
   sessions: IDisplaySession[];
 }

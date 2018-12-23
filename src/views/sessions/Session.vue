@@ -1,6 +1,4 @@
-<template>
-  
-</template>
+<template> </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IDisplaySpeaker } from '@/types';
@@ -23,6 +21,4 @@ export default class Session extends Vue {
   }
 }
 </script>
-<style lang="scss">
-</style>
-
+<style lang="scss"></style>

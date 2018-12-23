@@ -48,7 +48,6 @@ export interface ISessionSpeakerMap {
   speakerId: number;
 }
 
-
 export interface IDisplayConference {
   title: string;
   sessions: IDisplaySession[];

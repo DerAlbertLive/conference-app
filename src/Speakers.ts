@@ -71,7 +71,7 @@ const actions: ActionTree<ISpeakersState, IAppState> = {
     if (state.groups && state.groups.length > 0) {
       return;
     }
-    
+
     const groups = getGroups(rootState.data.speakers);
     commit('groupsLoaded', groups);
   },

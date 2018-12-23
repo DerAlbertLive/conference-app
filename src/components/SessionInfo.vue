@@ -5,7 +5,7 @@
       <p data-cy="names">{{ item.speakerNames }}</p>
     </div>
     <div class="fav">Fav</div>
-    <div class="track" :style="{ 'background-color': item.track.color}" >
+    <div class="track" :style="{ 'background-color': item.track.color }">
       {{ item.track.shortTitle }}
     </div>
   </div>

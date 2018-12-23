@@ -1,4 +1,9 @@
-import { IAppState, IDisplaySession, IDisplaySessionGroup, IConferenceData } from '@/types';
+import {
+  IAppState,
+  IDisplaySession,
+  IDisplaySessionGroup,
+  IConferenceData,
+} from '@/types';
 import { GetterTree, ActionTree, MutationTree, Module } from 'vuex';
 
 interface ISessionsState {
@@ -10,29 +15,30 @@ const sessionsState: ISessionsState = {
 };
 
 function getGroups(sessions: IDisplaySession[]): IDisplaySessionGroup[] {
-  const sessionGroups= new Map<string,IDisplaySession[]>();
+  const sessionGroups = new Map<string, IDisplaySession[]>();
   for (const session of sessions) {
-     let groupedSession  = sessionGroups.get(session.sessionTime);
-     if (!groupedSession) {
-        groupedSession = [];
-        sessionGroups.set(session.sessionTime, groupedSession);
-     }
-     groupedSession.push(session);
+    let groupedSession = sessionGroups.get(session.sessionTime);
+    if (!groupedSession) {
+      groupedSession = [];
+      sessionGroups.set(session.sessionTime, groupedSession);
+    }
+    groupedSession.push(session);
   }
   const groupTimes = [...sessionGroups.keys()].sort();
   const result: IDisplaySessionGroup[] = [];
   for (const groupTime of groupTimes) {
     let groupedSession = sessionGroups.get(groupTime) || [];
-    groupedSession = groupedSession.sort((s1,s2) => s1.track.shortTitle.localeCompare(s2.track.shortTitle));
+    groupedSession = groupedSession.sort((s1, s2) =>
+      s1.track.shortTitle.localeCompare(s2.track.shortTitle),
+    );
     const group: IDisplaySessionGroup = {
       title: groupTime,
-      sessions: groupedSession
-    }
+      sessions: groupedSession,
+    };
     result.push(group);
   }
   return result;
 }
-
 
 function getGroupByTime(data: IConferenceData) {
   return;

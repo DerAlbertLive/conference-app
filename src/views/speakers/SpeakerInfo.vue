@@ -1,7 +1,11 @@
 <template>
   <div class="speakerInfo">
     <img v-bind:src="item.imageUrl" v-bind:alt="altText" />
-    <router-link data-cy='name' :to="{name: 'speaker', params:{id:item.id}}">{{ item.name }}</router-link>
+    <router-link
+      data-cy="name"
+      :to="{ name: 'speaker', params: { id: item.id } }"
+      >{{ item.name }}</router-link
+    >
   </div>
 </template>
 
@@ -34,7 +38,7 @@ export default class SpeakerInfo extends Vue {
   a {
     font-size: 1.3em;
     text-decoration: none;
-    color: black;    
+    color: black;
   }
 }
 </style>

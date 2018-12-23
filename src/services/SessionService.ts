@@ -31,17 +31,17 @@ export class SessionDataConverter {
   }
 
   private convertSpeakers(speakers: ISpeaker[]): IDisplaySpeaker[] {
-    return speakers.map(s=>this.convertSpeaker(s))
+    return speakers.map((s) => this.convertSpeaker(s));
   }
 
-  private convertSpeaker(speaker: ISpeaker):IDisplaySpeaker {
+  private convertSpeaker(speaker: ISpeaker): IDisplaySpeaker {
     return {
       id: speaker.id,
       name: speaker.name,
       imageUrl: speaker.imageUrl,
       bio: speaker.bio,
-      sessions: []
-    }
+      sessions: [],
+    };
   }
 
   private convertSessions(sessions: ISession[]): IDisplaySession[] {
@@ -71,7 +71,9 @@ export class SessionDataConverter {
     return `${this.getTime(beginDate)} - ${this.getTime(endDate)}`;
   }
   getTime(date: Date): string {
-    return `${this.alignNumber(date.getHours())}:${this.alignNumber(date.getMinutes())}`;
+    return `${this.alignNumber(date.getHours())}:${this.alignNumber(
+      date.getMinutes(),
+    )}`;
   }
 
   alignNumber(num: number): string {

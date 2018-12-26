@@ -4,6 +4,7 @@ import { IAppState } from '@/types';
 import app from './AppModule';
 import speakers from './Speakers';
 import sessions from './Sessions';
+import favorites from './Favorites';
 
 Vue.use(Vuex);
 
@@ -16,6 +17,7 @@ const options: StoreOptions<IAppState> = {
   modules: {
     sessions,
     speakers,
+    favorites,
   },
 };
 

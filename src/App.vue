@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <header><h1>{{ conftitle }}</h1></header>
+    <header>
+      <h1>{{ conftitle }}</h1>
+    </header>
     <main><router-view /></main>
     <footer id="nav">
       <router-link to="/">Favoriten</router-link> |
@@ -17,11 +19,10 @@ import { Component, Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
 @Component
 export default class App extends Vue {
-    @Action private initializeApplication!: () => void;
-    @Getter conftitle!: string;
+  @Action private initializeApplication!: () => void;
+  @Getter conftitle!: string;
 
-    private async mounted() {
-    }
+  private async mounted() {}
 }
 </script>
 

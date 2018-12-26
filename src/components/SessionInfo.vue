@@ -1,10 +1,25 @@
 <template>
-  <div class="sessionInfo" @click="gotoSession">
-    <div class="info">
+  <div class="sessionInfo">
+    <div class="info" @click="gotoSession(item.id)">
       <h3 data-cy="title">{{ item.title }}</h3>
       <p data-cy="names">{{ speakerNames }}</p>
     </div>
-    <div class="fav">Fav</div>
+    <div
+      v-if="item.favorite"
+      data-cy="fav"
+      class="fav yes"
+      @click="toggle(item)"
+    >
+      Fav
+    </div>
+    <div
+      v-if="!item.favorite"
+      data-cy="fav"
+      class="fav no"
+      @click="toggle(item)"
+    >
+      No Fav
+    </div>
     <div class="track" :style="{ 'background-color': item.track.color }">
       {{ item.track.shortTitle }}
     </div>
@@ -14,23 +29,27 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IDisplaySession } from '@/types';
+import { Action } from 'vuex-class';
 import { Location } from 'vue-router';
 
 @Component
 export default class SessionInfo extends Vue {
   @Prop({ default: { title: 'Dummy Title' } })
   private item!: IDisplaySession;
+  @Action private toggleFavorite!: (session) => void;
 
-  private gotoSession() {
-    const id = this.item.id.toString();
-    this.$router.push({name:'session', params: {id}})
+  private gotoSession(sessionId: number) {
+    const id = sessionId.toString();
+    this.$router.push({ name: 'session', params: { id } });
   }
-
+  private toggle(session: IDisplaySession) {
+    this.toggleFavorite(session);
+  }
   get speakerNames() {
     if (!this.item || !this.item.speakers) {
       return;
     }
-    var names = this.item.speakers.map(s=>s.name);
+    var names = this.item.speakers.map((s) => s.name);
     return names.join(', ');
   }
 }

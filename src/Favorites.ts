@@ -1,21 +1,33 @@
-import { IAppState, IDisplaySession, IDisplaySessionGroup } from '@/types';
+import {
+  IAppState,
+  IDisplaySession,
+  IDisplaySessionGroup,
+  IDisplayConference,
+} from '@/types';
 import { GetterTree, ActionTree, MutationTree, Module } from 'vuex';
 
-interface ISessionsState {
+interface IFavoritesStates {
   sessions: IDisplaySessionGroup[];
-  currentSession: IDisplaySession;
 }
 
-const sessionsState: ISessionsState = {
+const sessionsState: IFavoritesStates = {
   sessions: [],
-  currentSession: {} as IDisplaySession,
 };
 
 function getGroupedSessions(
-  sessions: IDisplaySession[],
+  conference: IDisplayConference,
 ): IDisplaySessionGroup[] {
+  const json = localStorage.getItem(conference.title) || '[]';
+
+  const favoriteIds = JSON.parse(json);
+
+  const sessions = conference.sessions.filter(
+    (s) => favoriteIds.indexOf(s.id) >= 0,
+  );
+
   const sessionGroups = new Map<string, IDisplaySession[]>();
   for (const session of sessions) {
+    session.favorite = true;
     let groupedSession = sessionGroups.get(session.sessionTime);
     if (!groupedSession) {
       groupedSession = [];
@@ -40,31 +52,20 @@ function getGroupedSessions(
   return result;
 }
 
-const actions: ActionTree<ISessionsState, IAppState> = {
+const actions: ActionTree<IFavoritesStates, IAppState> = {
   async loadSessions({ commit, rootState }) {
-    const sessions = getGroupedSessions(rootState.data.sessions);
+    const sessions = getGroupedSessions(rootState.data);
     commit('sessionsLoaded', sessions);
-  },
-  async loadSession({ commit, rootState }, sessionId: string) {
-    console.log('loadSession', sessionId, rootState.data);
-    const id = Number(sessionId);
-    const session = rootState.data.sessions.find((s) => s.id === id);
-    if (session) {
-      commit('sessionLoaded', session);
-    }
   },
 };
 
-const getters: GetterTree<ISessionsState, IAppState> = {
+const getters: GetterTree<IFavoritesStates, IAppState> = {
   groups(state) {
     return state.sessions;
   },
-  session(state) {
-    return state.currentSession;
-  },
 };
 
-const mutations: MutationTree<ISessionsState> = {
+const mutations: MutationTree<IFavoritesStates> = {
   sessionsLoaded(state, sessions) {
     state.sessions = sessions;
   },
@@ -74,7 +75,7 @@ const mutations: MutationTree<ISessionsState> = {
   },
 };
 
-const moduleSessions: Module<ISessionsState, IAppState> = {
+const moduleSessions: Module<IFavoritesStates, IAppState> = {
   namespaced: true,
   state: sessionsState,
   actions,

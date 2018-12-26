@@ -28,6 +28,7 @@ export class SessionDataConverter {
       sessionSpeakerMaps: this.data.sessionSpeakerMaps,
     };
     this.assignSpeakersToSession(converted);
+    this.assignSessionsToSpeaker(converted);
     return converted;
   }
 
@@ -58,7 +59,7 @@ export class SessionDataConverter {
       id: session.id,
       title: session.title,
       abstract: session.abstract,
-      speakers: {} as any,
+      speakers: [],
       favorite: false,
       track: this.getTrack(session.trackId),
       location: this.getLocation(session.locationId),
@@ -66,37 +67,57 @@ export class SessionDataConverter {
     };
   }
 
-  private assignSpeakersToSession(conference: IDisplayConference) {
-    for (const session of conference.sessions) {
-      session.speakers = this.getSpeakersForSession(conference, session.id)
+  private assignSessionsToSpeaker(conference: IDisplayConference) {
+    for (const speaker of conference.speakers) {
+      speaker.sessions = this.getSessionsForSpeaker(conference, speaker.id);
     }
   }
-  getSpeakersForSession(conference: IDisplayConference, sessionId: number): IDisplaySpeaker[] {
+
+  private assignSpeakersToSession(conference: IDisplayConference) {
+    for (const session of conference.sessions) {
+      session.speakers = this.getSpeakersForSession(conference, session.id);
+    }
+  }
+
+  private getSpeakersForSession(
+    conference: IDisplayConference,
+    sessionId: number,
+  ): IDisplaySpeaker[] {
     const speakersId = conference.sessionSpeakerMaps
       .filter((m) => m.sessionId === sessionId)
       .map((m) => m.speakerId);
-  
+
     return conference.speakers.filter((s) => speakersId.indexOf(s.id) >= 0);
   }
-  getSessionTime(begin: string, end: string): string {
+  private getSessionsForSpeaker(
+    conference: IDisplayConference,
+    speakerId: number,
+  ) {
+    const sessionIds = conference.sessionSpeakerMaps
+      .filter((m) => m.speakerId === speakerId)
+      .map((m) => m.sessionId);
+
+    return conference.sessions.filter((s) => sessionIds.indexOf(s.id) >= 0);
+  }
+  private getSessionTime(begin: string, end: string): string {
     const beginDate = new Date(begin);
     const endDate = new Date(end);
     return `${this.getTime(beginDate)} - ${this.getTime(endDate)}`;
   }
-  getTime(date: Date): string {
+  private getTime(date: Date): string {
     return `${this.alignNumber(date.getHours())}:${this.alignNumber(
       date.getMinutes(),
     )}`;
   }
 
-  alignNumber(num: number): string {
+  private alignNumber(num: number): string {
     if (num > 9) {
       return num.toString();
     }
     return `0${num}`;
   }
 
-  getLocation(locationId: number): ILocation {
+  private getLocation(locationId: number): ILocation {
     return (
       this.data.locations.find((l) => l.id === locationId) || {
         id: 0,
@@ -104,7 +125,8 @@ export class SessionDataConverter {
       }
     );
   }
-  getTrack(trackId: number): ITrack {
+
+  private getTrack(trackId: number): ITrack {
     return (
       this.data.tracks.find((t) => t.id === trackId) || {
         id: 0,

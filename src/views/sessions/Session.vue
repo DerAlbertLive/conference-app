@@ -1,11 +1,15 @@
-<template> 
-<div>
-  <h2 data-cy='title'>{{ session.title }}</h2>
-  <p data-cy='abstract'>{{ session.abstract }}</p>
-  <div data-cy='speakers'>
-    <SpeakerInfo v-for="speaker in session.speakers" :key="speaker.id" :item="speaker" />
+<template>
+  <div>
+    <h2 data-cy="title">{{ session.title }}</h2>
+    <p data-cy="abstract">{{ session.abstract }}</p>
+    <div data-cy="speakers">
+      <SpeakerInfo
+        v-for="speaker in session.speakers"
+        :key="speaker.id"
+        :item="speaker"
+      />
+    </div>
   </div>
-</div>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';

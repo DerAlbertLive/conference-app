@@ -3,13 +3,13 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import {  Action } from 'vuex-class';
+import { Action } from 'vuex-class';
 @Component
 export default class Information extends Vue {
-    @Action private initializeApplication!: () => void;
+  @Action private initializeApplication!: () => void;
 
-    private async mounted() {
-      await this.initializeApplication();
-    }
+  private async mounted() {
+    await this.initializeApplication();
+  }
 }
 </script>

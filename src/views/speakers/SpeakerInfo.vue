@@ -14,8 +14,8 @@ export default class SpeakerInfo extends Vue {
   @Prop({ default: { title: 'Dummy Title' } })
   private item!: IDisplaySpeaker;
 
-  gotoSpeaker(id:number) {
-    this.$router.push({name:'speaker', params:{id:id.toString()}});
+  gotoSpeaker(id: number) {
+    this.$router.push({ name: 'speaker', params: { id: id.toString() } });
   }
 
   get altText() {

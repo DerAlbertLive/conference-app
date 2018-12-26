@@ -73,4 +73,26 @@ context('Sessions', ()=>{
             cy.contains('[data-cy=speakers]', 'Rainer Stropek')
         })
     })
+
+    describe("favorite toogles", ()=>{
+        it ('should toogle first session', ()=>{
+            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').click();
+            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').should('have.class', 'yes');
+        });
+        it ('should toogle first session twice', ()=>{
+            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').click();
+            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').click();
+            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').should('have.class', 'no');
+        });
+
+        it ('should toogle first session in third group', ()=>{
+            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').click();
+            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').should('have.class', 'yes');
+        });
+        it ('should toogle first session twice in third group', ()=>{
+            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').click();
+            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').click();
+            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').should('have.class', 'no');
+        });
+    })
 });

@@ -1,4 +1,4 @@
-import { IAppState } from '@/types';
+import { IAppState, IDisplaySession } from '@/types';
 import { ActionContext, ActionTree, MutationTree, GetterTree } from 'vuex';
 import { SessionService } from './services/SessionService';
 
@@ -10,7 +10,6 @@ let initializing = false;
 
 const actions: ActionTree<IAppState, IAppState> = {
   async initializeApplication({ commit, rootState }) {
-    console.log('initializeApplication')
     if (initializing) {
       return;
     }
@@ -24,6 +23,9 @@ const actions: ActionTree<IAppState, IAppState> = {
     commit('applicationInitialized', { data });
     initializing = false;
   },
+  toggleFavorite({ commit }, session: IDisplaySession) {
+    commit('favoriteToggled', session);
+  },
 };
 
 const getters: GetterTree<IAppState, IAppState> = {
@@ -34,8 +36,16 @@ const getters: GetterTree<IAppState, IAppState> = {
 
 const mutations: MutationTree<IAppState> = {
   applicationInitialized(state: IAppState, { data }) {
-    console.log('mutating data', data)
     state.data = data;
+  },
+  favoriteToggled(state, session: IDisplaySession) {
+    session.favorite = !session.favorite;
+
+    var favoriteIds = state.data.sessions
+      .filter((s) => s.favorite)
+      .map((s) => s.id);
+
+    localStorage.setItem(state.data.title, JSON.stringify(favoriteIds));
   },
 };
 

@@ -11,7 +11,7 @@ context('Speakers', () => {
     });
 
     it('Should has the group Titles on the Page', () => {
-      cy.get('[data-cy=group-0] h3').should('have.text', 'A')
+      cy.get('[data-cy=group-0] [data-cy=title]').should('have.text', 'A')
     });
 
     it('Should has the group Titles on the Page', () => {

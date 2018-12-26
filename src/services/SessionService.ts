@@ -27,6 +27,7 @@ export class SessionDataConverter {
       speakers: this.convertSpeakers(this.data.speakers),
       sessionSpeakerMaps: this.data.sessionSpeakerMaps,
     };
+    this.assignSpeakersToSession(converted);
     return converted;
   }
 
@@ -57,7 +58,7 @@ export class SessionDataConverter {
       id: session.id,
       title: session.title,
       abstract: session.abstract,
-      speaker: {} as any,
+      speakers: {} as any,
       favorite: false,
       track: this.getTrack(session.trackId),
       location: this.getLocation(session.locationId),
@@ -65,6 +66,18 @@ export class SessionDataConverter {
     };
   }
 
+  private assignSpeakersToSession(conference: IDisplayConference) {
+    for (const session of conference.sessions) {
+      session.speakers = this.getSpeakersForSession(conference, session.id)
+    }
+  }
+  getSpeakersForSession(conference: IDisplayConference, sessionId: number): IDisplaySpeaker[] {
+    const speakersId = conference.sessionSpeakerMaps
+      .filter((m) => m.sessionId === sessionId)
+      .map((m) => m.speakerId);
+  
+    return conference.speakers.filter((s) => speakersId.indexOf(s.id) >= 0);
+  }
   getSessionTime(begin: string, end: string): string {
     const beginDate = new Date(begin);
     const endDate = new Date(end);

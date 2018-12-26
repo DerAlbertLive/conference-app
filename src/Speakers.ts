@@ -50,20 +50,13 @@ function findSpeaker(id: number, data: IDisplayConference) {
     return {};
   }
 
-  const sessions: IDisplaySession[] = [];
   if (!speaker.sessions || speaker.sessions.length === 0) {
     const sessionIds = data.sessionSpeakerMaps
       .filter((m) => m.speakerId === id)
       .map((m) => m.sessionId);
 
-    for (const sessionId of sessionIds) {
-      const session = data.sessions.find((s) => s.id === sessionId);
-      if (session) {
-        sessions.push(session);
-      }
-    }
+     speaker.sessions = data.sessions.filter(s=>sessionIds.indexOf(s.id) >= 0);    
   }
-  speaker.sessions = sessions;
   return speaker;
 }
 const actions: ActionTree<ISpeakersState, IAppState> = {

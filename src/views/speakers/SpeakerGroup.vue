@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3>{{ group.title }}</h3>
+    <h3 data-cy="title">{{ group.title }}</h3>
     <SpeakerInfo
       v-for="(speaker, index) in group.speakers"
       :key="speaker.id"

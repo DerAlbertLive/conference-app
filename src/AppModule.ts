@@ -1,5 +1,5 @@
 import { IAppState } from '@/types';
-import { ActionContext, ActionTree, MutationTree } from 'vuex';
+import { ActionContext, ActionTree, MutationTree, GetterTree } from 'vuex';
 import { SessionService } from './services/SessionService';
 
 export const AppState: IAppState = {
@@ -10,6 +10,7 @@ let initializing = false;
 
 const actions: ActionTree<IAppState, IAppState> = {
   async initializeApplication({ commit, rootState }) {
+    console.log('initializeApplication')
     if (initializing) {
       return;
     }
@@ -19,19 +20,28 @@ const actions: ActionTree<IAppState, IAppState> = {
     initializing = true;
     const service = new SessionService();
     const data = await service.getConferenceData();
+
     commit('applicationInitialized', { data });
     initializing = false;
   },
 };
 
+const getters: GetterTree<IAppState, IAppState> = {
+  conftitle(state) {
+    return state.data.title;
+  },
+};
+
 const mutations: MutationTree<IAppState> = {
   applicationInitialized(state: IAppState, { data }) {
+    console.log('mutating data', data)
     state.data = data;
   },
 };
 
 export default {
   actions,
+  getters,
   mutations,
   AppState,
 };

@@ -59,7 +59,7 @@ export interface IDisplaySession {
   id: number;
   title: string;
   abstract: string;
-  speaker: IDisplaySpeaker;
+  speakers: IDisplaySpeaker[];
   favorite?: boolean;
   track: ITrack;
   location: ILocation;

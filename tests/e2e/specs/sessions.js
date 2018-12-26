@@ -19,10 +19,16 @@ context('Sessions', ()=>{
         it('first session should be begrüßung', ()=> {
             cy.contains('[data-cy=group-0] [data-cy=info-0] [data-cy=title]', 'Begrüßung')
         })
+        it ('first session should have speakerNames', ()=>{
+            cy.contains('[data-cy=group-0] [data-cy=info-0] [data-cy=names]', 'Albert Weinert, Melanie Eibl, Stefan Lange')
+        })
     })
     describe('third slot has sessions', ()=> {
         it('first session should be WebAssembly', ()=> {
             cy.contains('[data-cy=group-2] [data-cy=info-0] [data-cy=title]', 'WebAssembly')
+        })
+        it ('first session should have speakerNames', ()=>{
+            cy.contains('[data-cy=group-2] [data-cy=info-0] [data-cy=names]', 'Rainer Stropek')
         })
 
         it('third session should be Progressive ', ()=> {
@@ -43,5 +49,28 @@ context('Sessions', ()=>{
             cy.contains('[data-cy=group-2] [data-cy=info-6] .track', 'G');
         })        
     })
+    describe("navigation to first WebAssembly", ()=> {
+        beforeEach(()=>{
+            cy.contains('[data-cy=group-1] [data-cy=info-0]', 'Web Assembly').click();
+        })
+        it ('should navigation to the ', ()=>{
+            cy.contains('[data-cy=title]', 'Web Assembly');
+        });
 
+        it ('should has Floarin Bender as speaker', ()=> {
+            cy.contains('[data-cy=speakers]', 'Florian Bader')
+        })
+    })
+
+    describe("navigation to second Web Assembly", ()=> {
+        beforeEach(()=>{
+            cy.contains('[data-cy=group-2] [data-cy=info-0]', 'WebAssembly').click();
+        })
+        it ('should navigation to the ', ()=>{
+            cy.contains('[data-cy=title]', 'WebAssembly');
+        });
+        it ('should has rainer stropek as speaker', ()=> {
+            cy.contains('[data-cy=speakers]', 'Rainer Stropek')
+        })
+    })
 });

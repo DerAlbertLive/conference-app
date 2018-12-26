@@ -1,11 +1,7 @@
 <template>
-  <div class="speakerInfo">
+  <div class="speakerInfo" @click="gotoSpeaker(item.id)">
     <img v-bind:src="item.imageUrl" v-bind:alt="altText" />
-    <router-link
-      data-cy="name"
-      :to="{ name: 'speaker', params: { id: item.id } }"
-      >{{ item.name }}</router-link
-    >
+    <h4 data-cy="name">{{ item.name }}</h4>
   </div>
 </template>
 
@@ -18,6 +14,10 @@ export default class SpeakerInfo extends Vue {
   @Prop({ default: { title: 'Dummy Title' } })
   private item!: IDisplaySpeaker;
 
+  gotoSpeaker(id:number) {
+    this.$router.push({name:'speaker', params:{id:id.toString()}});
+  }
+
   get altText() {
     return `Picture of ${this.item.name}`;
   }
@@ -26,6 +26,7 @@ export default class SpeakerInfo extends Vue {
 
 <style lang="scss">
 .speakerInfo {
+  cursor: pointer;
   display: grid;
   grid-template-columns: 2.5rem auto;
 

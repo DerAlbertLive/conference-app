@@ -36,4 +36,8 @@ export default class Speaker extends Vue {
   }
 }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+speaker .img {
+  margin-bottom: 1em;
+}
+</style>

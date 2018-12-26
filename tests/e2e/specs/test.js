@@ -27,4 +27,8 @@ describe('Root Navigation', () => {
   })
 
 
+  it('Should has dotnet Cologne 2018 in header', ()=>{
+    cy.visit('/about');
+    cy.contains('header', 'dotnet Cologne 2018');
+  }); 
 })

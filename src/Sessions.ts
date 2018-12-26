@@ -1,20 +1,23 @@
 import {
   IAppState,
   IDisplaySession,
-  IDisplaySessionGroup,
-  IConferenceData,
+  IDisplaySessionGroup
 } from '@/types';
 import { GetterTree, ActionTree, MutationTree, Module } from 'vuex';
 
 interface ISessionsState {
-  groups: IDisplaySessionGroup[];
+  sessions: IDisplaySessionGroup[];
+  currentSession: IDisplaySession;
 }
 
 const sessionsState: ISessionsState = {
-  groups: [],
+  sessions: [],
+  currentSession: {} as IDisplaySession,
 };
 
-function getGroups(sessions: IDisplaySession[]): IDisplaySessionGroup[] {
+function getGroupedSessions(
+  sessions: IDisplaySession[],
+): IDisplaySessionGroup[] {
   const sessionGroups = new Map<string, IDisplaySession[]>();
   for (const session of sessions) {
     let groupedSession = sessionGroups.get(session.sessionTime);
@@ -25,6 +28,7 @@ function getGroups(sessions: IDisplaySession[]): IDisplaySessionGroup[] {
     groupedSession.push(session);
   }
   const groupTimes = [...sessionGroups.keys()].sort();
+
   const result: IDisplaySessionGroup[] = [];
   for (const groupTime of groupTimes) {
     let groupedSession = sessionGroups.get(groupTime) || [];
@@ -40,27 +44,37 @@ function getGroups(sessions: IDisplaySession[]): IDisplaySessionGroup[] {
   return result;
 }
 
-function getGroupByTime(data: IConferenceData) {
-  return;
-}
 const actions: ActionTree<ISessionsState, IAppState> = {
-  async loadGroups({ commit, rootState }) {
-    const groups = getGroups(rootState.data.sessions);
-    console.log('groupsLoaded', groups);
-
-    commit('groupsLoaded', groups);
+  async loadSessions({ commit, rootState }) {
+    const sessions = getGroupedSessions(rootState.data.sessions);
+    commit('sessionsLoaded', sessions);
+  },
+  async loadSession({ commit, rootState }, sessionId: string) {
+    console.log('loadSession', sessionId, rootState.data);
+    const id = Number(sessionId);
+    const session = rootState.data.sessions.find((s) => s.id === id);
+    if (session) {
+      commit('sessionLoaded', session);
+    }
   },
 };
 
 const getters: GetterTree<ISessionsState, IAppState> = {
   groups(state) {
-    return state.groups;
+    return state.sessions;
+  },
+  session(state) {
+    return state.currentSession;
   },
 };
 
 const mutations: MutationTree<ISessionsState> = {
-  groupsLoaded(state, payLoad) {
-    state.groups = payLoad;
+  sessionsLoaded(state, sessions) {
+    state.sessions = sessions;
+  },
+  sessionLoaded(state, session: IDisplaySession) {
+    console.log('sessionLoaded', session);
+    state.currentSession = session;
   },
 };
 

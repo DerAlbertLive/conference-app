@@ -12,6 +12,7 @@ const options: StoreOptions<IAppState> = {
   strict: true,
   actions: app.actions,
   mutations: app.mutations,
+  getters: app.getters,
   modules: {
     sessions,
     speakers,

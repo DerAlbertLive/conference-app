@@ -26,12 +26,12 @@ const mod = namespace('sessions');
 })
 export default class Sessions extends Vue {
   @Action private initializeApplication!: () => void;
-  @mod.Action private loadGroups!: () => void;
+  @mod.Action private loadSessions!: () => void;
   @mod.Getter private groups!: () => types.IDisplaySessionGroup[];
 
   private async mounted() {
     await this.initializeApplication();
-    await this.loadGroups();
+    await this.loadSessions();
   }
 }
 </script>

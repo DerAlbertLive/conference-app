@@ -5,10 +5,10 @@
     </header>
     <main><router-view /></main>
     <footer id="nav">
-      <router-link to="/">Favoriten</router-link> |
-      <router-link to="/sessions">Sessions</router-link> |
-      <router-link to="/speakers">Sprecher</router-link> |
-      <router-link to="/information">Information</router-link> |
+      <router-link to="/">Favoriten</router-link>|
+      <router-link to="/sessions">Sessions</router-link>|
+      <router-link to="/speakers">Sprecher</router-link>|
+      <router-link to="/information">Information</router-link>|
       <router-link to="/about">Über</router-link>
     </footer>
   </div>
@@ -20,9 +20,7 @@ import { Getter, Action } from 'vuex-class';
 @Component
 export default class App extends Vue {
   @Action private initializeApplication!: () => void;
-  @Getter conftitle!: string;
-
-  private async mounted() {}
+  @Getter private conftitle!: string;
 }
 </script>
 

@@ -34,9 +34,8 @@ import { Location } from 'vue-router';
 
 @Component
 export default class SessionInfo extends Vue {
-  @Prop({ default: { title: 'Dummy Title' } })
-  private item!: IDisplaySession;
-  @Action private toggleFavorite!: (session) => void;
+  @Prop() private item!: IDisplaySession;
+  @Action private toggleFavorite!: (session: IDisplaySession) => void;
 
   private gotoSession(sessionId: number) {
     const id = sessionId.toString();
@@ -49,7 +48,7 @@ export default class SessionInfo extends Vue {
     if (!this.item || !this.item.speakers) {
       return;
     }
-    var names = this.item.speakers.map((s) => s.name);
+    const names = this.item.speakers.map((s) => s.name);
     return names.join(', ');
   }
 }

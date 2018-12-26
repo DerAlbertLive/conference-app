@@ -69,10 +69,6 @@ const mutations: MutationTree<IFavoritesStates> = {
   sessionsLoaded(state, sessions) {
     state.sessions = sessions;
   },
-  sessionLoaded(state, session: IDisplaySession) {
-    console.log('sessionLoaded', session);
-    state.currentSession = session;
-  },
 };
 
 const moduleSessions: Module<IFavoritesStates, IAppState> = {

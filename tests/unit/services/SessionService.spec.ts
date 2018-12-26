@@ -6,7 +6,7 @@ import {
   ISession,
   IDisplaySession,
 } from '@/types';
-import { SessionDataConverter } from '@/services/SessionService';
+import SessionDataConverter from '@/services/SessionDataConverter';
 
 const loadedTracks: ITrack[] = [
   {
@@ -56,7 +56,7 @@ const loadedSessions: ISession[] = [
     title: 'Session A',
     abstract: 'Abstract A',
     begin: '2018-05-04T14:35:00+01:00', // 15:35
-    end: '2018-05-04T15:35:00+01:00',  // 16:35
+    end: '2018-05-04T15:35:00+01:00', // 16:35
   },
   {
     id: 1002,
@@ -82,7 +82,7 @@ const loadedData: IConferenceData = {
 describe('Convert Conference Data', () => {
   let result: IDisplayConference;
   beforeAll(() => {
-    var converter = new SessionDataConverter(loadedData);
+    const converter = new SessionDataConverter(loadedData);
     result = converter.convert();
   });
 
@@ -116,9 +116,9 @@ describe('Convert Conference Data', () => {
         expect(session.location.name).toBe('Raum 301');
       });
 
-      test('sessionTime shoud be 15:35 - 16:35', ()=>{
+      test('sessionTime shoud be 15:35 - 16:35', () => {
         expect(session.sessionTime).toBe('15:35 - 16:35');
-      })
+      });
     });
 
     describe('session 2', () => {
@@ -141,9 +141,9 @@ describe('Convert Conference Data', () => {
       test('location should be Raum 7', () => {
         expect(session.location.name).toBe('Raum 7');
       });
-      test('sessionTime shoud be 09:00 - 09:15', ()=>{
+      test('sessionTime shoud be 09:00 - 09:15', () => {
         expect(session.sessionTime).toBe('09:00 - 09:15');
-      })
+      });
     });
   });
 });

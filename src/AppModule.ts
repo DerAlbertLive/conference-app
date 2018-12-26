@@ -41,7 +41,7 @@ const mutations: MutationTree<IAppState> = {
   favoriteToggled(state, session: IDisplaySession) {
     session.favorite = !session.favorite;
 
-    var favoriteIds = state.data.sessions
+    const favoriteIds = state.data.sessions
       .filter((s) => s.favorite)
       .map((s) => s.id);
 

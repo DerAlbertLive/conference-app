@@ -46,7 +46,6 @@ const actions: ActionTree<ISessionsState, IAppState> = {
     commit('sessionsLoaded', sessions);
   },
   async loadSession({ commit, rootState }, sessionId: string) {
-    console.log('loadSession', sessionId, rootState.data);
     const id = Number(sessionId);
     const session = rootState.data.sessions.find((s) => s.id === id);
     if (session) {
@@ -69,7 +68,6 @@ const mutations: MutationTree<ISessionsState> = {
     state.sessions = sessions;
   },
   sessionLoaded(state, session: IDisplaySession) {
-    console.log('sessionLoaded', session);
     state.currentSession = session;
   },
 };

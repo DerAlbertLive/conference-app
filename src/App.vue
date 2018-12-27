@@ -60,6 +60,7 @@ html {
   footer {
     a {
       color: white;
+      padding-top: 0.4em;
     }
     background-color: #2c3e50;
     grid-row-start: 3;
@@ -79,8 +80,6 @@ html {
     margin-bottom: 0.4em;
   }
   #nav {
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
     background-color: #eee;
     color: white;
     display: grid;
@@ -88,6 +87,9 @@ html {
     text-align: center;
     img {    
       height: 2em;    
+    }
+    .router-link-exact-active {
+      background-color: #e2e2e2;
     }
   }
 }

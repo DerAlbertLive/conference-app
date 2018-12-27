@@ -1,8 +1,10 @@
 <template>
   <div class="speaker" data-cy="speaker">
-    <h2 data-cy="name">{{ speaker.name }}</h2>
-    <img :src="speaker.imageUrl" :alt="altText" />
-    <p data-cy="bio">{{ speaker.bio }}</p>
+    <div class="about">
+      <h2 data-cy="name">{{ speaker.name }}</h2>
+      <img :src="speaker.imageUrl" :alt="altText">
+      <p data-cy="bio">{{ speaker.bio }}</p>
+    </div>
     <SessionInfo
       v-for="(item, index) in speaker.sessions"
       :item="item"
@@ -37,7 +39,19 @@ export default class Speaker extends Vue {
 }
 </script>
 <style lang="scss">
-speaker .img {
-  margin-bottom: 1em;
+.about {
+
+  img {
+    margin-bottom: 1em;
+    width: 7em;
+    padding: 0.4em;
+    float: left;
+  }
+  p {
+    padding: 0.4em;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
 }
 </style>

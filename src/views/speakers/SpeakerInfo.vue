@@ -29,11 +29,14 @@ export default class SpeakerInfo extends Vue {
   cursor: pointer;
   display: grid;
   grid-template-columns: 2.5rem auto;
+  margin-bottom: 0.4em;
+  padding-left: 0.4em;
 
   img {
     grid-column-start: 1;
     grid-row-start: 1;
     height: 2.3rem;
+    border-radius: 50%;
   }
 
   a {

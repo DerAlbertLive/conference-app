@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 data-cy="title">{{ group.title }}</h2>
+    <h3 data-cy="title">{{ group.title }}</h3>
     <SessionInfo
       v-for="(item, index) in group.sessions"
       :item="item"

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="session">
     <h2 data-cy="title">{{ session.title }}</h2>
     <p data-cy="abstract">{{ session.abstract }}</p>
     <div data-cy="speakers">
@@ -34,4 +34,13 @@ export default class Session extends Vue {
   }
 }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.session {
+  p {
+    padding: 0.4em;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+}
+</style>

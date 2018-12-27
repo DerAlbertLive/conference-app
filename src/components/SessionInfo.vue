@@ -1,8 +1,9 @@
 <template>
   <div class="sessionInfo">
     <div class="info" @click="gotoSession(item.id)">
-      <h3 data-cy="title">{{ item.title }}</h3>
-      <p data-cy="names">{{ speakerNames }}</p>
+      <h4 data-cy="title">{{ item.title }}</h4>
+      <p data-cy="names" class="names">{{ speakerNames }}</p>
+      <p class="location">{{ item.location.name }}</p>
     </div>
     <div
       v-if="item.favorite"
@@ -10,7 +11,7 @@
       class="fav yes"
       @click="toggle(item)"
     >
-      Fav
+      <img src="@/assets/star-solid.svg" alt="Favorisiert" />
     </div>
     <div
       v-if="!item.favorite"
@@ -18,7 +19,7 @@
       class="fav no"
       @click="toggle(item)"
     >
-      No Fav
+      <img src="@/assets/star.svg" alt="Nicht favorisiert" />
     </div>
     <div class="track" :style="{ 'background-color': item.track.color }">
       {{ item.track.shortTitle }}
@@ -59,8 +60,10 @@ export default class SessionInfo extends Vue {
   cursor: pointer;
   display: grid;
   grid-template-columns: auto 2.5rem 1rem;
-  grid-template-rows: minmax(2.5rem, 3rem);
+  grid-template-rows: minmax(minimal-content, 3rem);
   margin-bottom: 0.5rem;
+  padding-left: 0.4em;
+
   div {
     &.info {
       grid-column-start: 1;
@@ -75,9 +78,28 @@ export default class SessionInfo extends Vue {
       grid-row-start: 1;
     }
   }
-
-  h3 {
+  .fav {
+    img {
+      width: 2em;
+      padding-top: 0.4rem;
+    }
+  }
+  h4 {
     font-size: 1rem;
+  }
+  .names {
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  .location {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  .track {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.4em;
   }
 }
 </style>

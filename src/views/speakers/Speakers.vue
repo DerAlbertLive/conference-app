@@ -34,4 +34,5 @@ export default class Speakers extends Vue {
   }
 }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+</style>

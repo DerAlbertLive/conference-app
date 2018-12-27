@@ -6,20 +6,13 @@
       <p class="location">{{ item.location.name }}</p>
     </div>
     <div
-      v-if="item.favorite"
       data-cy="fav"
-      class="fav yes"
+      class="fav"
       @click="toggle(item)"
     >
-      <img src="@/assets/star-solid.svg" alt="Favorisiert" />
-    </div>
-    <div
-      v-if="!item.favorite"
-      data-cy="fav"
-      class="fav no"
-      @click="toggle(item)"
-    >
-      <img src="@/assets/star.svg" alt="Nicht favorisiert" />
+      <svg class="" v-bind:class="[ item.favorite ? 'favorite' : '']">
+        <use xlink:href="#star--sprite"></use>
+      </svg>
     </div>
     <div class="track" :style="{ 'background-color': item.track.color }">
       {{ item.track.shortTitle }}
@@ -28,6 +21,7 @@
 </template>
 
 <script lang="ts">
+import '@/assets/star.svg?sprite';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IDisplaySession } from '@/types';
 import { Action } from 'vuex-class';
@@ -79,10 +73,15 @@ export default class SessionInfo extends Vue {
     }
   }
   .fav {
-    img {
+    svg {
+           
       width: 2em;
+      height: 2em;
       padding-top: 0.4rem;
     }
+    .favorite {
+        fill: #ece313
+    } 
   }
   h4 {
     font-size: 1rem;

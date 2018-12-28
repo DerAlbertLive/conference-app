@@ -10,6 +10,10 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/sessions'
+    },
+    {
+      path: '/favorites',
       name: 'favorites',
       component: Favorites,
     },
@@ -52,5 +56,5 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
-  ],
+  ]
 });

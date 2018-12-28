@@ -7,7 +7,7 @@
       <router-view/>
     </main>
     <footer id="nav">
-      <router-link to="/"><img alt="Favoriten" src="@/assets/star.svg?data" /></router-link>
+      <router-link to="/favorites"><img alt="Favoriten" src="@/assets/star.svg?data" /></router-link>
       <router-link to="/sessions"><img alt="Sessions" src="@/assets/comments.svg?data" /></router-link>
       <router-link to="/speakers"><img alt="Sprecher" src="@/assets/users.svg?data" /></router-link>
       <router-link to="/information"><img alt="Information" src="@/assets/info.svg?data" /></router-link>
@@ -88,7 +88,7 @@ html {
     img {    
       height: 2em;    
     }
-    .router-link-exact-active {
+    .router-link-active {
       background-color: #e2e2e2;
     }
   }

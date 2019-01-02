@@ -5,26 +5,41 @@
     </header>
     <main><router-view /></main>
     <footer id="nav">
-      <router-link to="/"
-        ><img alt="Favoriten" src="@/assets/star.svg?data"
-      /></router-link>
-      <router-link to="/sessions"
-        ><img alt="Sessions" src="@/assets/comments.svg?data"
-      /></router-link>
-      <router-link to="/speakers"
-        ><img alt="Sprecher" src="@/assets/users.svg?data"
-      /></router-link>
-      <router-link to="/information"
-        ><img alt="Information" src="@/assets/info.svg?data"
-      /></router-link>
-      <router-link to="/about"
-        ><img alt="Über" src="@/assets/question-circle.svg?data"
-      /></router-link>
+        <router-link to="/">
+            <svg>
+                <use xlink:href="#star--sprite"></use>
+            </svg>
+        </router-link>
+        <router-link to="/sessions">
+            <svg>
+                <use xlink:href="#comments--sprite"></use>
+            </svg>
+        </router-link>
+        <router-link to="/speakers">
+            <svg>
+                <use xlink:href="#users--sprite"></use>
+            </svg>
+        </router-link>
+        <router-link to="/information">
+            <svg>
+                <use xlink:href="#info--sprite"></use>
+            </svg>
+        </router-link>
+        <router-link to="/about">
+            <svg>
+                <use xlink:href="#question-circle--sprite"></use>
+            </svg>
+        </router-link>
     </footer>
   </div>
 </template>
 
 <script lang="ts">
+import '@/assets/star.svg?sprite';
+import '@/assets/comments.svg?sprite';
+import '@/assets/users.svg?sprite';
+import '@/assets/info.svg?sprite';
+import '@/assets/question-circle.svg?sprite';
 import { Component, Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
 @Component
@@ -94,8 +109,10 @@ html {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     text-align: center;
-    img {
+    svg {
       height: 2em;
+      width: 2em;
+      fill : #2c3e50;
     }
   }
 

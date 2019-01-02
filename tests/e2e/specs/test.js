@@ -31,7 +31,7 @@ describe('Root Navigation', () => {
     cy.contains('header', 'dotnet Cologne 2018');
   });
 
-  describe.only('navigation with the back chevron', () => {
+  describe('navigation with the back chevron', () => {
     beforeEach(() => {
       cy.visit('/');
     });

@@ -82,9 +82,10 @@ section .sessionInfo {
       width: 2em;
       height: 2em;
       padding-top: 0.4rem;
+        fill: #ccc;
     }
     .favorite {
-        fill: #ece313
+        fill: #ece313;
     } 
   }
   h4 {

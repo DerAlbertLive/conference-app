@@ -3,15 +3,23 @@
     <header>
       <h1>{{ conftitle }}</h1>
     </header>
-    <main>
-      <router-view/>
-    </main>
+    <main><router-view /></main>
     <footer id="nav">
-      <router-link to="/"><img alt="Favoriten" src="@/assets/star.svg?data" /></router-link>
-      <router-link to="/sessions"><img alt="Sessions" src="@/assets/comments.svg?data" /></router-link>
-      <router-link to="/speakers"><img alt="Sprecher" src="@/assets/users.svg?data" /></router-link>
-      <router-link to="/information"><img alt="Information" src="@/assets/info.svg?data" /></router-link>
-      <router-link to="/about"><img alt="Über" src="@/assets/question-circle.svg?data"/></router-link>
+      <router-link to="/"
+        ><img alt="Favoriten" src="@/assets/star.svg?data"
+      /></router-link>
+      <router-link to="/sessions"
+        ><img alt="Sessions" src="@/assets/comments.svg?data"
+      /></router-link>
+      <router-link to="/speakers"
+        ><img alt="Sprecher" src="@/assets/users.svg?data"
+      /></router-link>
+      <router-link to="/information"
+        ><img alt="Information" src="@/assets/info.svg?data"
+      /></router-link>
+      <router-link to="/about"
+        ><img alt="Über" src="@/assets/question-circle.svg?data"
+      /></router-link>
     </footer>
   </div>
 </template>
@@ -67,27 +75,26 @@ html {
 
   h2 {
     background-color: #66add6;
-    padding: 0.4em;
+    padding: 0.4rem;
     font-weight: normal;
     font-size: 1.3rem;
   }
 
   h3 {
     background-color: #ddd;
-    padding: 0.4em;
+    padding: 0.4rem;
     font-size: 1.1rem;
-    margin-bottom: 0.4em;
   }
   #nav {
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
     background-color: #eee;
     color: white;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     text-align: center;
-    img {    
-      height: 2em;    
+    img {
+      height: 2em;
     }
   }
 

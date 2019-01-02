@@ -5,12 +5,8 @@
       <p data-cy="names" class="names">{{ speakerNames }}</p>
       <p class="location">{{ item.location.name }}</p>
     </div>
-    <div
-      data-cy="fav"
-      class="fav"
-      @click="toggle(item)"
-    >
-      <svg class="" v-bind:class="[ item.favorite ? 'favorite' : '']">
+    <div data-cy="fav" class="fav" @click="toggle(item)">
+      <svg class="" v-bind:class="[item.favorite ? 'favorite' : '']">
         <use xlink:href="#star--sprite"></use>
       </svg>
     </div>
@@ -78,15 +74,14 @@ section .sessionInfo {
   }
   .fav {
     svg {
-           
       width: 2em;
       height: 2em;
       padding-top: 0.4rem;
-        fill: #ccc;
+      fill: #ccc;
     }
     .favorite {
-        fill: #ece313;
-    } 
+      fill: #ece313;
+    }
   }
   h4 {
     font-size: 1rem;

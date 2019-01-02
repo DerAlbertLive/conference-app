@@ -63,6 +63,7 @@ html {
   main {
     grid-row-start: 2;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   footer {

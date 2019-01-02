@@ -1,23 +1,24 @@
 <template>
   <div id="app">
     <header>
+      <svg data-cy='link-back' v-if="canGoBack" @click="back"><use xlink:href="#chevron-left--sprite"></use></svg>
       <h1>{{ conftitle }}</h1>
     </header>
     <main><router-view /></main>
     <footer id="nav">
-      <router-link to="/favorites">
+      <router-link to="/favorites" data-cy="link-favorites">
         <svg><use xlink:href="#star--sprite"></use></svg>
       </router-link>
-      <router-link to="/sessions">
+      <router-link to="/sessions" data-cy="link-sessions">
         <svg><use xlink:href="#comments--sprite"></use></svg>
       </router-link>
-      <router-link to="/speakers">
+      <router-link to="/speakers" data-cy="link-speakers">
         <svg><use xlink:href="#users--sprite"></use></svg>
       </router-link>
-      <router-link to="/information">
+      <router-link to="/information" data-cy="link-information">
         <svg><use xlink:href="#info--sprite"></use></svg>
       </router-link>
-      <router-link to="/about">
+      <router-link to="/about" data-cy="link-about">
         <svg><use xlink:href="#question-circle--sprite"></use></svg>
       </router-link>
     </footer>
@@ -30,12 +31,29 @@ import '@/assets/comments.svg?sprite';
 import '@/assets/users.svg?sprite';
 import '@/assets/info.svg?sprite';
 import '@/assets/question-circle.svg?sprite';
+import '@/assets/chevron-left.svg?sprite';
 import { Component, Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
 @Component
 export default class App extends Vue {
   @Action private initializeApplication!: () => void;
   @Getter private conftitle!: string;
+
+  private get canGoBack() {
+    console.log('ref', document.referrer);
+    return true;
+    return document.referrer != '';
+  }
+  private back() {
+    if (this.canGoBack) {
+      this.$router.back();
+    }
+  }
+
+  beforeRouteEnter(to, from, next) {
+    console.log('beforeRouteEnter', window.history.length);
+
+  }
 }
 </script>
 
@@ -60,8 +78,18 @@ html {
     background-color: #2c3e50;
     text-align: center;
     color: white;
+
     h1 {
+      padding-top: 0.2rem;
       font-size: 1.5rem;
+    }
+    
+    svg {
+      padding-top: 0.25rem;
+      float: left;
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: #fff;
     }
   }
 
@@ -91,18 +119,21 @@ html {
     padding: 0.4rem;
     font-size: 1.1rem;
   }
+
   #nav {
     background-color: #eee;
     color: white;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     text-align: center;
+
     svg {
       padding-top: 0.4rem;
       height: 2em;
       width: 2em;
       fill: #2c3e50;
     }
+
     .router-link-active {
       background-color: #e2e2e2;
       svg {

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <header>
-      <svg data-cy='link-back' v-if="canGoBack" @click="back"><use xlink:href="#chevron-left--sprite"></use></svg>
+      <svg data-cy="link-back" @click="back">
+        <use xlink:href="#chevron-left--sprite"></use>
+      </svg>
       <h1>{{ conftitle }}</h1>
     </header>
     <main><router-view /></main>
@@ -39,20 +41,8 @@ export default class App extends Vue {
   @Action private initializeApplication!: () => void;
   @Getter private conftitle!: string;
 
-  private get canGoBack() {
-    console.log('ref', document.referrer);
-    return true;
-    return document.referrer != '';
-  }
   private back() {
-    if (this.canGoBack) {
-      this.$router.back();
-    }
-  }
-
-  beforeRouteEnter(to, from, next) {
-    console.log('beforeRouteEnter', window.history.length);
-
+    this.$router.back();
   }
 }
 </script>
@@ -83,7 +73,7 @@ html {
       padding-top: 0.2rem;
       font-size: 1.5rem;
     }
-    
+
     svg {
       padding-top: 0.25rem;
       float: left;

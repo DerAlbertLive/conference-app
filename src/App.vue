@@ -90,5 +90,10 @@ html {
       height: 2em;    
     }
   }
+
+  .sticky-element {
+    position: sticky;
+    top: 0;
+  }
 }
 </style>

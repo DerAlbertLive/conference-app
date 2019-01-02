@@ -7,16 +7,41 @@
       <router-view/>
     </main>
     <footer id="nav">
-      <router-link to="/favorites"><img alt="Favoriten" src="@/assets/star.svg?data" /></router-link>
-      <router-link to="/sessions"><img alt="Sessions" src="@/assets/comments.svg?data" /></router-link>
-      <router-link to="/speakers"><img alt="Sprecher" src="@/assets/users.svg?data" /></router-link>
-      <router-link to="/information"><img alt="Information" src="@/assets/info.svg?data" /></router-link>
-      <router-link to="/about"><img alt="Über" src="@/assets/question-circle.svg?data"/></router-link>
+        <router-link to="/">
+            <svg>
+                <use xlink:href="#star--sprite"></use>
+            </svg>
+        </router-link>
+        <router-link to="/sessions">
+            <svg>
+                <use xlink:href="#comments--sprite"></use>
+            </svg>
+        </router-link>
+        <router-link to="/speakers">
+            <svg>
+                <use xlink:href="#users--sprite"></use>
+            </svg>
+        </router-link>
+        <router-link to="/information">
+            <svg>
+                <use xlink:href="#info--sprite"></use>
+            </svg>
+        </router-link>
+        <router-link to="/about">
+            <svg>
+                <use xlink:href="#question-circle--sprite"></use>
+            </svg>
+        </router-link>
     </footer>
   </div>
 </template>
 
 <script lang="ts">
+import '@/assets/star.svg?sprite';
+import '@/assets/comments.svg?sprite';
+import '@/assets/users.svg?sprite';
+import '@/assets/info.svg?sprite';
+import '@/assets/question-circle.svg?sprite';
 import { Component, Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
 @Component
@@ -27,70 +52,78 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-* {
-  padding: 0;
-  margin: 0;
-}
-body,
-html {
-  height: 100%;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  display: grid;
-  grid-template-rows: 2em auto 2.8rem;
-  grid-template-columns: 100%;
-  height: 100%;
-
-  header {
-    background-color: #2c3e50;
-    text-align: center;
-    color: white;
-    h1 {
-      font-size: 1.5rem;
+    * {
+      padding: 0;
+      margin: 0;
     }
-  }
-
-  main {
-    grid-row-start: 2;
-    overflow: auto;
-  }
-
-  footer {
-    a {
-      color: white;
-      padding-top: 0.4em;
+    body,
+    html {
+      height: 100%;
     }
-    background-color: #2c3e50;
-    grid-row-start: 3;
-  }
+    #app {
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+      color: #2c3e50;
+      display: grid;
+      grid-template-rows: 2em auto 2.8rem;
+      grid-template-columns: 100%;
+      height: 100%;
 
-  h2 {
-    background-color: #66add6;
-    padding: 0.4em;
-    font-weight: normal;
-    font-size: 1.3rem;
-  }
+      header {
+        background-color: #2c3e50;
+        text-align: center;
+        color: white;
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
 
-  h3 {
-    background-color: #ddd;
-    padding: 0.4em;
-    font-size: 1.1rem;
-    margin-bottom: 0.4em;
-  }
-  #nav {
-    background-color: #eee;
-    color: white;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    text-align: center;
-    img {    
-      height: 2em;    
+      main {
+        grid-row-start: 2;
+        overflow: auto;
+      }
+
+      footer {
+        a {
+          color: white;
+          padding-top: 0.4em;
+        }
+        background-color: #2c3e50;
+        grid-row-start: 3;
+      }
+
+      h2 {
+        background-color: #66add6;
+        padding: 0.4em;
+        font-weight: normal;
+        font-size: 1.3rem;
+      }
+
+      h3 {
+        background-color: #ddd;
+        padding: 0.4em;
+        font-size: 1.1rem;
+        margin-bottom: 0.4em;
+      }
+      #nav {
+        background-color: #eee;
+        color: white;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        text-align: center;
+      img {
+          height: 2em;
+        }
+      }
+
+      .sticky-element {
+        position: sticky;
+        top: 0;
+        img {
+          height: 2em;
+        }
+        .router-link-active {
+          background-color: #e2e2e2;
+        }
+      }
     }
-    .router-link-active {
-      background-color: #e2e2e2;
-    }
-  }
-}
 </style>

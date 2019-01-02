@@ -77,22 +77,22 @@ context('Sessions', ()=>{
     describe("favorite toogles", ()=>{
         it ('should toogle first session', ()=>{
             cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').click();
-            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').should('have.class', 'yes');
+            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav] > svg').should('have.class', 'favorite');
         });
         it ('should toogle first session twice', ()=>{
             cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').click();
             cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').click();
-            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').should('have.class', 'no');
+            cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav] > svg').should('not.have.class', 'favorite');
         });
 
         it ('should toogle first session in third group', ()=>{
             cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').click();
-            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').should('have.class', 'yes');
+            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav] > svg').should('have.class', 'favorite');
         });
         it ('should toogle first session twice in third group', ()=>{
             cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').click();
             cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').click();
-            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav]').should('have.class', 'no');
+            cy.get('[data-cy=group-2] [data-cy=info-0] [data-cy=fav] > svg').should('not.have.class', 'favorite');
         });
     })
 });

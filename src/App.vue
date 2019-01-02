@@ -117,5 +117,10 @@ html {
       fill : #2c3e50;
     }
   }
+
+  .sticky-element {
+    position: sticky;
+    top: 0;
+  }
 }
 </style>

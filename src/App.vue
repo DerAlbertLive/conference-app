@@ -3,35 +3,23 @@
     <header>
       <h1>{{ conftitle }}</h1>
     </header>
-    <main>
-      <router-view/>
-    </main>
+    <main><router-view /></main>
     <footer id="nav">
-        <router-link to="/">
-            <svg>
-                <use xlink:href="#star--sprite"></use>
-            </svg>
-        </router-link>
-        <router-link to="/sessions">
-            <svg>
-                <use xlink:href="#comments--sprite"></use>
-            </svg>
-        </router-link>
-        <router-link to="/speakers">
-            <svg>
-                <use xlink:href="#users--sprite"></use>
-            </svg>
-        </router-link>
-        <router-link to="/information">
-            <svg>
-                <use xlink:href="#info--sprite"></use>
-            </svg>
-        </router-link>
-        <router-link to="/about">
-            <svg>
-                <use xlink:href="#question-circle--sprite"></use>
-            </svg>
-        </router-link>
+      <router-link to="/favorites">
+        <svg><use xlink:href="#star--sprite"></use></svg>
+      </router-link>
+      <router-link to="/sessions">
+        <svg><use xlink:href="#comments--sprite"></use></svg>
+      </router-link>
+      <router-link to="/speakers">
+        <svg><use xlink:href="#users--sprite"></use></svg>
+      </router-link>
+      <router-link to="/information">
+        <svg><use xlink:href="#info--sprite"></use></svg>
+      </router-link>
+      <router-link to="/about">
+        <svg><use xlink:href="#question-circle--sprite"></use></svg>
+      </router-link>
     </footer>
   </div>
 </template>
@@ -80,6 +68,7 @@ html {
   main {
     grid-row-start: 2;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   footer {
@@ -92,29 +81,33 @@ html {
 
   h2 {
     background-color: #66add6;
-    padding: 0.4em;
+    padding: 0.4rem;
     font-weight: normal;
     font-size: 1.3rem;
   }
 
   h3 {
     background-color: #ddd;
-    padding: 0.4em;
+    padding: 0.4rem;
     font-size: 1.1rem;
-    margin-bottom: 0.4em;
   }
   #nav {
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
     background-color: #eee;
     color: white;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     text-align: center;
     svg {
+      padding-top: 0.4rem;
       height: 2em;
       width: 2em;
-      fill : #2c3e50;
+      fill: #2c3e50;
+    }
+    .router-link-active {
+      background-color: #e2e2e2;
+      svg {
+        fill: #66add6;
+      }
     }
   }
 

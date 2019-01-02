@@ -50,12 +50,16 @@ export default class SessionInfo extends Vue {
 </script>
 
 <style lang="scss">
+section .sessionInfo {
+  &:first-of-type {
+    margin-top: 0.4rem;
+  }
+}
 .sessionInfo {
   cursor: pointer;
   display: grid;
   grid-template-columns: auto 2.5rem 1rem;
   grid-template-rows: minmax(minimal-content, 3rem);
-  margin-bottom: 0.5rem;
   padding-left: 0.4em;
 
   div {
@@ -78,9 +82,10 @@ export default class SessionInfo extends Vue {
       width: 2em;
       height: 2em;
       padding-top: 0.4rem;
+        fill: #ccc;
     }
     .favorite {
-        fill: #ece313
+        fill: #ece313;
     } 
   }
   h4 {
@@ -93,6 +98,7 @@ export default class SessionInfo extends Vue {
   .location {
     font-size: 0.8rem;
     color: #666;
+    margin-bottom: 0.4em;
   }
   .track {
     color: white;

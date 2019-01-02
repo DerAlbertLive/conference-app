@@ -2,7 +2,7 @@
   <div class="speaker" data-cy="speaker">
     <div class="about">
       <h2 data-cy="name">{{ speaker.name }}</h2>
-      <img :src="speaker.imageUrl" :alt="altText">
+      <img :src="speaker.imageUrl" :alt="altText" />
       <p data-cy="bio">{{ speaker.bio }}</p>
     </div>
     <SessionInfo
@@ -40,7 +40,6 @@ export default class Speaker extends Vue {
 </script>
 <style lang="scss">
 .about {
-
   img {
     margin-bottom: 1em;
     width: 7em;

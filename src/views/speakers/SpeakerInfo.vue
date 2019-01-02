@@ -25,11 +25,15 @@ export default class SpeakerInfo extends Vue {
 </script>
 
 <style lang="scss">
+section .speakerInfo {
+  &:first-of-type {
+    margin-top: 0.4rem;
+  }
+}
 .speakerInfo {
   cursor: pointer;
   display: grid;
   grid-template-columns: 2.5rem auto;
-  margin-bottom: 0.4em;
   padding-left: 0.4em;
 
   img {
@@ -37,6 +41,7 @@ export default class SpeakerInfo extends Vue {
     grid-row-start: 1;
     height: 2.3rem;
     border-radius: 50%;
+    margin-bottom: 0.4rem;
   }
 
   a {

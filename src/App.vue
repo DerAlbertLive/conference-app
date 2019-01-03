@@ -6,22 +6,39 @@
       </svg>
       <h1>{{ conftitle }}</h1>
     </header>
-    <main><router-view /></main>
+    <main>
+      <router-view/>
+    </main>
     <footer id="nav">
       <router-link to="/favorites" data-cy="link-favorites">
-        <svg><use xlink:href="#star--sprite"></use></svg>
+        <svg>
+          <title>Favoriten</title>
+          <use xlink:href="#star--sprite"></use>
+        </svg>
       </router-link>
       <router-link to="/sessions" data-cy="link-sessions">
-        <svg><use xlink:href="#comments--sprite"></use></svg>
+        <svg>
+          <title>Sessions</title>
+          <use xlink:href="#comments--sprite"></use>
+        </svg>
       </router-link>
       <router-link to="/speakers" data-cy="link-speakers">
-        <svg><use xlink:href="#users--sprite"></use></svg>
+        <svg>
+          <title>Sprecher</title>
+          <use xlink:href="#users--sprite"></use>
+        </svg>
       </router-link>
       <router-link to="/information" data-cy="link-information">
-        <svg><use xlink:href="#info--sprite"></use></svg>
+        <svg>
+          <title>Information</title>
+          <use xlink:href="#info--sprite"></use>
+        </svg>
       </router-link>
       <router-link to="/about" data-cy="link-about">
-        <svg><use xlink:href="#question-circle--sprite"></use></svg>
+        <svg>
+          <title>Über</title>
+          <use xlink:href="#question-circle--sprite"></use>
+        </svg>
       </router-link>
     </footer>
   </div>
@@ -75,6 +92,7 @@ html {
     }
 
     svg {
+      cursor: pointer;
       padding-top: 0.25rem;
       float: left;
       width: 1.5rem;

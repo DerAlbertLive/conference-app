@@ -16,7 +16,7 @@ export default new Router({
       path: '/favorites',
       name: 'favorites',
       component: () =>
-      import(/* webpackChunkName: "favorites" */ './views/Favorites.vue'),
+        import(/* webpackChunkName: "favorites" */ './views/Favorites.vue'),
     },
     {
       path: '/sessions',
@@ -57,5 +57,6 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
+    { path: '*', redirect: '/' },
   ],
 });

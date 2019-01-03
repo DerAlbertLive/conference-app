@@ -24,6 +24,11 @@ Jedoch kann sich ein anderes Projekt entwickeln mit dem man die Sessions aus Ver
 * VueJS als SPA Framework (hat die Abstimmung ergeben)
 * Keine fetten CSS Framework oder Control Libraries
 
+## Im Internet
+
+Sie ist schon im Internet Deployd, testet sie und file issues
+https://vue-conference-app.azurewebsites.net
+
 # Wie man sie zum entwickeln zu laufen bekommt
 
 ## Project setup

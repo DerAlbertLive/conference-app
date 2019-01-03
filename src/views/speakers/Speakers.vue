@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="speakers">
     <h2>Sprecher</h2>
     <SpeakerGroup
       v-for="(group, index) in groups"

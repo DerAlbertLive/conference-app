@@ -6,7 +6,11 @@
       </svg>
       <h1>{{ conftitle }}</h1>
     </header>
-    <main><router-view /></main>
+    <main ref="scrolled">
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
+    </main>
     <footer id="nav">
       <router-link to="/favorites" data-cy="link-favorites">
         <svg>
@@ -51,13 +55,33 @@ import '@/assets/question-circle.svg?sprite';
 import '@/assets/chevron-left.svg?sprite';
 import { Component, Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
+
+interface IPositions {
+  [name: string]: number;
+}
 @Component
 export default class App extends Vue {
   @Action private initializeApplication!: () => void;
   @Getter private conftitle!: string;
 
+  private scroll: number = 0;
+  private scrollPositions: IPositions = {};
+
   private back() {
     this.$router.back();
+  }
+
+  private created() {
+    this.$router.afterEach((to, from) => {
+      const toName = to.name || '';
+      const fromName = from.name || '';
+      var scrolledElement = this.$refs.scrolled as Element;
+      this.scrollPositions[fromName] = scrolledElement.scrollTop;
+      const oldPos = this.scrollPositions[toName] || 0;
+      setTimeout(() => {
+        scrolledElement.scrollTop = oldPos;
+      }, 0);
+    });
   }
 }
 </script>

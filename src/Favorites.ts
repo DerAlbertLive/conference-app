@@ -27,9 +27,7 @@ function getGroupedSessions(
   );
 
   const service = new SessionService();
-  for (const session of sessions) {
-    session.favorite = true;
-  }
+
   return service.getGroupedSession(sessions);
 }
 
@@ -47,8 +45,13 @@ const getters: GetterTree<IFavoritesStates, IAppState> = {
 };
 
 const mutations: MutationTree<IFavoritesStates> = {
-  sessionsLoaded(state, sessions) {
-    state.sessions = sessions;
+  sessionsLoaded(state, sessionGroups: IDisplaySessionGroup[]) {
+    for (const group of sessionGroups) {
+      for (const session of group.sessions) {
+        session.favorite = true;
+      }
+    }
+    state.sessions = sessionGroups;
   },
 };
 

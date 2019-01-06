@@ -5,6 +5,7 @@ import {
   IDisplayConference,
 } from '@/types';
 import { GetterTree, ActionTree, MutationTree, Module } from 'vuex';
+import { SessionService } from './services/SessionService';
 
 interface IFavoritesStates {
   sessions: IDisplaySessionGroup[];
@@ -25,31 +26,11 @@ function getGroupedSessions(
     (s) => favoriteIds.indexOf(s.id) >= 0,
   );
 
-  const sessionGroups = new Map<string, IDisplaySession[]>();
+  const service = new SessionService();
   for (const session of sessions) {
     session.favorite = true;
-    let groupedSession = sessionGroups.get(session.sessionTime);
-    if (!groupedSession) {
-      groupedSession = [];
-      sessionGroups.set(session.sessionTime, groupedSession);
-    }
-    groupedSession.push(session);
   }
-  const groupTimes = [...sessionGroups.keys()].sort();
-
-  const result: IDisplaySessionGroup[] = [];
-  for (const groupTime of groupTimes) {
-    let groupedSession = sessionGroups.get(groupTime) || [];
-    groupedSession = groupedSession.sort((s1, s2) =>
-      s1.track.shortTitle.localeCompare(s2.track.shortTitle),
-    );
-    const group: IDisplaySessionGroup = {
-      title: groupTime,
-      sessions: groupedSession,
-    };
-    result.push(group);
-  }
-  return result;
+  return service.getGroupedSession(sessions);
 }
 
 const actions: ActionTree<IFavoritesStates, IAppState> = {

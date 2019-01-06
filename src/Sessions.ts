@@ -1,6 +1,6 @@
 import { IAppState, IDisplaySession, IDisplaySessionGroup } from '@/types';
 import { GetterTree, ActionTree, MutationTree, Module } from 'vuex';
-
+import { SessionService } from './services/SessionService';
 interface ISessionsState {
   sessions: IDisplaySessionGroup[];
   currentSession: IDisplaySession;
@@ -11,38 +11,10 @@ const sessionsState: ISessionsState = {
   currentSession: {} as IDisplaySession,
 };
 
-function getGroupedSessions(
-  sessions: IDisplaySession[],
-): IDisplaySessionGroup[] {
-  const sessionGroups = new Map<string, IDisplaySession[]>();
-  for (const session of sessions) {
-    let groupedSession = sessionGroups.get(session.sessionTime);
-    if (!groupedSession) {
-      groupedSession = [];
-      sessionGroups.set(session.sessionTime, groupedSession);
-    }
-    groupedSession.push(session);
-  }
-  const groupTimes = [...sessionGroups.keys()].sort();
-
-  const result: IDisplaySessionGroup[] = [];
-  for (const groupTime of groupTimes) {
-    let groupedSession = sessionGroups.get(groupTime) || [];
-    groupedSession = groupedSession.sort((s1, s2) =>
-      s1.track.shortTitle.localeCompare(s2.track.shortTitle),
-    );
-    const group: IDisplaySessionGroup = {
-      title: groupTime,
-      sessions: groupedSession,
-    };
-    result.push(group);
-  }
-  return result;
-}
-
 const actions: ActionTree<ISessionsState, IAppState> = {
   async loadSessions({ commit, rootState }) {
-    const sessions = getGroupedSessions(rootState.data.sessions);
+    const service = new SessionService();
+    const sessions = service.getGroupedSession(rootState.data.sessions);
     commit('sessionsLoaded', sessions);
   },
   async loadSession({ commit, rootState }, sessionId: string) {

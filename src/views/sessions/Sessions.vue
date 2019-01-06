@@ -1,7 +1,8 @@
 <template>
-  <div class="sessions">
+  <div class="groups">
     <h2>Sessions</h2>
     <SessionGroup
+      class="group"
       v-for="(group, index) in groups"
       :group="group"
       :key="group.title"

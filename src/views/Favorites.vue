@@ -1,7 +1,8 @@
 <template>
-  <div class="favorites">
+  <div class="groups">
     <h2>Favoriten</h2>
     <SessionGroup
+      class="group"
       v-for="(group, index) in groups"
       :group="group"
       :key="group.title"
@@ -12,7 +13,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import SessionGroup from '@/views/sessions/SessionGroup.vue'; // @ is an alias to /src
+import SessionGroup from './sessions/SessionGroup.vue'; 
 import { Action, namespace } from 'vuex-class';
 import * as types from '../types';
 

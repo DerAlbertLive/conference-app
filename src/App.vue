@@ -122,12 +122,6 @@ html {
     font-size: 1.3rem;
   }
 
-  h3 {
-    background-color: #ddd;
-    padding: 0.4rem;
-    font-size: 1.1rem;
-  }
-
   #nav {
     background-color: #eee;
     color: white;
@@ -150,9 +144,21 @@ html {
     }
   }
 
-  .sticky-element {
-    position: sticky;
-    top: 0;
+  .groups {
+    h3 {
+      position: sticky;
+      top: 0;
+      background-color: #ddd;
+      padding: 0.4rem;
+      font-size: 1.1rem;
+    }
+    .item {
+      &:first-of-type {
+        margin-top: 0.4rem;
+      }
+      cursor: pointer;
+      display: grid;
+    }    
   }
 }
 </style>

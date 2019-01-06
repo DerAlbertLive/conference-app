@@ -17,7 +17,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IDisplaySpeaker } from '@/types';
 import { namespace, Action } from 'vuex-class';
-import SessionInfo from '../../components/SessionInfo.vue';
+import SessionInfo from '../sessions/SessionInfo.vue';
 
 const mod = namespace('speakers');
 

@@ -23,7 +23,7 @@ import '@/assets/star.svg?sprite';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IDisplaySpeaker, IDisplaySession } from '@/types';
 import { namespace, Action } from 'vuex-class';
-import SessionInfo from '../../components/SessionInfo.vue';
+import SessionInfo from './SessionInfo.vue';
 import SpeakerInfo from '../speakers/SpeakerInfo.vue';
 
 const mod = namespace('sessions');

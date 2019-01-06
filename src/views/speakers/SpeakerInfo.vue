@@ -1,6 +1,6 @@
 <template>
-  <div class="speakerInfo" @click="gotoSpeaker(item.id)">
-    <img v-bind:src="item.imageUrl" v-bind:alt="altText" />
+  <div @click="gotoSpeaker(item.id)">
+    <img v-bind:src="item.imageUrl" v-bind:alt="altText">
     <h4 data-cy="name">{{ item.name }}</h4>
   </div>
 </template>
@@ -25,29 +25,18 @@ export default class SpeakerInfo extends Vue {
 </script>
 
 <style lang="scss">
-section .speakerInfo {
-  &:first-of-type {
-    margin-top: 0.4rem;
-  }
-}
-.speakerInfo {
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 2.5rem auto;
-  padding-left: 0.4em;
+.group {
+  .item {
+    grid-template-columns: 2.5rem auto;
+    padding-left: 0.4em;
 
-  img {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    height: 2.3rem;
-    border-radius: 50%;
-    margin-bottom: 0.4rem;
-  }
-
-  a {
-    font-size: 1.3em;
-    text-decoration: none;
-    color: black;
+    img {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      height: 2.3rem;
+      border-radius: 50%;
+      margin-bottom: 0.4rem;
+    }
   }
 }
 </style>

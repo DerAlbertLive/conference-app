@@ -1,12 +1,12 @@
 <template>
-  <div class="speakers">
+  <div class="groups">
     <h2>Sprecher</h2>
     <SpeakerGroup
       v-for="(group, index) in groups"
       :key="group.title"
       :group="group"
       :data-cy="'group-' + index"
-      class="speakerGroup"
+      class="group"
     ></SpeakerGroup>
   </div>
 </template>

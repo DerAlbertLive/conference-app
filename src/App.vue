@@ -7,7 +7,7 @@
       <h1>{{ conftitle }}</h1>
     </header>
     <main ref="scrolled">
-      <keep-alive>
+      <keep-alive exclude="\/[a-zA-Z]*\/[0-9]*">
         <router-view/>
       </keep-alive>
     </main>

@@ -6,9 +6,7 @@
       </svg>
       <h1>{{ conftitle }}</h1>
     </header>
-    <main>
-      <router-view/>
-    </main>
+    <main><router-view /></main>
     <footer id="nav">
       <router-link to="/favorites" data-cy="link-favorites">
         <svg>
@@ -69,96 +67,125 @@ export default class App extends Vue {
   padding: 0;
   margin: 0;
 }
+
+:root {
+  /// colors
+  --font-color: #000;
+  --header-background: #2c3e50;
+  --header-color: #fff;
+
+  --footer-color: #888;
+  --footer-color-active: #fff;
+  --footer-background: #ccc;
+  --footer-background-active: #aaa;
+
+  --groups-header-color: #66add6;
+  --group-header-color: #ccc;
+
+  --favorite-color-active: gold;
+  --favorite-color: #ccc;
+
+  --item-color: #000;
+  --item-level-1-color: #555;
+  --item-level-2-color: #999;
+
+  --track-color: #fff;
+
+  --padding: 0.4rem;
+}
+
 body,
 html {
   height: 100%;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
+  color: var(--font-color);
   display: grid;
-  grid-template-rows: 2em auto 2.8rem;
+  grid-template-rows: 2em auto 2.8em;
   grid-template-columns: 100%;
   height: 100%;
 
   header {
-    background-color: #2c3e50;
+    background-color: var(--header-background);
     text-align: center;
-    color: white;
+    color: var(--header-color);
 
     h1 {
-      padding-top: 0.2rem;
-      font-size: 1.5rem;
+      padding-top: 0.2em;
+      font-size: 1.5em;
     }
 
     svg {
       cursor: pointer;
-      padding-top: 0.25rem;
+      padding-top: 0.25em;
       float: left;
-      width: 1.5rem;
-      height: 1.5rem;
-      fill: #fff;
+      width: 1.5em;
+      height: 1.5em;
+      fill: var(--header-color);
     }
   }
 
   main {
+    font-size: 1em;
     grid-row-start: 2;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
 
   footer {
-    a {
-      color: white;
-    }
-    background-color: #2c3e50;
-    grid-row-start: 3;
-  }
-
-  h2 {
-    background-color: #66add6;
-    padding: 0.4rem;
-    font-weight: normal;
-    font-size: 1.3rem;
-  }
-
-  #nav {
-    background-color: #eee;
-    color: white;
     display: grid;
+    grid-row-start: 3;
     grid-template-columns: 20% 20% 20% 20% 20%;
     text-align: center;
 
+    a {
+      color: var(--footer-color);
+    }
+
+    background-color: var(--footer-background);
+    color: var(--footer-color);
+
     svg {
-      padding-top: 0.4rem;
+      padding-top: var(--padding);
       height: 2em;
       width: 2em;
-      fill: #2c3e50;
+      fill: var(--footer-color);
     }
 
     .router-link-active {
-      background-color: #e2e2e2;
+      background-color: var(--footer-background-active);
       svg {
-        fill: #66add6;
+        fill: var(--footer-color-active);
       }
     }
   }
 
   .groups {
+    h2 {
+      background-color: var(--groups-header-color);
+      padding: 0.4rem;
+      font-weight: normal;
+      font-size: 1.3rem;
+    }
+  }
+
+  .group {
     h3 {
       position: sticky;
       top: 0;
-      background-color: #ddd;
-      padding: 0.4rem;
+      background-color: var(--group-header-color);
+      padding: var(--padding);
       font-size: 1.1rem;
     }
+
     .item {
       &:first-of-type {
-        margin-top: 0.4rem;
+        margin-top: var(--padding);
       }
       cursor: pointer;
       display: grid;
-    }    
+    }
   }
 }
 </style>

@@ -12,8 +12,13 @@
     </div>
 
     <p data-cy="abstract">{{ session.abstract }}</p>
-    <div data-cy="speakers">
-      <SpeakerInfo v-for="speaker in session.speakers" :key="speaker.id" :item="speaker"/>
+    <div data-cy="speakers" class="group">
+      <SpeakerInfo
+        class="item"
+        v-for="speaker in session.speakers"
+        :key="speaker.id"
+        :item="speaker"
+      />
     </div>
   </div>
 </template>
@@ -54,6 +59,7 @@ export default class Session extends Vue {
   grid-template-rows: min-content auto auto;
 
   h2 {
+    background-color: var(--groups-header-color);
     grid-column-start: 1;
     grid-row-start: 1;
   }

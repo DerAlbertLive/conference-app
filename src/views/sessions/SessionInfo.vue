@@ -10,7 +10,9 @@
         <use xlink:href="#star--sprite"></use>
       </svg>
     </div>
-    <div class="track" :style="{ 'background-color': item.track.color }">{{ item.track.shortTitle }}</div>
+    <div class="track" :style="{ 'background-color': item.track.color }">
+      {{ item.track.shortTitle }}
+    </div>
   </div>
 </template>
 
@@ -43,12 +45,12 @@ export default class SessionInfo extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .group {
   .item {
-    grid-template-columns: auto 2.5rem 1rem;
-    grid-template-rows: minmax(minimal-content, 3rem);
-    padding-left: 0.4em;
+    grid-template-columns: auto 2.5em 1em;
+    grid-template-rows: minmax(minimal-content, 3em);
+    padding-left: var(--padding);
 
     div {
       &.info {
@@ -64,34 +66,38 @@ export default class SessionInfo extends Vue {
         grid-row-start: 1;
       }
     }
+
     .fav {
       svg {
         width: 2em;
         height: 2em;
-        padding-top: 0.4rem;
-        fill: #ccc;
+        padding-top: var(--padding);
+        fill: var(--favorite-color);
       }
       .favorite {
-        fill: #ece313;
+        fill: var(--favorite-color-active);
       }
     }
+
     h4 {
-      font-size: 1rem;
+      font-size: 1em;
     }
     .names {
-      font-size: 0.9rem;
+      font-size: 0.9em;
+      color: var(--item-level-1-color);
       font-style: italic;
     }
     .location {
-      font-size: 0.8rem;
-      color: #666;
-      margin-bottom: 0.4em;
+      font-size: 0.8em;
+      color: var(--item-level-2-color);
+      margin-bottom: var(--padding);
     }
     .track {
-      color: white;
+      color: var(--track-color);
       font-weight: bold;
       text-align: center;
-      padding-top: 0.4em;
+      padding-top: var(--padding);
+      margin-bottom: var(--padding);
     }
   }
 }

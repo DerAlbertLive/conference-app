@@ -1,6 +1,6 @@
 <template>
   <div @click="gotoSpeaker(item.id)">
-    <img v-bind:src="item.imageUrl" v-bind:alt="altText">
+    <img v-bind:src="item.imageUrl" v-bind:alt="altText" />
     <h4 data-cy="name">{{ item.name }}</h4>
   </div>
 </template>
@@ -24,18 +24,18 @@ export default class SpeakerInfo extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .group {
   .item {
-    grid-template-columns: 2.5rem auto;
-    padding-left: 0.4em;
+    grid-template-columns: 2.5em auto;
+    padding-left: var(--padding);
 
     img {
       grid-column-start: 1;
       grid-row-start: 1;
       height: 2.3rem;
       border-radius: 50%;
-      margin-bottom: 0.4rem;
+      margin-bottom: var(--padding);
     }
   }
 }

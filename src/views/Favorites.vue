@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import SessionGroup from './sessions/SessionGroup.vue'; 
+import SessionGroup from './sessions/SessionGroup.vue';
 import { Action, namespace } from 'vuex-class';
 import * as types from '../types';
 

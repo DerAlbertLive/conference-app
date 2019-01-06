@@ -1,21 +1,19 @@
 <template>
   <div class="session">
     <h2 data-cy="title">{{ session.title }}</h2>
-    <svg
-      @click="toggle(session)"
-      data-cy="fav"
-      v-bind:class="[session.favorite ? 'favorite' : '']"
-    >
-      <use xlink:href="#star--sprite"></use>
-    </svg>
+    <div class="fav">
+      <svg
+        @click="toggle(session)"
+        data-cy="fav"
+        v-bind:class="[session.favorite ? 'favorite' : '']"
+      >
+        <use xlink:href="#star--sprite"></use>
+      </svg>
+    </div>
 
     <p data-cy="abstract">{{ session.abstract }}</p>
     <div data-cy="speakers">
-      <SpeakerInfo
-        v-for="speaker in session.speakers"
-        :key="speaker.id"
-        :item="speaker"
-      />
+      <SpeakerInfo v-for="speaker in session.speakers" :key="speaker.id" :item="speaker"/>
     </div>
   </div>
 </template>
@@ -53,23 +51,24 @@ export default class Session extends Vue {
 .session {
   display: grid;
   grid-template-columns: auto 2em;
-  grid-template-rows: minmax(minimal-content, 5rem) auto auto;
+  grid-template-rows: min-content auto auto;
 
   h2 {
     grid-column-start: 1;
     grid-row-start: 1;
   }
 
-  svg {
+  div.fav {
     cursor: pointer;
     grid-column-start: 2;
     grid-row-start: 1;
-    width: 2em;
-    height: 100%;
-
-    fill: #ccc;
     background-color: #66add6;
-    &.favorite {
+    svg {
+      width: 2em;
+      height: 2em;
+      fill: #ccc;
+    }
+    svg.favorite {
       fill: #ece313;
     }
   }

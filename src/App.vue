@@ -7,7 +7,7 @@
       <h1>{{ conftitle }}</h1>
     </header>
     <main ref="scrolled">
-      <keep-alive exclude="\/[a-zA-Z]*\/[0-9]*">
+      <keep-alive include="/sessions|/speakers">
         <router-view/>
       </keep-alive>
     </main>
@@ -75,7 +75,7 @@ export default class App extends Vue {
     this.$router.afterEach((to, from) => {
       const toName = to.name || '';
       const fromName = from.name || '';
-      var scrolledElement = this.$refs.scrolled as Element;
+      const scrolledElement = this.$refs.scrolled as Element;
       this.scrollPositions[fromName] = scrolledElement.scrollTop;
       const oldPos = this.scrollPositions[toName] || 0;
       setTimeout(() => {

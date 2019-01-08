@@ -27,14 +27,22 @@ module.exports = {
                         size: 1024,
                         destination: path.join('icons', 'ios'),
                         ios: 'startup'
-                      },
-                      {
+                    },
+                    {
                         src: path.resolve('src/assets/logo.png'),
                         sizes: [36, 48, 72, 96, 144, 192, 512],
                         destination: path.join('icons', 'android')
-                      }
+                    }
                 ]
             }),
         ]
+      },
+      pwa : {
+        workboxPluginMode: 'InjectManifest',
+        workboxOptions: {
+            // swSrc is required in InjectManifest mode.
+            swSrc: 'scr/pwa/sw.js',
+            // ...other Workbox options...
+          }
       }
   }

@@ -36,6 +36,7 @@
     "ts-jest": "^23.0.0",
     "typescript": "^3.0.0",
     "vue-cli-plugin-svg": "^0.1.2",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "webpack-pwa-manifest": "^4.0.0"
   }
 }

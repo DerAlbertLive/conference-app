@@ -36,6 +36,10 @@ import '@/assets/question-circle.svg?sprite';
 import '@/assets/chevron-left.svg?sprite';
 import { Component, Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
+import ServiceWorkerManager from './pwa/ServiceWorkerManager';
+
+new ServiceWorkerManager().registerServiceWorker();
+
 @Component
 export default class App extends Vue {
   @Action private initializeApplication!: () => void;

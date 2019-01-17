@@ -2,7 +2,7 @@ context('Sessions', () => {
   beforeEach(() => {
     cy.visit('/sessions');
   });
-
+      
   describe('group titles', () => {
     it('first shoud be 09:00 - 9:15', () => {
       cy.contains('[data-cy=group-0] [data-cy=title]', '09:00 - 09:15');

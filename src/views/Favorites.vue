@@ -36,7 +36,7 @@ export default class Favorites extends Vue {
     }
   }
   private redirectToSessions() {
-    this.$router.push({name:'sessions'});
+    this.$router.push({ name: 'sessions' });
   }
 }
 </script>

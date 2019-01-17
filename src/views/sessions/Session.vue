@@ -69,7 +69,7 @@ export default class Session extends Vue {
 
   div.fav {
     cursor: pointer;
-    background-color: #66add6;
+    background-color: $groups-header-color;
     svg {
       width: 2em;
       height: 2em;

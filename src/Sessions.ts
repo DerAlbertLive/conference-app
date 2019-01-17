@@ -1,14 +1,17 @@
 import { IAppState, IDisplaySession, IDisplaySessionGroup } from '@/types';
 import { GetterTree, ActionTree, MutationTree, Module } from 'vuex';
 import { SessionService } from './services/SessionService';
+
 interface ISessionsState {
-  sessions: IDisplaySessionGroup[];
+  sessionGroups: IDisplaySessionGroup[];
   currentSession: IDisplaySession;
+  showSearch: boolean;
 }
 
 const sessionsState: ISessionsState = {
-  sessions: [],
+  sessionGroups: [],
   currentSession: {} as IDisplaySession,
+  showSearch: false,
 };
 
 const actions: ActionTree<ISessionsState, IAppState> = {
@@ -24,23 +27,37 @@ const actions: ActionTree<ISessionsState, IAppState> = {
       commit('sessionLoaded', session);
     }
   },
+  toggleSearch({ commit, state }) {
+    commit('searchToggled', !state.showSearch);
+  },
+  search({ commit, state, rootState }, text: string) {
+    const service = new SessionService();
+    const sessions = service.searchSessions(rootState.data.sessions, text);
+    commit('sessionsLoaded', sessions);
+  },
 };
 
 const getters: GetterTree<ISessionsState, IAppState> = {
   groups(state) {
-    return state.sessions;
+    return state.sessionGroups;
   },
   session(state) {
     return state.currentSession;
+  },
+  showSearch(state) {
+    return state.showSearch;
   },
 };
 
 const mutations: MutationTree<ISessionsState> = {
   sessionsLoaded(state, sessions) {
-    state.sessions = sessions;
+    state.sessionGroups = sessions;
   },
   sessionLoaded(state, session: IDisplaySession) {
     state.currentSession = session;
+  },
+  searchToggled(state, showSearch: boolean) {
+    state.showSearch = showSearch;
   },
 };
 

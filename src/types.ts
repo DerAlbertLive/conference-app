@@ -84,7 +84,6 @@ export interface IDisplaySpeaker {
   sessions: IDisplaySession[];
 }
 
-
 export interface IConferenceFiles {
   files: string[];
 }

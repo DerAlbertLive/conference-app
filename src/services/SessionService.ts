@@ -9,18 +9,28 @@ import {
 import SessionDataConverter from './SessionDataConverter';
 
 export class SessionService {
-
   public async getConferenceData(): Promise<IDisplayConference> {
     const files = await this.fetch<IConferenceFiles>('/data/files.json');
+    // tslint:disable:prefer-const
     let data = {} as IConferenceData;
+    // tslint:enable:prefer-const
     for (const file of files.files) {
-       const confData = await this.fetch<IConferenceData>(file);
-       Object.assign(data, confData);
+      const confData = await this.fetch<IConferenceData>(file);
+      Object.assign(data, confData);
     }
     const converter = new SessionDataConverter(data);
     return converter.convert();
   }
 
+  public searchSessions(sessions: IDisplaySession[], searchText: string) {
+    const foundSessions: IDisplaySession[] = [];
+    for (const session of sessions) {
+      if (this.isSearchedSession(session, searchText)) {
+        foundSessions.push(session);
+      }
+    }
+    return this.getGroupedSession(foundSessions);
+  }
 
   public getGroupedSession(
     sessions: IDisplaySession[],
@@ -70,5 +80,15 @@ export class SessionService {
       req.send();
     });
     return promise;
+  }
+
+  private isSearchedSession(
+    session: IDisplaySession,
+    searchText: string,
+  ): boolean {
+    if (session.abstract && session.abstract.match(searchText)) {
+      return true;
+    }
+    return false;
   }
 }

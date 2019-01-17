@@ -1,7 +1,7 @@
 <template>
   <div @click="gotoSpeaker(item.id)">
     <div class="speaker-picture">
-    <img v-bind:src="item.imageUrl" v-bind:alt="altText" />
+      <img v-bind:src="item.imageUrl" v-bind:alt="altText" />
     </div>
     <h4 data-cy="name">{{ item.name }}</h4>
   </div>
@@ -27,8 +27,7 @@ export default class SpeakerInfo extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "@/_vars.scss";
-
+@import '@/_vars.scss';
 
 .group {
   .item {
@@ -37,7 +36,7 @@ export default class SpeakerInfo extends Vue {
       border-radius: 50%;
       overflow: hidden;
       width: 45px;
-      height: 45px;      
+      height: 45px;
     }
     img {
       display: block;

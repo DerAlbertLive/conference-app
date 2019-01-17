@@ -7,9 +7,7 @@
       <h1>{{ conftitle }}</h1>
     </header>
     <main ref="scrolled">
-      <keep-alive include="/sessions|/speakers">
-        <router-view/>
-      </keep-alive>
+      <keep-alive include="/sessions|/speakers"> <router-view /> </keep-alive>
     </main>
     <footer id="nav">
       <router-link to="/favorites" data-cy="link-favorites">

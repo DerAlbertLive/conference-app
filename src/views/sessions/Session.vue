@@ -1,16 +1,16 @@
 <template>
   <div class="session">
     <div>
-    <h2 data-cy="title">{{ session.title }}</h2>
-    <div class="fav">
-      <svg
-        @click="toggle(session)"
-        data-cy="fav"
-        v-bind:class="[session.favorite ? 'favorite' : '']"
-      >
-        <use xlink:href="#star--sprite"></use>
-      </svg>
-    </div>
+      <h2 data-cy="title">{{ session.title }}</h2>
+      <div class="fav">
+        <svg
+          @click="toggle(session)"
+          data-cy="fav"
+          v-bind:class="[session.favorite ? 'favorite' : '']"
+        >
+          <use xlink:href="#star--sprite"></use>
+        </svg>
+      </div>
     </div>
     <p data-cy="abstract">{{ session.abstract }}</p>
     <div data-cy="speakers" class="group">
@@ -54,7 +54,7 @@ export default class Session extends Vue {
 }
 </script>
 <style lang="scss">
-@import "../../vars";
+@import '../../vars';
 
 .session {
   display: flex;

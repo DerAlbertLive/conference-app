@@ -10,7 +10,9 @@
         <use xlink:href="#star--sprite"></use>
       </svg>
     </div>
-    <div :style="{ 'background-color': item.track.color }">{{ item.track.shortTitle }}</div>
+    <div data-cy="track" :style="{ 'background-color': item.track.color }">
+      {{ item.track.shortTitle }}
+    </div>
   </div>
 </template>
 
@@ -44,7 +46,7 @@ export default class SessionInfo extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "@/_vars.scss";
+@import '@/_vars.scss';
 
 .group {
   .item {

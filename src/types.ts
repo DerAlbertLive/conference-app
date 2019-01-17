@@ -83,3 +83,8 @@ export interface IDisplaySpeaker {
   imageUrl: string;
   sessions: IDisplaySession[];
 }
+
+
+export interface IConferenceFiles {
+  files: string[];
+}

@@ -3,13 +3,20 @@ import {
   IConferenceData,
   IDisplaySessionGroup,
   IDisplaySession,
+  IConferenceFiles,
 } from '@/types.ts';
 
 import SessionDataConverter from './SessionDataConverter';
 
 export class SessionService {
+
   public async getConferenceData(): Promise<IDisplayConference> {
-    const data = await this.fetch('/data/conference.json');
+    const files = await this.fetch<IConferenceFiles>('/data/files.json');
+    let data = {} as IConferenceData;
+    for (const file of files.files) {
+       const confData = await this.fetch<IConferenceData>(file);
+       Object.assign(data, confData);
+    }
     const converter = new SessionDataConverter(data);
     return converter.convert();
   }
@@ -44,8 +51,8 @@ export class SessionService {
     return result;
   }
 
-  private fetch(url: string): Promise<IConferenceData> {
-    const promise = new Promise<IConferenceData>((resolve, reject) => {
+  private fetch<T>(url: string): Promise<T> {
+    const promise = new Promise<T>((resolve, reject) => {
       const req = new XMLHttpRequest();
       req.open('get', url, true);
       req.onload = () => {

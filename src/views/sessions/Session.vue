@@ -65,7 +65,6 @@ export default class Session extends Vue {
   }
   h2 {
     flex-grow: 1;
-    background-color: $groups-header-color;
   }
 
   div.fav {

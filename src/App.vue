@@ -91,7 +91,7 @@ export default class App extends Vue {
   padding: 0;
   margin: 0;
 }
-@import "vars";
+@import 'vars';
 
 body,
 html {
@@ -164,13 +164,11 @@ html {
     }
   }
 
-  .groups {
-    h2 {
-      background-color: $groups-header-color;
-      padding: 0.4rem;
-      font-weight: normal;
-      font-size: 1.3rem;
-    }
+  h2 {
+    background-color: $groups-header-color;
+    padding: 0.4rem;
+    font-weight: normal;
+    font-size: 1.3rem;
   }
 
   .group {

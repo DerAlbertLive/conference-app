@@ -9,11 +9,11 @@ import SessionDataConverter from './SessionDataConverter';
 
 export class SessionService {
   public async getConferenceData(): Promise<IDisplayConference> {
-    const response = await fetch('/data/conference.json');
-    const data = (await response.json()) as IConferenceData;
+    const data = await this.fetch('/data/conference.json');
     const converter = new SessionDataConverter(data);
     return converter.convert();
   }
+
 
   public getGroupedSession(
     sessions: IDisplaySession[],
@@ -42,5 +42,26 @@ export class SessionService {
       result.push(group);
     }
     return result;
+  }
+
+  private fetch(url: string): Promise<IConferenceData> {
+    const promise = new Promise<IConferenceData>((resolve, reject) => {
+      const req = new XMLHttpRequest();
+      req.open('get', url, true);
+      req.onload = () => {
+        try {
+          if (req.status === 200) {
+            const data = JSON.parse(req.responseText);
+            resolve(data);
+          } else {
+            reject();
+          }
+        } catch (e) {
+          reject(e);
+        }
+      };
+      req.send();
+    });
+    return promise;
   }
 }

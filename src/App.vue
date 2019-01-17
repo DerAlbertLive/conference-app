@@ -121,16 +121,17 @@ export default class App extends Vue {
 body,
 html {
   height: 100%;
+  font-size: 13pt;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: var(--font-color);
-  display: grid;
-  grid-template-rows: 2em auto 2.8em;
-  grid-template-columns: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--font-color);
 
   header {
+    flex: 0 0 auto;
     background-color: var(--header-background);
     text-align: center;
     color: var(--header-color);
@@ -151,20 +152,23 @@ html {
   }
 
   main {
+    flex: 1 1 auto;
     font-size: 1em;
-    grid-row-start: 2;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
 
   footer {
-    display: grid;
-    grid-row-start: 3;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    text-align: center;
+    flex: 0 0 auto;
 
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+    text-align: center;
     a {
       color: var(--footer-color);
+      width: 100%;
     }
 
     background-color: var(--footer-background);
@@ -208,7 +212,8 @@ html {
         margin-top: var(--padding);
       }
       cursor: pointer;
-      display: grid;
+      display: flex;
+      flex-direction: row;
     }
   }
 }

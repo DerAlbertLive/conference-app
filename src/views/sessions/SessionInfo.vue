@@ -1,18 +1,16 @@
 <template>
   <div class="item">
-    <div class="info" @click="gotoSession(item.id)">
+    <div @click="gotoSession(item.id)">
       <h4 data-cy="title">{{ item.title }}</h4>
       <p data-cy="names" class="names">{{ speakerNames }}</p>
       <p class="location">{{ item.location.name }}</p>
     </div>
-    <div data-cy="fav" class="fav" @click="toggle(item)">
+    <div data-cy="fav" @click="toggle(item)">
       <svg class v-bind:class="[item.favorite ? 'favorite' : '']">
         <use xlink:href="#star--sprite"></use>
       </svg>
     </div>
-    <div class="track" :style="{ 'background-color': item.track.color }">
-      {{ item.track.shortTitle }}
-    </div>
+    <div :style="{ 'background-color': item.track.color }">{{ item.track.shortTitle }}</div>
   </div>
 </template>
 
@@ -48,26 +46,13 @@ export default class SessionInfo extends Vue {
 <style lang="scss" scoped>
 .group {
   .item {
-    grid-template-columns: auto 2.5em 1em;
-    grid-template-rows: minmax(minimal-content, 3em);
     padding-left: var(--padding);
-
-    div {
-      &.info {
-        grid-column-start: 1;
-        grid-row-start: 1;
-      }
-      &.fav {
-        grid-column-start: 2;
-        grid-row-start: 1;
-      }
-      &.room {
-        grid-column-start: 3;
-        grid-row-start: 1;
-      }
+    div:nth-child(1) {
+      flex-grow: 1;
     }
-
-    .fav {
+    div:nth-child(2) {
+      margin-left: 0.4rem;
+      margin-right: 0.4rem;
       svg {
         width: 2em;
         height: 2em;
@@ -77,6 +62,14 @@ export default class SessionInfo extends Vue {
       .favorite {
         fill: var(--favorite-color-active);
       }
+    }
+    div:nth-child(3) {
+      padding: 0.2em;
+      color: var(--track-color);
+      font-weight: bold;
+      text-align: center;
+      padding-top: var(--padding);
+      margin-bottom: var(--padding);
     }
 
     h4 {
@@ -90,13 +83,6 @@ export default class SessionInfo extends Vue {
     .location {
       font-size: 0.8em;
       color: var(--item-level-2-color);
-      margin-bottom: var(--padding);
-    }
-    .track {
-      color: var(--track-color);
-      font-weight: bold;
-      text-align: center;
-      padding-top: var(--padding);
       margin-bottom: var(--padding);
     }
   }

@@ -27,15 +27,17 @@ export default class SpeakerInfo extends Vue {
 <style lang="scss" scoped>
 .group {
   .item {
-    grid-template-columns: 2.5em auto;
     padding-left: var(--padding);
 
     img {
-      grid-column-start: 1;
-      grid-row-start: 1;
       height: 2.3rem;
       border-radius: 50%;
-      margin-bottom: var(--padding);
+      margin-bottom: var(--padding);      
+    }
+
+    h4 {
+      padding-left: var(--padding);
+      padding-right: var(--padding);
     }
   }
 }

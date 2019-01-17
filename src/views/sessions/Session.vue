@@ -1,5 +1,6 @@
 <template>
   <div class="session">
+    <div>
     <h2 data-cy="title">{{ session.title }}</h2>
     <div class="fav">
       <svg
@@ -10,7 +11,7 @@
         <use xlink:href="#star--sprite"></use>
       </svg>
     </div>
-
+    </div>
     <p data-cy="abstract">{{ session.abstract }}</p>
     <div data-cy="speakers" class="group">
       <SpeakerInfo
@@ -54,20 +55,19 @@ export default class Session extends Vue {
 </script>
 <style lang="scss">
 .session {
-  display: grid;
-  grid-template-columns: auto 2em;
-  grid-template-rows: min-content auto auto;
-
+  display: flex;
+  flex-direction: column;
+  div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+  }
   h2 {
+    flex-grow: 1;
     background-color: var(--groups-header-color);
-    grid-column-start: 1;
-    grid-row-start: 1;
   }
 
   div.fav {
     cursor: pointer;
-    grid-column-start: 2;
-    grid-row-start: 1;
     background-color: #66add6;
     svg {
       width: 2em;
@@ -80,8 +80,6 @@ export default class Session extends Vue {
   }
 
   p {
-    grid-column-start: span 2;
-    grid-row-start: 2;
     padding: 0.4em;
     line-height: 1.2em;
     margin-bottom: 1rem;
@@ -89,8 +87,6 @@ export default class Session extends Vue {
   }
 
   div {
-    grid-column-start: span 2;
-    grid-row-start: 3;
   }
 }
 </style>

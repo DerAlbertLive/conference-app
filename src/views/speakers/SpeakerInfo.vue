@@ -1,6 +1,8 @@
 <template>
   <div @click="gotoSpeaker(item.id)">
+    <div class="speaker-picture">
     <img v-bind:src="item.imageUrl" v-bind:alt="altText" />
+    </div>
     <h4 data-cy="name">{{ item.name }}</h4>
   </div>
 </template>
@@ -28,16 +30,26 @@ export default class SpeakerInfo extends Vue {
 .group {
   .item {
     padding-left: var(--padding);
-
-    img {
-      height: 2.3rem;
+    .speaker-picture {
       border-radius: 50%;
-      margin-bottom: var(--padding);      
+      overflow: hidden;
+      width: 45px;
+      height: 45px;      
+    }
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      margin: auto;
     }
 
     h4 {
       padding-left: var(--padding);
       padding-right: var(--padding);
+    }
+    div {
+      background-color: red;
+      margin-bottom: 0.4rem;
     }
   }
 }

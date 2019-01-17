@@ -50,7 +50,7 @@ export default class SpeakerInfo extends Vue {
       padding-right: $padding;
     }
     div {
-      background-color: red;
+      background-color: $image-placeholder;
       margin-bottom: $padding;
     }
   }

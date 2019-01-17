@@ -91,32 +91,7 @@ export default class App extends Vue {
   padding: 0;
   margin: 0;
 }
-
-:root {
-  /// colors
-  --font-color: #000;
-  --header-background: #2c3e50;
-  --header-color: #fff;
-
-  --footer-color: #888;
-  --footer-color-active: #fff;
-  --footer-background: #ccc;
-  --footer-background-active: #aaa;
-
-  --groups-header-color: #66add6;
-  --group-header-color: #ccc;
-
-  --favorite-color-active: gold;
-  --favorite-color: #ccc;
-
-  --item-color: #000;
-  --item-level-1-color: #555;
-  --item-level-2-color: #999;
-
-  --track-color: #fff;
-
-  --padding: 0.4rem;
-}
+@import "vars";
 
 body,
 html {
@@ -128,13 +103,13 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--font-color);
+  color: $font-color;
 
   header {
     flex: 0 0 auto;
-    background-color: var(--header-background);
+    background-color: $header-background;
     text-align: center;
-    color: var(--header-color);
+    color: $header-color;
 
     h1 {
       padding-top: 0.2em;
@@ -147,7 +122,7 @@ html {
       float: left;
       width: 1.5em;
       height: 1.5em;
-      fill: var(--header-color);
+      fill: $header-color;
     }
   }
 
@@ -167,31 +142,31 @@ html {
     justify-content: space-evenly;
     text-align: center;
     a {
-      color: var(--footer-color);
+      color: $footer-color;
       width: 100%;
     }
 
-    background-color: var(--footer-background);
-    color: var(--footer-color);
+    background-color: $footer-background;
+    color: $footer-color;
 
     svg {
-      padding-top: var(--padding);
+      padding-top: $padding;
       height: 2em;
       width: 2em;
-      fill: var(--footer-color);
+      fill: $footer-color;
     }
 
     .router-link-active {
-      background-color: var(--footer-background-active);
+      background-color: $footer-background-active;
       svg {
-        fill: var(--footer-color-active);
+        fill: $footer-color-active;
       }
     }
   }
 
   .groups {
     h2 {
-      background-color: var(--groups-header-color);
+      background-color: $groups-header-color;
       padding: 0.4rem;
       font-weight: normal;
       font-size: 1.3rem;
@@ -202,14 +177,14 @@ html {
     h3 {
       position: sticky;
       top: 0;
-      background-color: var(--group-header-color);
-      padding: var(--padding);
+      background-color: $group-header-color;
+      padding: $padding;
       font-size: 1.1rem;
     }
 
     .item {
       &:first-of-type {
-        margin-top: var(--padding);
+        margin-top: $padding;
       }
       cursor: pointer;
       display: flex;

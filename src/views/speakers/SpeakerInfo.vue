@@ -27,9 +27,12 @@ export default class SpeakerInfo extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import "@/_vars.scss";
+
+
 .group {
   .item {
-    padding-left: var(--padding);
+    padding-left: $padding;
     .speaker-picture {
       border-radius: 50%;
       overflow: hidden;
@@ -44,12 +47,12 @@ export default class SpeakerInfo extends Vue {
     }
 
     h4 {
-      padding-left: var(--padding);
-      padding-right: var(--padding);
+      padding-left: $padding;
+      padding-right: $padding;
     }
     div {
       background-color: red;
-      margin-bottom: 0.4rem;
+      margin-bottom: $padding;
     }
   }
 }

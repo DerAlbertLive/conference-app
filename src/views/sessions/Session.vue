@@ -54,6 +54,8 @@ export default class Session extends Vue {
 }
 </script>
 <style lang="scss">
+@import "../../vars";
+
 .session {
   display: flex;
   flex-direction: column;
@@ -63,7 +65,7 @@ export default class Session extends Vue {
   }
   h2 {
     flex-grow: 1;
-    background-color: var(--groups-header-color);
+    background-color: $groups-header-color;
   }
 
   div.fav {

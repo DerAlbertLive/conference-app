@@ -44,32 +44,34 @@ export default class SessionInfo extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import "@/_vars.scss";
+
 .group {
   .item {
-    padding-left: var(--padding);
+    padding-left: $padding;
     div:nth-child(1) {
       flex-grow: 1;
     }
     div:nth-child(2) {
-      margin-left: 0.4rem;
-      margin-right: 0.4rem;
+      margin-left: $padding;
+      margin-right: $padding;
       svg {
         width: 2em;
         height: 2em;
-        padding-top: var(--padding);
-        fill: var(--favorite-color);
+        padding-top: $padding;
+        fill: $favorite-color;
       }
       .favorite {
-        fill: var(--favorite-color-active);
+        fill: $favorite-color-active;
       }
     }
     div:nth-child(3) {
       padding: 0.2em;
-      color: var(--track-color);
+      color: $track-color;
       font-weight: bold;
       text-align: center;
-      padding-top: var(--padding);
-      margin-bottom: var(--padding);
+      padding-top: $padding;
+      margin-bottom: $padding;
     }
 
     h4 {
@@ -77,13 +79,13 @@ export default class SessionInfo extends Vue {
     }
     .names {
       font-size: 0.9em;
-      color: var(--item-level-1-color);
+      color: $item-level-1-color;
       font-style: italic;
     }
     .location {
       font-size: 0.8em;
-      color: var(--item-level-2-color);
-      margin-bottom: var(--padding);
+      color: $item-level-2-color;
+      margin-bottom: $padding;
     }
   }
 }

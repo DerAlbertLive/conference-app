@@ -30,7 +30,13 @@ export default class Favorites extends Vue {
   @mod.Getter private groups!: () => types.IDisplaySessionGroup[];
   private async mounted() {
     await this.initializeApplication();
-    this.loadSessions();
+    await this.loadSessions();
+    if (this.groups && this.groups.length === 0) {
+      this.redirectToSessions();
+    }
+  }
+  private redirectToSessions() {
+    this.$router.push({name:'sessions'});
   }
 }
 </script>

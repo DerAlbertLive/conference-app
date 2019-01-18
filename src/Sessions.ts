@@ -1,48 +1,23 @@
 import { IAppState, IDisplaySession, IDisplaySessionGroup } from '@/types';
 import { GetterTree, ActionTree, MutationTree, Module } from 'vuex';
+import { SessionService } from './services/SessionService';
 
 interface ISessionsState {
-  sessions: IDisplaySessionGroup[];
+  sessionGroups: IDisplaySessionGroup[];
   currentSession: IDisplaySession;
+  showSearch: boolean;
 }
 
 const sessionsState: ISessionsState = {
-  sessions: [],
+  sessionGroups: [],
   currentSession: {} as IDisplaySession,
+  showSearch: false,
 };
-
-function getGroupedSessions(
-  sessions: IDisplaySession[],
-): IDisplaySessionGroup[] {
-  const sessionGroups = new Map<string, IDisplaySession[]>();
-  for (const session of sessions) {
-    let groupedSession = sessionGroups.get(session.sessionTime);
-    if (!groupedSession) {
-      groupedSession = [];
-      sessionGroups.set(session.sessionTime, groupedSession);
-    }
-    groupedSession.push(session);
-  }
-  const groupTimes = [...sessionGroups.keys()].sort();
-
-  const result: IDisplaySessionGroup[] = [];
-  for (const groupTime of groupTimes) {
-    let groupedSession = sessionGroups.get(groupTime) || [];
-    groupedSession = groupedSession.sort((s1, s2) =>
-      s1.track.shortTitle.localeCompare(s2.track.shortTitle),
-    );
-    const group: IDisplaySessionGroup = {
-      title: groupTime,
-      sessions: groupedSession,
-    };
-    result.push(group);
-  }
-  return result;
-}
 
 const actions: ActionTree<ISessionsState, IAppState> = {
   async loadSessions({ commit, rootState }) {
-    const sessions = getGroupedSessions(rootState.data.sessions);
+    const service = new SessionService();
+    const sessions = service.getGroupedSession(rootState.data.sessions);
     commit('sessionsLoaded', sessions);
   },
   async loadSession({ commit, rootState }, sessionId: string) {
@@ -52,23 +27,37 @@ const actions: ActionTree<ISessionsState, IAppState> = {
       commit('sessionLoaded', session);
     }
   },
+  toggleSearch({ commit, state }) {
+    commit('searchToggled', !state.showSearch);
+  },
+  search({ commit, state, rootState }, text: string) {
+    const service = new SessionService();
+    const sessions = service.searchSessions(rootState.data.sessions, text);
+    commit('sessionsLoaded', sessions);
+  },
 };
 
 const getters: GetterTree<ISessionsState, IAppState> = {
   groups(state) {
-    return state.sessions;
+    return state.sessionGroups;
   },
   session(state) {
     return state.currentSession;
+  },
+  showSearch(state) {
+    return state.showSearch;
   },
 };
 
 const mutations: MutationTree<ISessionsState> = {
   sessionsLoaded(state, sessions) {
-    state.sessions = sessions;
+    state.sessionGroups = sessions;
   },
   sessionLoaded(state, session: IDisplaySession) {
     state.currentSession = session;
+  },
+  searchToggled(state, showSearch: boolean) {
+    state.showSearch = showSearch;
   },
 };
 

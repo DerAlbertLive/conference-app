@@ -5,19 +5,22 @@
       <img :src="speaker.imageUrl" :alt="altText" />
       <p data-cy="bio">{{ speaker.bio }}</p>
     </div>
-    <SessionInfo
-      v-for="(item, index) in speaker.sessions"
-      :item="item"
-      :key="item.id"
-      :data-cy="'info-' + index"
-    />
+    <div class="group">
+      <SessionInfo
+        class="item"
+        v-for="(item, index) in speaker.sessions"
+        :item="item"
+        :key="item.id"
+        :data-cy="'info-' + index"
+      />
+    </div>
   </div>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IDisplaySpeaker } from '@/types';
 import { namespace, Action } from 'vuex-class';
-import SessionInfo from '../../components/SessionInfo.vue';
+import SessionInfo from '../sessions/SessionInfo.vue';
 
 const mod = namespace('speakers');
 
@@ -38,7 +41,7 @@ export default class Speaker extends Vue {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .about {
   img {
     margin-bottom: 1em;
@@ -51,6 +54,9 @@ export default class Speaker extends Vue {
     line-height: 1.2em;
     margin-bottom: 1rem;
     text-align: justify;
+  }
+  div.group {
+    clear: both;
   }
 }
 </style>

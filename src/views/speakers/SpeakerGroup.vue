@@ -1,7 +1,8 @@
 <template>
   <section>
-    <h3 data-cy="title" class="sticky-element">{{ group.title }}</h3>
+    <h3 data-cy="title">{{ group.title }}</h3>
     <SpeakerInfo
+      class="item"
       v-for="(speaker, index) in group.speakers"
       :key="speaker.id"
       :item="speaker"

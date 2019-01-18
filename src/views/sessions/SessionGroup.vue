@@ -13,7 +13,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IDisplaySessionGroup } from '@/types';
-import SessionInfo from '@/components/SessionInfo.vue';
+import SessionInfo from './SessionInfo.vue';
 
 @Component({
   components: { SessionInfo },

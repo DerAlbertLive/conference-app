@@ -1,16 +1,16 @@
 <template>
-  <div class="sessionInfo">
-    <div class="info" @click="gotoSession(item.id)">
+  <div class="item">
+    <div @click="gotoSession(item.id)">
       <h4 data-cy="title">{{ item.title }}</h4>
       <p data-cy="names" class="names">{{ speakerNames }}</p>
       <p class="location">{{ item.location.name }}</p>
     </div>
-    <div data-cy="fav" class="fav" @click="toggle(item)">
-      <svg class="" v-bind:class="[item.favorite ? 'favorite' : '']">
+    <div data-cy="fav" @click="toggle(item)">
+      <svg class v-bind:class="[item.favorite ? 'favorite' : '']">
         <use xlink:href="#star--sprite"></use>
       </svg>
     </div>
-    <div class="track" :style="{ 'background-color': item.track.color }">
+    <div data-cy="track" :style="{ 'background-color': item.track.color }">
       {{ item.track.shortTitle }}
     </div>
   </div>
@@ -45,61 +45,50 @@ export default class SessionInfo extends Vue {
 }
 </script>
 
-<style lang="scss">
-section .sessionInfo {
-  &:first-of-type {
-    margin-top: 0.4rem;
-  }
-}
-.sessionInfo {
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: auto 2.5rem 1rem;
-  grid-template-rows: minmax(minimal-content, 3rem);
-  padding-left: 0.4em;
+<style lang="scss" scoped>
+@import '@/_vars.scss';
 
-  div {
-    &.info {
-      grid-column-start: 1;
-      grid-row-start: 1;
+.group {
+  .item {
+    padding-left: $padding;
+    div:nth-child(1) {
+      flex-grow: 1;
     }
-    &.fav {
-      grid-column-start: 2;
-      grid-row-start: 1;
+    div:nth-child(2) {
+      margin-left: $padding;
+      margin-right: $padding;
+      svg {
+        width: 2em;
+        height: 2em;
+        padding-top: $padding;
+        fill: $favorite-color;
+      }
+      .favorite {
+        fill: $favorite-color-active;
+      }
     }
-    &.room {
-      grid-column-start: 3;
-      grid-row-start: 1;
+    div:nth-child(3) {
+      padding: 0.2em;
+      color: $track-color;
+      font-weight: bold;
+      text-align: center;
+      padding-top: $padding;
+      margin-bottom: $padding;
     }
-  }
-  .fav {
-    svg {
-      width: 2em;
-      height: 2em;
-      padding-top: 0.4rem;
-      fill: #ccc;
+
+    h4 {
+      font-size: 1em;
     }
-    .favorite {
-      fill: #ece313;
+    .names {
+      font-size: 0.9em;
+      color: $item-level-1-color;
+      font-style: italic;
     }
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  .names {
-    font-size: 0.9rem;
-    font-style: italic;
-  }
-  .location {
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 0.4em;
-  }
-  .track {
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 0.4em;
+    .location {
+      font-size: 0.8em;
+      color: $item-level-2-color;
+      margin-bottom: $padding;
+    }
   }
 }
 </style>

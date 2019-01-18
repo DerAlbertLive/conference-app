@@ -1,4 +1,13 @@
 
+// if there is a new service worker available then clear all caches
+self.addEventListener('activate', event => {
+  event.waitUntil(
+      caches.keys()
+          .then(cacheNames => {
+              cacheNames.forEach(c => caches.delete(c))
+          })
+  );
+});
 
 workbox.routing.registerRoute(
   /.*(?:speakerpicture)/,
@@ -30,5 +39,19 @@ workbox.routing.registerRoute(
   })
 );
 
+self.addEventListener('message', (event) => {
+  if (!event.data){
+    return;
+  }
+
+  switch (event.data) {
+    case 'skipWaiting':
+      self.skipWaiting();
+      break;
+    default:
+      // NOOP
+      break;
+  }
+});
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest || []);

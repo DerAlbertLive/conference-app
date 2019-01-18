@@ -1,17 +1,21 @@
 <template>
   <div class="session">
-    <h2 data-cy="title">{{ session.title }}</h2>
-    <svg
-      @click="toggle(session)"
-      data-cy="fav"
-      v-bind:class="[session.favorite ? 'favorite' : '']"
-    >
-      <use xlink:href="#star--sprite"></use>
-    </svg>
-
+    <div>
+      <h2 data-cy="title">{{ session.title }}</h2>
+      <div class="fav">
+        <svg
+          @click="toggle(session)"
+          data-cy="fav"
+          v-bind:class="[session.favorite ? 'favorite' : '']"
+        >
+          <use xlink:href="#star--sprite"></use>
+        </svg>
+      </div>
+    </div>
     <p data-cy="abstract">{{ session.abstract }}</p>
-    <div data-cy="speakers">
+    <div data-cy="speakers" class="group">
       <SpeakerInfo
+        class="item"
         v-for="speaker in session.speakers"
         :key="speaker.id"
         :item="speaker"
@@ -25,7 +29,7 @@ import '@/assets/star.svg?sprite';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IDisplaySpeaker, IDisplaySession } from '@/types';
 import { namespace, Action } from 'vuex-class';
-import SessionInfo from '../../components/SessionInfo.vue';
+import SessionInfo from './SessionInfo.vue';
 import SpeakerInfo from '../speakers/SpeakerInfo.vue';
 
 const mod = namespace('sessions');
@@ -50,33 +54,33 @@ export default class Session extends Vue {
 }
 </script>
 <style lang="scss">
-.session {
-  display: grid;
-  grid-template-columns: auto 2em;
-  grid-template-rows: minmax(minimal-content, 5rem) auto auto;
+@import '../../vars';
 
+.session {
+  display: flex;
+  flex-direction: column;
+  div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+  }
   h2 {
-    grid-column-start: 1;
-    grid-row-start: 1;
+    flex-grow: 1;
   }
 
-  svg {
+  div.fav {
     cursor: pointer;
-    grid-column-start: 2;
-    grid-row-start: 1;
-    width: 2em;
-    height: 100%;
-
-    fill: #ccc;
-    background-color: #66add6;
-    &.favorite {
+    background-color: $groups-header-color;
+    svg {
+      width: 2em;
+      height: 2em;
+      fill: #ccc;
+    }
+    svg.favorite {
       fill: #ece313;
     }
   }
 
   p {
-    grid-column-start: span 2;
-    grid-row-start: 2;
     padding: 0.4em;
     line-height: 1.2em;
     margin-bottom: 1rem;
@@ -84,8 +88,6 @@ export default class Session extends Vue {
   }
 
   div {
-    grid-column-start: span 2;
-    grid-row-start: 3;
   }
 }
 </style>

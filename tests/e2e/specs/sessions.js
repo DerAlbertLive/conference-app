@@ -2,7 +2,7 @@ context('Sessions', () => {
   beforeEach(() => {
     cy.visit('/sessions');
   });
-
+      
   describe('group titles', () => {
     it('first shoud be 09:00 - 9:15', () => {
       cy.contains('[data-cy=group-0] [data-cy=title]', '09:00 - 09:15');
@@ -57,13 +57,13 @@ context('Sessions', () => {
     });
 
     it('tracks should be in order a,b,c,d,e,f,g', () => {
-      cy.contains('[data-cy=group-2] [data-cy=info-0] .track', 'A');
-      cy.contains('[data-cy=group-2] [data-cy=info-1] .track', 'B');
-      cy.contains('[data-cy=group-2] [data-cy=info-2] .track', 'C');
-      cy.contains('[data-cy=group-2] [data-cy=info-3] .track', 'D');
-      cy.contains('[data-cy=group-2] [data-cy=info-4] .track', 'E');
-      cy.contains('[data-cy=group-2] [data-cy=info-5] .track', 'F');
-      cy.contains('[data-cy=group-2] [data-cy=info-6] .track', 'G');
+      cy.contains('[data-cy=group-2] [data-cy=info-0] [data-cy=track]', 'A');
+      cy.contains('[data-cy=group-2] [data-cy=info-1] [data-cy=track]', 'B');
+      cy.contains('[data-cy=group-2] [data-cy=info-2] [data-cy=track]', 'C');
+      cy.contains('[data-cy=group-2] [data-cy=info-3] [data-cy=track]', 'D');
+      cy.contains('[data-cy=group-2] [data-cy=info-4] [data-cy=track]', 'E');
+      cy.contains('[data-cy=group-2] [data-cy=info-5] [data-cy=track]', 'F');
+      cy.contains('[data-cy=group-2] [data-cy=info-6] [data-cy=track]', 'G');
     });
   });
   describe('navigation to first WebAssembly', () => {

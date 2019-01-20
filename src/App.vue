@@ -54,6 +54,10 @@ import '@/assets/chevron-left.svg?sprite';
 import '@/assets/search.svg?sprite';
 import { Component, Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
+import ServiceWorkerManager from './pwa/ServiceWorkerManager';
+
+// new ServiceWorkerManager().registerServiceWorker();
+
 
 interface IPositions {
   [name: string]: number;

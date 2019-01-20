@@ -56,7 +56,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
 import ServiceWorkerManager from './pwa/ServiceWorkerManager';
 
-new ServiceWorkerManager().registerServiceWorker();
+// new ServiceWorkerManager().registerServiceWorker();
 
 
 interface IPositions {

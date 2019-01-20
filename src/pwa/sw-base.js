@@ -54,4 +54,7 @@ self.addEventListener('message', (event) => {
   }
 });
 
-workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+// The precaching code provided by Workbox.
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

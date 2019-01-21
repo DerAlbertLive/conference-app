@@ -2,15 +2,20 @@
 
 import { register } from 'register-service-worker';
 
+console.log('Enviromnet', process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
   register(`${process.env.BASE_URL}service-worker.js`, {
-    ready() {
+    ready(registration) {
       console.log(
         'App is being served from cache by a service worker.\n' +
           'For more details, visit https://goo.gl/AFskqB',
       );
+      console.log('ready', registration.active);
+      if (reg) {
+        reg(registration);
+      }
     },
-    registered() {
+    registered(registration: ServiceWorkerRegistration) {
       console.log('Service worker has been registered.');
     },
     cached() {
@@ -32,3 +37,10 @@ if (process.env.NODE_ENV === 'production') {
     },
   });
 }
+
+let reg: (sr: ServiceWorkerRegistration) => void;
+
+function registerOnRegister(callback: (sr: ServiceWorkerRegistration) => void) {
+  reg = callback;
+}
+export default registerOnRegister;

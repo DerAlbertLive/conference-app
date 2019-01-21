@@ -1,5 +1,6 @@
 export interface IAppState {
   data: IDisplayConference;
+  registration: ServiceWorkerRegistration | null;
 }
 
 export interface IConferenceData {

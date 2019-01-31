@@ -3,23 +3,26 @@ import {
   IConferenceData,
   IDisplaySessionGroup,
   IDisplaySession,
-  IConferenceFiles,
+  IConfiguration,
 } from '@/types.ts';
 
 import SessionDataConverter from './SessionDataConverter';
 
 export class SessionService {
   public async getConferenceData(): Promise<IDisplayConference> {
-    const files = await this.fetch<IConferenceFiles>('/data/files.json');
-    // tslint:disable:prefer-const
-    let data = {} as IConferenceData;
-    // tslint:enable:prefer-const
+    const configFileName = '/data/configuration.json'
+    const files = await this.fetch<IConfiguration>(configFileName);
+
+    const data = {} as IConferenceData;
     for (const file of files.files) {
       const confData = await this.fetch<IConferenceData>(file);
       Object.assign(data, confData);
     }
     const converter = new SessionDataConverter(data);
-    return converter.convert();
+    const displayConference = converter.convert();
+    displayConference.dataFiles = files.files;
+    displayConference.dataFiles.push(configFileName);
+    return displayConference;
   }
 
   public searchSessions(sessions: IDisplaySession[], searchText: string) {

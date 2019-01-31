@@ -5,8 +5,6 @@ workbox.core.setCacheNameDetails({ prefix: 'conference-app' });
  * See https://goo.gl/S9QRab
  */
 
-workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
-
 
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -24,17 +22,21 @@ self.addEventListener('activate', (event) => {
 });
 
 let imagesToCache = [];
+let dataToCache = [];
 
 self.addEventListener('message', (event) => {
   if (event.data.command === 'speakerImagesUpdate') {
     imagesToCache = event.data.imageUris;
   }
+
+  if (event.data.command === 'conferenceDataUpdate') {
+    dataToCache = event.data.dataUris;
+  }
 });
 
-
-function matchCallback(context) {
+function simpleMatcher(uris, context) {
   const href = context.url.href;
-  const index = imagesToCache.indexOf(href);
+  const index = uris.indexOf(href);
   if (index < 0)
   {
     return null;
@@ -42,30 +44,41 @@ function matchCallback(context) {
   return true;
 }
 
+function uriMatcher(uris, context) {
+  const href = context.url.href;
+  for (const uri of uris) {
+      if (uri.startsWith("http:") || uri.startsWith('https:')) {
+        if (href === uri) {
+          return true;
+        }
+      } else {
+        if (context.url.pathname === uri) {
+          return true;          
+        }
+      }
+  }
+  return null;
+}
+
 workbox.routing.registerRoute(
-  matchCallback,
+  function (context) { return simpleMatcher(imagesToCache, context)},
   workbox.strategies.cacheFirst({
     cacheName: 'speaker-image-cache',
     plugins: [
       new workbox.expiration.Plugin({
-        // Cache for a maximum of a week
-        maxAgeSeconds: 30,
+        maxAgeSeconds: 60 * 60 * 24, // 24 Hours
       }),
     ],
   }),
 );
 
-// Hack To resolver workbox.routing before registerUri
 workbox.routing.registerRoute(
-  'https://foo',
-  // Use cache but update in the background ASAP
+  function (context) { return uriMatcher(dataToCache, context)},
   workbox.strategies.staleWhileRevalidate({
-    // Use a custom cache name
-    cacheName: 'speaker-image-cache',
+    cacheName: 'conference-data-cache',
     plugins: [
       new workbox.expiration.Plugin({
-        // Cache for a maximum of a week
-        maxAgeSeconds: 30,
+        maxAgeSeconds: 60 * 30, // 30 Minuten
       }),
     ],
   }),

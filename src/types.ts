@@ -54,6 +54,7 @@ export interface IDisplayConference {
   sessions: IDisplaySession[];
   speakers: IDisplaySpeaker[];
   sessionSpeakerMaps: ISessionSpeakerMap[];
+  dataFiles: string[];
 }
 
 export interface IDisplaySession {
@@ -85,6 +86,6 @@ export interface IDisplaySpeaker {
   sessions: IDisplaySession[];
 }
 
-export interface IConferenceFiles {
+export interface IConfiguration {
   files: string[];
 }

@@ -17,6 +17,7 @@ export default class SessionDataConverter {
       sessions: this.convertSessions(this.data.sessions),
       speakers: this.convertSpeakers(this.data.speakers),
       sessionSpeakerMaps: this.data.sessionSpeakerMaps,
+      dataFiles: []
     };
     this.assignSpeakersToSession(converted);
     this.assignSessionsToSpeaker(converted);

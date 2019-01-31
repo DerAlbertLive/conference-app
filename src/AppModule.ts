@@ -35,19 +35,36 @@ const getters: GetterTree<IAppState, IAppState> = {
   },
 };
 
+function updateServiceWorker(registration: ServiceWorkerRegistration, cdata: IDisplayConference)
+{
+  let sw = registration.active as ServiceWorker;
+  if (!sw) {
+    return;
+  }
+
+  if (cdata.speakers) {
+    const uris = cdata.speakers.map((s) => s.imageUrl);
+  
+    sw.postMessage({
+      command: 'speakerImagesUpdate',
+      imageUris: uris,
+    });  
+  }
+  if (cdata.dataFiles) {
+    sw.postMessage({
+      command: 'conferenceDataUpdate',
+      dataUris: cdata.dataFiles
+    });
+  
+  }
+}
+
 const mutations: MutationTree<IAppState> = {
   applicationInitialized(state: IAppState, { data }) {
     state.data = data;
     console.log('applicationInitialized', state);
     if (state.registration) {
-      const uris = state.data.speakers.map((s) => s.imageUrl);
-//      console.log('uris', event);
-      let sw = state.registration.active as ServiceWorker;
-  //    console.log('postMessage', sw);
-      sw.postMessage({
-        command: 'speakerImagesUpdate',
-        imageUris: uris,
-      });
+      updateServiceWorker(state.registration, state.data);
     }
   },
   favoriteToggled(state, session: IDisplaySession) {
@@ -58,20 +75,10 @@ const mutations: MutationTree<IAppState> = {
       .map((s) => s.id);
 
     localStorage.setItem(state.data.title, JSON.stringify(favoriteIds));
-  },
+  },  
   swRegistered(state, registration: ServiceWorkerRegistration) {
     state.registration = registration;
-    if (state.data.speakers) {
-      const uris = state.data.speakers.map((s) => s.imageUrl);
-      let sw = state.registration.active;
-      console.log('postMessage', uris.length);
-      if (sw) {
-        sw.postMessage({
-          command: 'speakerImagesUpdate',
-          imageUris: uris,
-        });
-      }
-    }
+    updateServiceWorker(state.registration, state.data);
   },
 };
 

@@ -41,9 +41,9 @@ const mutations: MutationTree<IAppState> = {
     console.log('applicationInitialized', state);
     if (state.registration) {
       const uris = state.data.speakers.map((s) => s.imageUrl);
-      console.log('uris', event);
+//      console.log('uris', event);
       let sw = state.registration.active as ServiceWorker;
-      console.log('postMessage', sw);
+  //    console.log('postMessage', sw);
       sw.postMessage({
         command: 'speakerImagesUpdate',
         imageUris: uris,

@@ -1,9 +1,10 @@
-import { IAppState, IDisplaySession } from '@/types';
+import { IAppState, IDisplaySession, IDisplayConference } from '@/types';
 import { ActionContext, ActionTree, MutationTree, GetterTree } from 'vuex';
 import { SessionService } from './services/SessionService';
 
 export const AppState: IAppState = {
   data: {} as any,
+  registration: null,
 };
 
 let initializing = false;
@@ -34,9 +35,37 @@ const getters: GetterTree<IAppState, IAppState> = {
   },
 };
 
+function updateServiceWorker(registration: ServiceWorkerRegistration, cdata: IDisplayConference)
+{
+  let sw = registration.active as ServiceWorker;
+  if (!sw) {
+    return;
+  }
+
+  if (cdata.speakers) {
+    const uris = cdata.speakers.map((s) => s.imageUrl);
+  
+    sw.postMessage({
+      command: 'speakerImagesUpdate',
+      imageUris: uris,
+    });  
+  }
+  if (cdata.dataFiles) {
+    sw.postMessage({
+      command: 'conferenceDataUpdate',
+      dataUris: cdata.dataFiles
+    });
+  
+  }
+}
+
 const mutations: MutationTree<IAppState> = {
   applicationInitialized(state: IAppState, { data }) {
     state.data = data;
+    console.log('applicationInitialized', state);
+    if (state.registration) {
+      updateServiceWorker(state.registration, state.data);
+    }
   },
   favoriteToggled(state, session: IDisplaySession) {
     session.favorite = !session.favorite;
@@ -46,6 +75,10 @@ const mutations: MutationTree<IAppState> = {
       .map((s) => s.id);
 
     localStorage.setItem(state.data.title, JSON.stringify(favoriteIds));
+  },  
+  swRegistered(state, registration: ServiceWorkerRegistration) {
+    state.registration = registration;
+    updateServiceWorker(state.registration, state.data);
   },
 };
 

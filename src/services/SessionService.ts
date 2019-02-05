@@ -10,7 +10,7 @@ import SessionDataConverter from './SessionDataConverter';
 
 export class SessionService {
   public async getConferenceData(): Promise<IDisplayConference> {
-    const configFileName = '/data/configuration.json'
+    const configFileName = '/data/configuration.json';
     const files = await this.fetch<IConfiguration>(configFileName);
 
     const data = {} as IConferenceData;

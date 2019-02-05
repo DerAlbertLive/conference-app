@@ -35,8 +35,10 @@ const getters: GetterTree<IAppState, IAppState> = {
   },
 };
 
-function updateServiceWorker(registration: ServiceWorkerRegistration, cdata: IDisplayConference)
-{
+function updateServiceWorker(
+  registration: ServiceWorkerRegistration,
+  cdata: IDisplayConference,
+) {
   let sw = registration.active as ServiceWorker;
   if (!sw) {
     return;
@@ -44,18 +46,17 @@ function updateServiceWorker(registration: ServiceWorkerRegistration, cdata: IDi
 
   if (cdata.speakers) {
     const uris = cdata.speakers.map((s) => s.imageUrl);
-  
+
     sw.postMessage({
       command: 'speakerImagesUpdate',
       imageUris: uris,
-    });  
+    });
   }
   if (cdata.dataFiles) {
     sw.postMessage({
       command: 'conferenceDataUpdate',
-      dataUris: cdata.dataFiles
+      dataUris: cdata.dataFiles,
     });
-  
   }
 }
 
@@ -75,7 +76,7 @@ const mutations: MutationTree<IAppState> = {
       .map((s) => s.id);
 
     localStorage.setItem(state.data.title, JSON.stringify(favoriteIds));
-  },  
+  },
   swRegistered(state, registration: ServiceWorkerRegistration) {
     state.registration = registration;
     updateServiceWorker(state.registration, state.data);

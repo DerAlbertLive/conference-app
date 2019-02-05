@@ -2,7 +2,7 @@
   <div class="speaker" data-cy="speaker">
     <div class="about">
       <h2 data-cy="name">{{ speaker.name }}</h2>
-      <img :src="speaker.imageUrl" :alt="altText" />
+      <img crossorigin="anonymous" :src="speaker.imageUrl" :alt="altText" />
       <p data-cy="bio">{{ speaker.bio }}</p>
     </div>
     <div class="group">

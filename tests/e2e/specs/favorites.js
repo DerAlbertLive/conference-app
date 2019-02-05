@@ -1,7 +1,7 @@
 context('Favorites', () => {
     context('selection favories', ()=>{
         beforeEach(() => {
-            cy.visit('/sessions');
+            cy.visit('/#sessions');
             cy.get('[data-cy=group-0] [data-cy=info-0] [data-cy=fav]').click();
             cy.get('[data-cy=group-1] [data-cy=info-0] [data-cy=fav]').click();
             cy.get('[data-cy=group-1] [data-cy=info-3] [data-cy=fav]').click();

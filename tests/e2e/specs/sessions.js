@@ -1,6 +1,6 @@
 context('Sessions', () => {
   beforeEach(() => {
-    cy.visit('/sessions');
+    cy.visit('/#sessions');
   });
       
   describe('group titles', () => {

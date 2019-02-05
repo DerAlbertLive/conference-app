@@ -2,7 +2,7 @@
 
 context('Speaker', () => {
   beforeEach(() => {
-    cy.visit('/speakers');
+    cy.visit('/#speakers');
   });
 
   context('Selection of Adam Ralph', () => {

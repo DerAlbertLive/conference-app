@@ -2,7 +2,7 @@
 context('Search', ()=>{
     context('Toogle Search File', ()=>{
         beforeEach(()=>{
-            cy.visit('/sessions');
+            cy.visit('/#sessions');
         });
 
         it('should does not show text-box', ()=>{

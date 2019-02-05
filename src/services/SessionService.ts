@@ -26,12 +26,7 @@ export class SessionService {
   }
 
   public searchSessions(sessions: IDisplaySession[], searchText: string) {
-    const foundSessions: IDisplaySession[] = [];
-    for (const session of sessions) {
-      if (this.isSearchedSession(session, searchText)) {
-        foundSessions.push(session);
-      }
-    }
+    const foundSessions = sessions.filter(s=> this.isSearchedSession(s, searchText))
     return this.getGroupedSession(foundSessions);
   }
 
@@ -89,8 +84,17 @@ export class SessionService {
     session: IDisplaySession,
     searchText: string,
   ): boolean {
-    if (session.abstract && session.abstract.match(searchText)) {
+    const regEx = new RegExp(searchText, 'i')
+    if (session.abstract && session.abstract.match(regEx)) {
       return true;
+    }
+    if (session.title && session.title.match(regEx)) {
+      return true;
+    }
+    for (const speaker of session.speakers) {
+      if (speaker.name.match(regEx)) {
+        return true;
+      }
     }
     return false;
   }

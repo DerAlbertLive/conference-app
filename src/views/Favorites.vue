@@ -44,8 +44,6 @@ export default class Favorites extends Vue {
   private async mounted() {
     await this.initializeApplication();
     await this.loadSessions();
-    console.log('route', this.$route);
-    console.log('router', this.$router);
 
     if (Favorites.userNavigation) {
       return;
@@ -53,9 +51,8 @@ export default class Favorites extends Vue {
       this.redirectToSessions();
     }
   }
-  beforeRouteEnter(to: Route, from: Route, next: any) {
+  private beforeRouteEnter(to: Route, from: Route, next: any) {
     Favorites.userNavigation = from.name != null;
-    console.log('beforeRouteEnter', from);
     next();
   }
   private redirectToSessions() {

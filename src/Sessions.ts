@@ -27,8 +27,15 @@ const actions: ActionTree<ISessionsState, IAppState> = {
       commit('sessionLoaded', session);
     }
   },
-  toggleSearch({ commit, state }) {
-    commit('searchToggled', !state.showSearch);
+  toggleSearch({ commit, state, rootState }) {
+    const newSearch = !state.showSearch;
+    commit('searchToggled', newSearch);
+    
+    if (!newSearch) {
+      const service = new SessionService();
+      const sessions = service.getGroupedSession(rootState.data.sessions);
+      commit('sessionsLoaded', sessions);  
+    }
   },
   search({ commit, state, rootState }, text: string) {
     const service = new SessionService();

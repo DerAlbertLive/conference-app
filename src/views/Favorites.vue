@@ -8,6 +8,9 @@
       :key="group.title"
       :data-cy="'group-' + index"
     />
+    <section v-if="groups.length===0"  class="group">
+    <h3>Bitte wähle ein paar Sessions aus, damit diese hier in Deinen Favoriten angezeigt werden.</h3>
+    </section>
   </div>
 </template>
 

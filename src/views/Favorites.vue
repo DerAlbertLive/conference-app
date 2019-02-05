@@ -13,9 +13,17 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+
+Component.registerHooks([
+  'beforeRouteEnter',
+  'beforeRouteUpdate',
+  'beforeRouteLeave',
+]);
+
 import SessionGroup from './sessions/SessionGroup.vue';
 import { Action, namespace } from 'vuex-class';
 import * as types from '../types';
+import { Route } from 'vue-router';
 
 const mod = namespace('favorites');
 
@@ -25,15 +33,27 @@ const mod = namespace('favorites');
   },
 })
 export default class Favorites extends Vue {
+  public static userNavigation = false;
+
   @Action private initializeApplication!: () => void;
   @mod.Action private loadSessions!: () => void;
   @mod.Getter private groups!: () => types.IDisplaySessionGroup[];
   private async mounted() {
     await this.initializeApplication();
     await this.loadSessions();
-    if (this.groups && this.groups.length === 0) {
+    console.log('route', this.$route);
+    console.log('router', this.$router);
+
+    if (Favorites.userNavigation) {
+      return;
+    } else if (this.groups && this.groups.length === 0) {
       this.redirectToSessions();
     }
+  }
+  beforeRouteEnter(to: Route, from: Route, next: any) {
+    Favorites.userNavigation = from.name != null;
+    console.log('beforeRouteEnter', from);
+    next();
   }
   private redirectToSessions() {
     this.$router.push({ name: 'sessions' });

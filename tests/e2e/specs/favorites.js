@@ -39,14 +39,43 @@ context('Favorites', () => {
           });
         
     });
-  describe('on empty favorites', () => {
+  describe('on empty favorites, and first start', () => {
         beforeEach(()=>{
             cy.clearLocalStorage();
             cy.visit('/');
         })
 
-        it('should navigatio to sessions page', ()=>{
-            cy.url().should('include', '/sessions')
+        it('should navigate to sessions page', ()=>{
+            cy.url().should('include', '/#/sessions')
         })
   });
+
+  describe('on fresh start at home page, and clicking on favorites', () => {
+    beforeEach(()=>{
+        cy.clearLocalStorage();
+        cy.visit('/');
+        window.sessionStorage.clear();
+    })
+
+    it('should navigation to the favorites page', ()=>{
+      cy.url().should('include', '/#/sessions')
+      cy.get('[data-cy=link-favorites]').click();
+      cy.url().should('include', '/#/favorites')
+    })
+});
+
+describe('on fresh start at speakers page, and clicking on favorites', () => {
+  beforeEach(()=>{
+      cy.clearLocalStorage();
+      cy.visit('/#/speakers');
+      window.sessionStorage.clear();
+  })
+
+  it('should navigation to the favorites page', ()=>{
+    cy.url().should('include', '/#/speakers')
+    cy.get('[data-cy=link-favorites]').click();
+    cy.wait(200);
+    cy.url().should('include', '/#/favorites')
+  })
+});
 });

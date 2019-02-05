@@ -45,6 +45,9 @@
 </template>
 
 <script lang="ts">
+
+import Component from 'vue-class-component'
+
 import '@/assets/star.svg?sprite';
 import '@/assets/comments.svg?sprite';
 import '@/assets/users.svg?sprite';
@@ -52,7 +55,7 @@ import '@/assets/info.svg?sprite';
 import '@/assets/question-circle.svg?sprite';
 import '@/assets/chevron-left.svg?sprite';
 import '@/assets/search.svg?sprite';
-import { Component, Vue } from 'vue-property-decorator';
+import {  Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
 
 interface IPositions {

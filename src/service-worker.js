@@ -14,13 +14,13 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 workbox.skipWaiting();
 workbox.clientsClaim();
 
-// self.addEventListener('activate', (event) => {
-//   event.waitUntil(
-//     caches.keys().then((cacheNames) => {
-//       cacheNames.forEach((c) => caches.delete(c));
-//     }),
-//   );
-// });
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      cacheNames.forEach((c) => caches.delete(c));
+    }),
+  );
+});
 
 let imagesToCache = [];
 let dataToCache = [];

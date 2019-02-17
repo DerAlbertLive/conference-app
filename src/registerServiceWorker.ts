@@ -2,7 +2,7 @@
 
 import { register } from 'register-service-worker';
 
-console.log('Enviromnet', process.env.NODE_ENV);
+console.log('Environment', process.env);
 if (process.env.NODE_ENV === 'production') {
   register(`${process.env.BASE_URL}service-worker.js`, {
     ready(registration) {
@@ -17,6 +17,9 @@ if (process.env.NODE_ENV === 'production') {
     },
     registered(registration: ServiceWorkerRegistration) {
       console.log('Service worker has been registered.');
+      if (reg) {
+        reg(registration);
+      }
     },
     cached() {
       console.log('Content has been cached for offline use.');

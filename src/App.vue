@@ -7,7 +7,9 @@
       <h1>{{ conftitle }}</h1>
     </header>
     <main ref="scrolled">
-      <keep-alive include="/sessions|/speakers"> <router-view /> </keep-alive>
+      <keep-alive include="/sessions|/speakers">
+        <router-view/>
+      </keep-alive>
     </main>
     <footer id="nav">
       <router-link to="/favorites" data-cy="link-favorites">
@@ -65,12 +67,19 @@ interface IPositions {
 export default class App extends Vue {
   @Action private initializeApplication!: () => void;
   @Getter private conftitle!: string;
-
+  @Getter private registration!: ServiceWorkerRegistration;
   private scroll: number = 0;
   private scrollPositions: IPositions = {};
 
   private back() {
     this.$router.back();
+  }
+  mounted() {
+    this.$watch("registration", () => {
+      if (!this.conftitle) {
+        this.initializeApplication();
+      }
+    });
   }
 
   private created() {

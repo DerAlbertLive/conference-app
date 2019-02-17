@@ -33,6 +33,9 @@ const getters: GetterTree<IAppState, IAppState> = {
   conftitle(state) {
     return state.data.title;
   },
+  registration(state) {
+    return state.registration;
+  },
 };
 
 const Keys = {
@@ -44,7 +47,7 @@ function updateServiceWorker(
   registration: ServiceWorkerRegistration,
   cdata: IDisplayConference,
 ) {
-  let sw = registration.active as ServiceWorker;
+  const sw = registration.active as ServiceWorker;
   if (!sw) {
     return;
   }
@@ -81,7 +84,6 @@ const mutations: MutationTree<IAppState> = {
       const json = JSON.stringify(uris);
       localStorage.setItem(Keys.ImageUrls, json);
     }
-    console.log('applicationInitialized', state);
     if (state.registration) {
       updateServiceWorker(state.registration, state.data);
     }

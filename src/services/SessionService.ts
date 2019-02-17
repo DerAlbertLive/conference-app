@@ -26,7 +26,9 @@ export class SessionService {
   }
 
   public searchSessions(sessions: IDisplaySession[], searchText: string) {
-    const foundSessions = sessions.filter(s=> this.isSearchedSession(s, searchText))
+    const foundSessions = sessions.filter((s) =>
+      this.isSearchedSession(s, searchText),
+    );
     return this.getGroupedSession(foundSessions);
   }
 
@@ -84,7 +86,7 @@ export class SessionService {
     session: IDisplaySession,
     searchText: string,
   ): boolean {
-    const regEx = new RegExp(searchText, 'i')
+    const regEx = new RegExp(searchText, 'i');
     if (session.abstract && session.abstract.match(regEx)) {
       return true;
     }

@@ -1,3 +1,4 @@
+
 workbox.core.setCacheNameDetails({ prefix: 'conference-app' });
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -13,28 +14,32 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 workbox.skipWaiting();
 workbox.clientsClaim();
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      cacheNames.forEach((c) => caches.delete(c));
-    }),
-  );
-});
+// self.addEventListener('activate', (event) => {
+//   event.waitUntil(
+//     caches.keys().then((cacheNames) => {
+//       cacheNames.forEach((c) => caches.delete(c));
+//     }),
+//   );
+// });
 
 let imagesToCache = [];
 let dataToCache = [];
 
-self.addEventListener('message', (event) => {
+self.addEventListener('message', async (event) => {
   if (event.data.command === 'speakerImagesUpdate') {
-    imagesToCache = event.data.imageUris;
+    imagesToCache = event.data.uris;
+    const cache = await caches.open('speaker-images');
+    cache.addAll(imagesToCache);
   }
 
   if (event.data.command === 'conferenceDataUpdate') {
-    dataToCache = event.data.dataUris;
+    dataToCache = event.data.uris;
+    const cache = await caches.open('conference-data');
+    cache.addAll(dataToCache);
   }
 });
 
-function simpleMatcher(uris, context) {
+function imageUrlMatcher(uris, context) {
   const href = context.url.href;
   const index = uris.indexOf(href);
   if (index < 0)
@@ -44,7 +49,7 @@ function simpleMatcher(uris, context) {
   return true;
 }
 
-function uriMatcher(uris, context) {
+function dataUrlMatcher(uris, context) {
   const href = context.url.href;
   for (const uri of uris) {
       if (uri.startsWith("http:") || uri.startsWith('https:')) {
@@ -61,9 +66,9 @@ function uriMatcher(uris, context) {
 }
 
 workbox.routing.registerRoute(
-  function (context) { return simpleMatcher(imagesToCache, context)},
+  function (context) { return imageUrlMatcher(imagesToCache, context)},
   workbox.strategies.cacheFirst({
-    cacheName: 'speaker-image-cache',
+    cacheName: 'speaker-images',
     plugins: [
       new workbox.expiration.Plugin({
         maxAgeSeconds: 60 * 60 * 24, // 24 Hours
@@ -73,9 +78,9 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-  function (context) { return uriMatcher(dataToCache, context)},
+  function (context) { return dataUrlMatcher(dataToCache, context)},
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'conference-data-cache',
+    cacheName: 'conference-data',
     plugins: [
       new workbox.expiration.Plugin({
         maxAgeSeconds: 60 * 30, // 30 Minuten
@@ -83,3 +88,4 @@ workbox.routing.registerRoute(
     ],
   }),
 );
+

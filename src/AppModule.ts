@@ -35,6 +35,11 @@ const getters: GetterTree<IAppState, IAppState> = {
   },
 };
 
+const Keys = {
+  ImageUrls: 'imageUrls',
+  DataUrls: 'dataUrls',
+};
+
 function updateServiceWorker(
   registration: ServiceWorkerRegistration,
   cdata: IDisplayConference,
@@ -44,18 +49,21 @@ function updateServiceWorker(
     return;
   }
 
-  if (cdata.speakers) {
-    const uris = cdata.speakers.map((s) => s.imageUrl);
-
+  let urlJson = localStorage.getItem(Keys.ImageUrls);
+  if (urlJson) {
+    const uris = JSON.parse(urlJson);
     sw.postMessage({
       command: 'speakerImagesUpdate',
-      imageUris: uris,
+      uris: uris,
     });
   }
-  if (cdata.dataFiles) {
+
+  urlJson = localStorage.getItem(Keys.DataUrls);
+  if (urlJson) {
+    const uris = JSON.parse(urlJson);
     sw.postMessage({
       command: 'conferenceDataUpdate',
-      dataUris: cdata.dataFiles,
+      uris: uris,
     });
   }
 }
@@ -63,6 +71,16 @@ function updateServiceWorker(
 const mutations: MutationTree<IAppState> = {
   applicationInitialized(state: IAppState, { data }) {
     state.data = data;
+    if (state.data.dataFiles) {
+      const json = JSON.stringify(state.data.dataFiles);
+      localStorage.setItem(Keys.DataUrls, json);
+    }
+
+    if (state.data.speakers) {
+      const uris = state.data.speakers.map((s) => s.imageUrl);
+      const json = JSON.stringify(uris);
+      localStorage.setItem(Keys.ImageUrls, json);
+    }
     console.log('applicationInitialized', state);
     if (state.registration) {
       updateServiceWorker(state.registration, state.data);

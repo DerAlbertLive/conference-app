@@ -36,20 +36,32 @@ describe('Root Navigation', () => {
       cy.visit('/');
     });
 
-    it('should be on the favorites page', ()=> {
-      cy.url().should('include', '/#/favorite')
-    })
+    it('should be on the speakers page after click', () => {
+      cy.url().should('include', '/#/sessions');
+      cy.get('[data-cy=link-speakers]').click();
+      cy.url().should('include', '/#/speakers');
+    });
 
-    it('should be on the session page after click', ()=>{
-      cy.get('[data-cy=link-sessions').click();
-      cy.url().should('include', '/#/sessions')
-    })
+    it('should be on the information page after click', () => {
+      cy.url().should('include', '/#/sessions');
+      cy.get('[data-cy=link-information]').click();
+      cy.url().should('include', '/#/information');
+    });
 
-    it('should be on the session page after click', ()=>{
-      cy.get('[data-cy=link-sessions').click();
-      cy.url().should('include', '/#/sessions')
-      cy.get('[data-cy=link-back').click();
-      cy.url().should('include', '/#/favorite')
-    })
+    it('should be on the favorites page', () => {
+      cy.url().should('include', '/#/favorite');
+    });
+
+    it('should be on the session page after click', () => {
+      cy.get('[data-cy=link-sessions]').click();
+      cy.url().should('include', '/#/sessions');
+    });
+
+    it('should be on the session page after click', () => {
+      cy.get('[data-cy=link-sessions]').click();
+      cy.url().should('include', '/#/sessions');
+      cy.get('[data-cy=link-back]').click();
+      cy.url().should('include', '/#/favorite');
+    });
   });
 });

@@ -190,4 +190,18 @@ html {
     }
   }
 }
+
+dl {
+  padding: $padding;
+}
+
+dt {
+  font-weight: bold;
+  margin-bottom: $padding;
+}
+
+dd {
+  margin-left: $padding * 4;
+  margin-bottom: $padding;
+}
 </style>

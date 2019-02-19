@@ -38,19 +38,3 @@ export default class Information extends Vue {
   }
 }
 </script>
-<style lang="scss" scoped>
-@import '../_vars.scss';
-dl {
-  padding: $padding;
-}
-
-dt {
-  font-weight: bold;
-  margin-bottom: $padding;
-}
-
-dd {
-  margin-left: $padding * 4;
-  margin-bottom: $padding;
-}
-</style>

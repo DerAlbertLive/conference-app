@@ -7,9 +7,7 @@
       <h1>{{ conftitle }}</h1>
     </header>
     <main ref="scrolled">
-      <keep-alive include="/sessions|/speakers">
-        <router-view/>
-      </keep-alive>
+      <keep-alive include="/sessions|/speakers"> <router-view /> </keep-alive>
     </main>
     <footer id="nav">
       <router-link to="/favorites" data-cy="link-favorites">
@@ -47,8 +45,7 @@
 </template>
 
 <script lang="ts">
-
-import Component from 'vue-class-component'
+import Component from 'vue-class-component';
 
 import '@/assets/star.svg?sprite';
 import '@/assets/comments.svg?sprite';
@@ -57,7 +54,7 @@ import '@/assets/info.svg?sprite';
 import '@/assets/question-circle.svg?sprite';
 import '@/assets/chevron-left.svg?sprite';
 import '@/assets/search.svg?sprite';
-import {  Vue } from 'vue-property-decorator';
+import { Vue } from 'vue-property-decorator';
 import { Getter, Action } from 'vuex-class';
 
 interface IPositions {
@@ -67,19 +64,11 @@ interface IPositions {
 export default class App extends Vue {
   @Action private initializeApplication!: () => void;
   @Getter private conftitle!: string;
-  @Getter private registration!: ServiceWorkerRegistration;
   private scroll: number = 0;
   private scrollPositions: IPositions = {};
 
   private back() {
     this.$router.back();
-  }
-  mounted() {
-    this.$watch("registration", () => {
-      if (!this.conftitle) {
-        this.initializeApplication();
-      }
-    });
   }
 
   private created() {

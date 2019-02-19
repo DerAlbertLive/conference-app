@@ -6,6 +6,7 @@ import {
   ILocation,
   ITrack,
   IDisplaySpeaker,
+  IConferenceInformation,
   ISpeaker,
 } from '@/types.ts';
 
@@ -17,11 +18,26 @@ export default class SessionDataConverter {
       sessions: this.convertSessions(this.data.sessions),
       speakers: this.convertSpeakers(this.data.speakers),
       sessionSpeakerMaps: this.data.sessionSpeakerMaps,
+      information: this.data.information || this.getDefaultInformation(),
       dataFiles: [],
     };
     this.assignSpeakersToSession(converted);
     this.assignSessionsToSpeaker(converted);
     return converted;
+  }
+  private getDefaultInformation(): IConferenceInformation {
+    return {
+      title: 'Information',
+      items: [
+        {
+          term: 'Keine Informationen hinterlegt',
+          link: {
+            href: 'https://github.com/DerAlbertLive/conference-app',
+            caption: 'siehe Project Site',
+          },
+        },
+      ],
+    };
   }
   private convertSpeakers(speakers: ISpeaker[]): IDisplaySpeaker[] {
     return speakers.map((s) => this.convertSpeaker(s));

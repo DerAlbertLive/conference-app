@@ -1,6 +1,5 @@
 export interface IAppState {
   data: IDisplayConference;
-  registration: ServiceWorkerRegistration | null;
 }
 
 export interface IConferenceData {
@@ -10,7 +9,24 @@ export interface IConferenceData {
   speakers: ISpeaker[];
   tracks: ITrack[];
   sessions: ISession[];
+  information?: IConferenceInformation;
   sessionSpeakerMaps: ISessionSpeakerMap[];
+}
+
+export interface IConferenceInformation {
+  title: string;
+  items: IInformationItem[];
+}
+
+export interface IInformationItem {
+  term: string;
+  address?: string;
+  link?: ILink;
+}
+
+export interface ILink {
+  href: string;
+  caption: string;
 }
 
 export interface ILocation {
@@ -54,6 +70,7 @@ export interface IDisplayConference {
   sessions: IDisplaySession[];
   speakers: IDisplaySpeaker[];
   sessionSpeakerMaps: ISessionSpeakerMap[];
+  information: IConferenceInformation;
   dataFiles: string[];
 }
 

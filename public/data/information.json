@@ -1,0 +1,39 @@
+{
+  "information": {
+    "title": "Information",
+    "items": [
+      {
+        "term": "Veranstaltungsort",
+        "address": "KOMED im MediaPark GmbH\nIm MediaPark Haus 6 und Haus 7\n50670 Köln"
+      },
+      {
+        "term": "Anfahrt",
+        "link": {
+          "href": "https://www.komed-veranstaltungen.de/standort/anfahrt/",
+          "caption": "Zum Komed"
+        }
+      },
+      {
+        "term": "Website",
+        "link": {
+          "href": "https://www.dotnet-cologne.de",
+          "caption": "www.dotnet-cologne.de"
+        }
+      },
+      {
+        "term": "Twitter",
+        "link": {
+          "href": "https://twitter.com/dotnetcologne",
+          "caption": "twitter.com/dotnetcologne"
+        }
+      },
+      {
+        "term": "Hashtag",
+        "link": {
+          "href": "https://twitter.com/hashtag/dncgn?src=hash",
+          "caption": "#dncgn"
+        }
+      }
+    ]
+  }
+}

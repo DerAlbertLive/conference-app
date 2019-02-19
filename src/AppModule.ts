@@ -1,4 +1,4 @@
-import { IAppState, IDisplaySession, IDisplayConference } from '@/types';
+import { IAppState, IDisplaySession, IDisplayConference, IConferenceInformation } from '@/types';
 import { ActionContext, ActionTree, MutationTree, GetterTree } from 'vuex';
 import { SessionService } from './services/SessionService';
 
@@ -31,6 +31,15 @@ const actions: ActionTree<IAppState, IAppState> = {
 const getters: GetterTree<IAppState, IAppState> = {
   conftitle(state) {
     return state.data.title;
+  },
+  information(state) : IConferenceInformation {
+    if (state.data.information) {
+      return state.data.information;
+    }
+    return {
+      title:'',
+      items: [],
+    }
   },
 };
 

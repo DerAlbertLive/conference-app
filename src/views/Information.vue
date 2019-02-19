@@ -1,47 +1,40 @@
 <template>
-  <section class="Information group">
+  <section class="group">
     <div>
-      <h2>Information</h2>
+      <h2>{{ information.title }}</h2>
       <dl>
-        <dt>Veranstaltungsort</dt>
-        <dd>
-          <address>
-            KOMED im MediaPark GmbH<br />
-            Im MediaPark Haus 6 und Haus 7<br />
-            50670 Köln
-          </address>
-        </dd>
-        <dt>Anfahrt</dt>
-        <dd>
-          <a href="https://www.komed-veranstaltungen.de/standort/anfahrt/"
-            >Zum Komed</a
-          >
-        </dd>
-        <dt>Website</dt>
-        <dd>
-          <a href="https://www.dotnet-cologne.de">www.dotnet-cologne.de</a>
-        </dd>
-        <dt>Twitter</dt>
-        <dd>
-          <a href="https://twitter.com/dotnetcologne"
-            >twitter.com/dotnetcologne</a
-          >
-        </dd>
-        <dt>Hashtag</dt>
-        <dd><a href="https://twitter.com/hashtag/dncgn?src=hash">#dncgn</a></dd>
+        <template v-for="item in information.items">
+          <dt :key="item.term">{{ item.term }}</dt>
+          <dd>
+            <address v-if="item.address" v-html="brIt(item.address)"></address>
+            <a v-if="item.link" :href="item.link.href">{{item.link.caption}}</a>
+          </dd>
+        </template>
       </dl>
     </div>
   </section>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { Action } from 'vuex-class';
-@Component
+import { Action, Getter } from 'vuex-class';
+import { IConferenceInformation } from '@/types';
+
+@Component({
+  filters: {
+    br(value: string) {
+      return value.replace('\r\n', '<br/>').replace(/\n/g, '<br/>');
+    },
+  },
+})
 export default class Information extends Vue {
   @Action private initializeApplication!: () => void;
-
+  @Getter private information!: IConferenceInformation;
   private async mounted() {
     await this.initializeApplication();
+  }
+
+  private brIt(value : string) {
+      return value.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>');
   }
 }
 </script>
